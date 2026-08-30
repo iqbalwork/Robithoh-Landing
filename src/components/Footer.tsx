@@ -19,12 +19,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-merah-600 to-merah-900 p-0.5 shadow-md flex items-center justify-center">
                 <img
-                  src="/assets/icons/icon.png"
+                  src="./assets/icons/icon.png"
                   alt="Logo Robithoh"
                   className="w-full h-full object-cover rounded-[10px]"
-                  onError={(e) => {
-                    (e.target as HTMLElement).style.display = 'none';
-                  }}
                 />
               </div>
               <div>

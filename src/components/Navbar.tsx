@@ -41,13 +41,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
             <div className="relative">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-merah-500 via-merah-700 to-black p-0.5 shadow-md shadow-merah-700/50 group-hover:scale-105 transition-transform">
                 <img
-                  src="/assets/icons/icon.png"
+                  src="./assets/icons/icon.png"
                   alt="Robithoh Logo"
                   className="w-full h-full object-cover rounded-[10px]"
-                  onError={(e) => {
-                    // Fallback to stylized letter R if image fails
-                    (e.target as HTMLElement).style.display = 'none';
-                  }}
                 />
               </div>
               <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emas-500 border-2 border-canvas-dark flex items-center justify-center">
