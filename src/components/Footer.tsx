@@ -26,12 +26,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
               </div>
               <div>
                 <span className="font-extrabold text-lg tracking-wider text-white">ROBITHOH</span>
-                <p className="text-[10px] text-emas-400 font-semibold">Aplikasi Ibadah &amp; Amaliyah TQN</p>
+                <p className="text-[10px] text-emas-400 font-semibold">Aplikasi Ibadah &amp; Amaliyah MTQN Suryalaya Sirnarasa PPKN III</p>
               </div>
             </div>
 
             <p className="text-slate-300 leading-relaxed text-xs">
-              Aplikasi pendamping ibadah &amp; amaliyah independen bagi ikhwan/akhwat Thoriqoh Qodiriyyah Naqsyabandiyyah dan seluruh umat muslim. Memadukan arsitektur modern 100% luring (offline-first), dzikir berirama, Al-Qur'an 30 Juz, Manqobah 1–56, dan jadwal sholat presisi.
+              Aplikasi pendamping ibadah &amp; amaliyah independen bagi ikhwan dan akhwat MTQN Suryalaya Sirnarasa PPKN III. Memadukan arsitektur modern 100% luring (offline-first), dzikir berirama, Al-Qur'an 30 Juz, Manqobah 1–56, dan jadwal sholat presisi.
             </p>
 
             <div className="space-y-2 pt-2 text-slate-300">
@@ -91,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
               <li>• Dzikir Jahr &amp; Khofi Harian</li>
               <li>• Kitab Manqobah 1–56 (3 Bahasa)</li>
               <li>• Naskah MC Manaqib (Indo/Sunda)</li>
-              <li>• Tanbih &amp; Silsilah TQN 1–38</li>
+              <li>• Tanbih &amp; Silsilah 1–38</li>
               <li>• Al-Qur'an Digital 114 Surah</li>
               <li>• Audio Downloader &amp; Background Player</li>
               <li>• 100% Offline-First SQLDelight</li>
@@ -155,7 +155,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
           <div className="flex items-center gap-1 text-slate-400">
             <span>Dirancang dengan</span>
             <Heart className="w-3.5 h-3.5 text-merah-500 fill-merah-500 inline" />
-            <span>untuk Umat &amp; Pengamal Dzikir TQN</span>
+            <span>untuk Ikhwan &amp; Akhwat Pengamal Dzikir</span>
           </div>
         </div>
 

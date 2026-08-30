@@ -152,7 +152,7 @@ export const BentoFeatures: React.FC<BentoFeaturesProps> = ({ onOpenTechSpec }) 
                 Interactive Tasbih Engine
               </h3>
               <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                Sentuhan fullscreen responsif dengan animasi pegas (spring dynamic), getaran milestone pada target 33x, 100x, dan 165x sesuai amaliyah TQN.
+                Sentuhan fullscreen responsif dengan animasi pegas (spring dynamic), getaran milestone pada target 33x, 100x, dan 165x sesuai amaliyah Dzikir Jahr 165x.
               </p>
 
               <div className="flex gap-2">
@@ -214,7 +214,7 @@ export const BentoFeatures: React.FC<BentoFeaturesProps> = ({ onOpenTechSpec }) 
 
               <div className="pt-4 border-t border-white/5 flex items-center justify-between">
                 <span className="text-xs text-slate-400">
-                  Lantunan Asli Khidmat Dzikir &amp; Shalawat TQN
+                  Lantunan Asli Khidmat Dzikir &amp; Shalawat MTQN Suryalaya Sirnarasa PPKN III
                 </span>
                 <a
                   href="#audio-demo"
@@ -288,7 +288,7 @@ export const BentoFeatures: React.FC<BentoFeaturesProps> = ({ onOpenTechSpec }) 
                   </div>
                   <div className="p-3 rounded-xl bg-black/40 border border-white/5 text-xs text-slate-300 flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emas-400 flex-shrink-0" />
-                    <span>Silsilah Mutashil 1 s/d 38 Mursyid TQN</span>
+                    <span>Silsilah Mutashil 1 s/d 38 Mursyid</span>
                   </div>
                 </div>
               </div>

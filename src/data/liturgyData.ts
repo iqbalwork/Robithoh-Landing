@@ -13,7 +13,7 @@ export const liturgySamples: LiturgySample[] = [
     transliteration: 'Subhânal malikil ma‘bûd, Subhânal malikil maujûd, Subhânal malikil hayyil-ladzî lâ yanâmu wa lâ yamûtu abadâ, Subbûhun Quddûsun Rabbunâ wa Rabbul-malâ-ikati war-rûh.',
     indonesianText: 'Maha Suci Dzat Yang Maha Menguasai lagi Maha Disembah, Maha Suci Dzat Yang Maha Menguasai lagi Maha Ada, Maha Suci Dzat Yang Maha Hidup yang tidak pernah tidur dan tidak pernah mati selamanya. Maha Suci dan Maha Quddus Tuhan kami dan Tuhan seluruh malaikat serta Malaikat Jibril.',
     sundaneseText: 'Maha Suci Dzat Nu Maha Ngawasa tur Maha Diibadahan, Maha Suci Dzat Nu Maha Hirup anu henteu kulem tur henteu pupus salalanggengna.',
-    description: 'Bilal dan langgam sholat tarawih & witir khas TQN.'
+    description: 'Bilal dan langgam sholat tarawih & witir.'
   },
   {
     id: 'langgam_irama_dzikir',
@@ -25,12 +25,12 @@ export const liturgySamples: LiturgySample[] = [
     transliteration: 'Lâ ilâha illallâh',
     indonesianText: 'Tiada Tuhan selain Allah.',
     sundaneseText: 'Teu aya deui Pangeran anging Gusti Allah.',
-    description: 'Langgam irama penghayatan dzikir TQN untuk menumbuhkan kekhusyukan dzikrullah.'
+    description: 'Langgam irama penghayatan dzikir untuk menumbuhkan kekhusyukan dzikrullah.'
   },
   {
     id: 'langgam_dzikir_jahr',
     title: 'Dzikir Jahr',
-    category: 'Amaliyah Harian TQN',
+    category: 'Amaliyah Harian',
     audioSrc: `${GITHUB_AUDIO_BASE_URL}/dzikir_jahr.mp3`,
     duration: '03:23',
     arabicText: 'لَا إِلٰهَ إِلَّا اللهُ',

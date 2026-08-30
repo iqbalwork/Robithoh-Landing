@@ -54,7 +54,7 @@ export const featureData: FeatureItem[] = [
   {
     id: 'mc-silsilah',
     title: 'Susunan MC, Tanbih & Silsilah 1–38',
-    subtitle: 'Panduan Baku Majlis Manaqib TQN',
+    subtitle: 'Panduan Baku Majlis Manaqib',
     description: 'Naskah MC Manaqib dwibahasa (Indonesia & Sunda), Wasiat Tanbih Pangersa Abah Anom & Syekh Ahmad Shohibulwafa Tajul Arifin, serta sanad emas Tawassul Silsilah 1 s/d 38 hingga Pangersa Abah Aos Ra. Qs.',
     badge: 'Sanad Mutashil',
     iconName: 'ShieldCheck',

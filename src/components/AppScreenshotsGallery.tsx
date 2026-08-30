@@ -96,7 +96,7 @@ const screenshots: ScreenshotItem[] = [
     id: 'tasbih',
     title: 'Tasbih Digital Interaktif Haptik',
     category: 'Dzikir Taktil Berirama',
-    tagline: 'Getaran Milestone & Preset Dzikir TQN 165x',
+    tagline: 'Getaran Milestone & Preset Dzikir 165x',
     description:
       'Penghitung dzikir berlayar penuh dengan lingkaran progres dinamis, pilihan preset amaliyah (Dzikir Jahr 165x, 33x, 100x, atau target kustom), statistik putaran selesai, serta respon getaran taktil haptic feedback pada tiap ketukan.',
     imageSrc: './assets/screenshots/tasbih.png',

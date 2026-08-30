@@ -24,8 +24,8 @@ const profiles: ProfileCard[] = [
     description:
       'Sesepuh serta pembimbing dan penasihat yang senantiasa memberikan arahan, restu, dan bimbingan amaliyah agar seluruh kaifiyat dzikir dalam aplikasi Robithoh senantiasa terjaga kemurniannya dan muttashil dengan tuntunan Guru Mursyid.',
     highlights: [
-      'Wakil Talqin TQN Pangersa Abah Aos',
-      'Pembimbing Kaifiyat & Adab Dzikir TQN',
+      'Wakil Talqin Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III',
+      'Pembimbing Kaifiyat & Adab Dzikir',
       'Pengayom & Penasihat Amaliyah'
     ],
     avatarText: 'EG'
@@ -39,7 +39,7 @@ const profiles: ProfileCard[] = [
     description:
       'Pembimbing dan penasihat yang memverifikasi keaslian naskah Kitab Manaqib 1–56, teks sanad Tawassul Silsilah, susunan MC Manaqib, serta rujukan liturgi amaliyah dalam aplikasi Robithoh.',
     highlights: [
-      'Wakil Talqin TQN Pangersa Abah Aos',
+      'Wakil Talqin Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III',
       'Verifikasi Sanad & Kitab Amaliyah',
       'Penasihat Konsep & Khidmat Ilmiah'
     ],
@@ -52,7 +52,7 @@ const profiles: ProfileCard[] = [
     badge: 'Pengembang Aplikasi',
     badgeColor: 'bg-merah-500/10 text-merah-400 border-merah-500/30',
     description:
-      'Software engineer independen yang merancang arsitektur, mengembangkan, dan memelihara aplikasi Robithoh secara multiplatform (Kotlin Multiplatform & Compose Multiplatform) sebagai dedikasi teknologi untuk kemaslahatan umat.',
+      'Software engineer independen yang merancang arsitektur, mengembangkan, dan memelihara aplikasi Robithoh secara multiplatform (Kotlin Multiplatform & Compose Multiplatform) sebagai dedikasi teknologi untuk kemaslahatan ikhwan dan akhwat.',
     highlights: [
       'Kotlin Multiplatform & Mobile Specialist',
       'Arsitek 100% Offline-First Engine',
@@ -84,7 +84,7 @@ export const AboutSection: React.FC = () => {
             <span className="gold-gradient-text">Guru Mursyid</span> &amp; Pembimbing
           </h2>
           <p className="text-slate-400 text-base leading-relaxed">
-            Aplikasi Robithoh dihadirkan sebagai wujud khidmat dan mahabbah kepada Pangersa Guru Mursyid, dibangun dengan bimbingan dan nasihat para Wakil Talqin guna menjaga keaslian sanad serta kemurnian amaliyah Thoriqoh Qodiriyyah Naqsyabandiyyah.
+            Aplikasi Robithoh dihadirkan sebagai wujud khidmat dan mahabbah kepada Pangersa Guru Mursyid, dibangun dengan bimbingan dan nasihat para Wakil Talqin guna menjaga keaslian sanad serta kemurnian amaliyah Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III.
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export const AboutSection: React.FC = () => {
                   </div>
                   <div className="absolute -bottom-3 -right-3 px-3 py-1 rounded-full bg-merah-950 border border-emas-500/60 text-emas-300 text-[11px] font-extrabold shadow-lg flex items-center gap-1.5">
                     <Award className="w-3.5 h-3.5 text-emas-400" />
-                    <span>Mursyid Ke-38 TQN</span>
+                    <span>Mursyid Ke-38 Roudloh Merah Putih</span>
                   </div>
                 </div>
 
@@ -142,7 +142,7 @@ export const AboutSection: React.FC = () => {
                     Syaikh Muhammad Abdul Gaos Saefulloh Maslul Ra. Qs.
                   </h3>
                   <p className="text-sm sm:text-base font-bold text-emas-400 mt-1">
-                    Pangersa Abah Aos — Guru Mursyid Thoriqoh Qodiriyyah Naqsyabandiyyah Silsilah Ke-38
+                    Pangersa Abah Aos — Guru Mursyid Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III (Silsilah Ke-38)
                   </p>
                 </div>
 
@@ -151,7 +151,7 @@ export const AboutSection: React.FC = () => {
                     &ldquo;Rasa syukur dan terima kasih tak terhingga kami haturkan kepada Pangersa Guru Mursyid Syaikh Muhammad Abdul Gaos Saefulloh Maslul Ra. Qs. (Abah Aos) atas limpahan karomah, doa, restu, dan bimbingan ruhani yang senantiasa menaungi para murid.&rdquo;
                   </p>
                   <p className="text-xs sm:text-sm text-slate-300 not-italic font-normal">
-                    Aplikasi <strong>Robithoh</strong> ini didedikasikan secara tulus sebagai washilah kemudahan mengamalkan Dzikir, Kitab Manaqib, dan seluruh Amaliyah TQN bagi ikhwan, akhwat, serta umat Islam di seluruh penjuru dunia.
+                    Aplikasi <strong>Robithoh</strong> ini didedikasikan secara tulus sebagai washilah kemudahan mengamalkan Dzikir, Kitab Manaqib, dan seluruh Amaliyah Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III bagi ikhwan dan akhwat di seluruh penjuru dunia.
                   </p>
                 </div>
               </div>

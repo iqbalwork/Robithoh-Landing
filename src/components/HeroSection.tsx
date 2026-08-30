@@ -31,7 +31,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
                 Aplikasi Ibadah &amp; Amaliyah{' '}
-                <span className="crimson-gradient-text">TQN</span> Modern{' '}
+                <span className="crimson-gradient-text">MTQN</span> Modern{' '}
                 <span className="gold-gradient-text">Multiplatform</span>
               </h1>
               
@@ -100,7 +100,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
                 <div className="flex items-center justify-center lg:justify-start gap-1.5 text-merah-400 font-extrabold text-xl">
                   <ShieldCheck className="w-4 h-4" /> 38
                 </div>
-                <p className="text-xs text-slate-400 font-medium mt-0.5">Sanad Silsilah TQN</p>
+                <p className="text-xs text-slate-400 font-medium mt-0.5">Sanad Silsilah 38</p>
               </div>
 
               <div className="p-3 rounded-xl bg-canvas-card/60 border border-white/5 text-center lg:text-left">

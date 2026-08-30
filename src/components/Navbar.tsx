@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
                   ROBITHOH
                 </span>
                 <span className="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-merah-500/20 text-merah-300 border border-merah-500/30">
-                  TQN
+                  MTQN
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 font-medium">Panduan Ibadah &amp; Amaliyah</p>

@@ -84,7 +84,7 @@ export const InteractiveTasbihPreview: React.FC = () => {
             <span className="crimson-gradient-text">Berdaya Haptik</span>
           </h2>
           <p className="text-slate-400 text-base leading-relaxed">
-            Rasakan kelembutan dan kepuasan sentuhan saat melantunkan dzikir harian. Lengkap dengan target preset amaliyah dzikir TQN.
+            Rasakan kelembutan dan kepuasan sentuhan saat melantunkan dzikir harian. Lengkap dengan target preset amaliyah Dzikir Jahr 165x.
           </p>
         </div>
 
