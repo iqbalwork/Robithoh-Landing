@@ -71,6 +71,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
                 <a href="#audio-demo" className="hover:text-emas-400 transition-colors">Audio &amp; Liturgi</a>
               </li>
               <li>
+                <a href="#tentang" className="hover:text-emas-400 transition-colors">Tentang Kami</a>
+              </li>
+              <li>
                 <a href="./privacy.html" className="text-emas-400/90 hover:text-emas-300 font-semibold transition-colors flex items-center gap-1">
                   <span>Kebijakan Privasi</span>
                   <span className="text-[10px]">↗</span>

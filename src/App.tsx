@@ -5,6 +5,7 @@ import { BentoFeatures } from './components/BentoFeatures';
 import { AppScreenshotsGallery } from './components/AppScreenshotsGallery';
 import { InteractiveTasbihPreview } from './components/InteractiveTasbihPreview';
 import { AudioLiturgyDemo } from './components/AudioLiturgyDemo';
+import { AboutSection } from './components/AboutSection';
 import { Footer } from './components/Footer';
 import { DownloadCenterModal } from './components/DownloadCenterModal';
 import { OfflineTechSpecModal } from './components/OfflineTechSpecModal';
@@ -41,6 +42,9 @@ export function App() {
         <AudioLiturgyDemo
           onPlayStateChange={setIsPlayingAudio}
         />
+
+        {/* About & Mentors Section */}
+        <AboutSection />
       </main>
 
       {/* Footer */}

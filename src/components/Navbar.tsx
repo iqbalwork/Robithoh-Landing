@@ -23,6 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
     { label: 'Tampilan Layar', href: '#screenshots' },
     { label: 'Tasbih Digital', href: '#tasbih' },
     { label: 'Audio & Liturgi', href: '#audio-demo' },
+    { label: 'Tentang Kami', href: '#tentang' },
     { label: 'Kebijakan Privasi', href: './privacy.html' },
   ];
 
