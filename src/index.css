@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #111113;
+    color: #F8F9FA;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111113;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A2E33;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+  }
+}
+
+.font-arabic {
+  font-family: 'Amiri', 'Amiri Quran', 'Scheherazade New', serif;
+  line-height: 2.2;
+}
+
+/* Islamic Geometric Pattern Background */
+.bg-islamic-pattern {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px), radial-gradient(rgba(206, 17, 38, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: linear-gradient(145deg, rgba(26, 29, 32, 0.85) 0%, rgba(22, 24, 27, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 12px 30px -10px rgba(212, 175, 55, 0.2);
+}
+
+.glass-panel {
+  background: rgba(26, 29, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF0B8 0%, #D4AF37 50%, #AA7C11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.crimson-gradient-text {
+  background: linear-gradient(135deg, #FF6B7D 0%, #CE1126 50%, #7A0914 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
