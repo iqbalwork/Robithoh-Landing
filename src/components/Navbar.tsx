@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Sparkles, Menu, X, Volume2 } from 'lucide-react';
+import { Download, Sparkles, Menu, X, Volume2, Clock } from 'lucide-react';
 
 interface NavbarProps {
   onOpenDownload: () => void;
@@ -20,6 +20,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
 
   const navLinks = [
     { label: 'Fitur Utama', href: '#fitur' },
+    { label: 'Tampilan Layar', href: '#screenshots' },
     { label: 'Tasbih Digital', href: '#tasbih' },
     { label: 'Audio & Liturgi', href: '#audio-demo' },
     { label: 'Kebijakan Privasi', href: './privacy.html' },
@@ -92,10 +93,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
             )}
             <button
               onClick={onOpenDownload}
-              className="relative group overflow-hidden px-5 py-2.5 rounded-xl bg-gradient-to-r from-merah-600 via-merah-500 to-merah-700 text-white text-sm font-bold shadow-md shadow-merah-600/30 hover:shadow-merah-600/60 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border border-merah-400/30 flex items-center gap-2"
+              className="relative group overflow-hidden px-4 py-2 rounded-xl bg-gradient-to-r from-merah-600 via-merah-500 to-merah-700 text-white text-xs sm:text-sm font-bold shadow-md shadow-merah-600/30 hover:shadow-merah-600/60 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border border-merah-400/30 flex items-center gap-2"
             >
-              <Download className="w-4 h-4 group-hover:animate-bounce" />
-              <span>Unduh Aplikasi</span>
+              <Download className="w-4 h-4 text-emas-300" />
+              <span>Unduh di Play Store</span>
               <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             </button>
           </div>
@@ -105,7 +106,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
             <button
               onClick={onOpenDownload}
               className="p-2 rounded-lg bg-merah-600 text-white"
-              aria-label="Download"
+              aria-label="Unduh di Play Store"
             >
               <Download className="w-4 h-4" />
             </button>

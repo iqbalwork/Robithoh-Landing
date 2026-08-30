@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { BentoFeatures } from './components/BentoFeatures';
+import { AppScreenshotsGallery } from './components/AppScreenshotsGallery';
 import { InteractiveTasbihPreview } from './components/InteractiveTasbihPreview';
 import { AudioLiturgyDemo } from './components/AudioLiturgyDemo';
 import { Footer } from './components/Footer';
@@ -31,6 +32,9 @@ export function App() {
         <BentoFeatures
           onOpenTechSpec={() => setIsTechSpecOpen(true)}
         />
+
+        {/* Real Screenshots Showcase Gallery */}
+        <AppScreenshotsGallery />
 
         <InteractiveTasbihPreview />
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, Heart, Code2 } from 'lucide-react';
+import { Phone, Mail, Heart, Code2, Clock, Smartphone } from 'lucide-react';
 
 interface FooterProps {
   onOpenDownload: () => void;
@@ -65,6 +65,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
                 <a href="#fitur" className="hover:text-emas-400 transition-colors">Fitur Unggulan</a>
               </li>
               <li>
+                <a href="#screenshots" className="hover:text-emas-400 transition-colors">Tampilan Layar</a>
+              </li>
+              <li>
                 <a href="#tasbih" className="hover:text-emas-400 transition-colors">Tasbih Digital</a>
               </li>
               <li>
@@ -99,36 +102,37 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
           <div className="space-y-3">
             <h4 className="font-bold text-white uppercase text-xs tracking-wider">Unduh &amp; Sumber</h4>
             <p className="text-xs text-slate-300">
-              Dapatkan installer versi terbaru secara cuma-cuma dan bebas iklan.
+              Dapatkan aplikasi resmi langsung di Google Play Store.
             </p>
-            <button
-              onClick={onOpenDownload}
-              className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-merah-600 to-merah-700 text-white font-bold text-xs shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 border border-merah-400/30"
+            <a
+              href="https://play.google.com/store/apps/details?id=com.iqbalwork.robithoh"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-merah-600 to-merah-700 hover:from-merah-500 hover:to-merah-600 text-white font-bold text-xs shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 border border-merah-400/30"
             >
-              <span>Download APK v1.0.0</span>
-            </button>
+              <Smartphone className="w-3.5 h-3.5 text-emerald-300" />
+              <span>Google Play Store</span>
+            </a>
 
             <div className="pt-2">
-              <span className="text-[11px] font-bold text-slate-400 block mb-1">Open Source &amp; Kontak:</span>
+              <span className="text-[11px] font-bold text-slate-400 block mb-1">Hubungi Pengembang:</span>
               <div className="flex gap-2">
                 <a
-                  href="https://github.com/iqbalwork/Robithoh-Landing"
+                  href="https://wa.me/6287822882668"
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-merah-600/30 hover:text-white border border-white/10 transition-colors flex items-center gap-1.5"
-                  title="GitHub Repository"
+                  className="p-2 rounded-lg bg-white/5 hover:bg-emerald-600/30 hover:text-white border border-white/10 transition-colors flex items-center gap-1.5"
+                  title="WhatsApp Pengembang"
                 >
-                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                  </svg>
-                  <span>GitHub</span>
+                  <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>WhatsApp</span>
                 </a>
                 <a
                   href="mailto:work.iqbalfauzi@gmail.com"
                   className="p-2 rounded-lg bg-white/5 hover:bg-emas-500/30 hover:text-white border border-white/10 transition-colors flex items-center gap-1.5"
-                  title="Email Developer"
+                  title="Email Pengembang"
                 >
-                  <Mail className="w-3.5 h-3.5" />
+                  <Mail className="w-3.5 h-3.5 text-sky-400" />
                   <span>Email</span>
                 </a>
               </div>

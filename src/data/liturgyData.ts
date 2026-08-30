@@ -4,56 +4,8 @@ export const GITHUB_AUDIO_BASE_URL = 'https://github.com/iqbalwork/Robithoh-App/
 
 export const liturgySamples: LiturgySample[] = [
   {
-    id: 'dzikir-jahr',
-    title: 'Dzikir Jahr (Lâ Ilâha Illallâh)',
-    category: 'Amaliyah Harian TQN',
-    audioSrc: `${GITHUB_AUDIO_BASE_URL}/dzikir_jahr.mp3`,
-    duration: '03:23',
-    arabicText: 'لَا إِلٰهَ إِلَّا اللهُ، لَا إِلٰهَ إِلَّا اللهُ، لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، كَلِمَةُ حَقٍّ عَلَيْهَا نَحْيَى وَعَلَيْهَا نَمُوتُ وَبِهَا نُبْعَثُ إِنْ شَاءَ اللهُ تَعَالَى مِنَ الْآمِنِينَ.',
-    transliteration: 'Lâ ilâha illallâh, Lâ ilâha illallâh, Lâ ilâha illallâh Muhammadu-r-Rasûlullâhi shallallâhu ‘alayhi wa sallam. Kalimatu haqqin ‘alayhâ nahyâ wa ‘alayhâ namûtu wa bihâ nub’atsu in syâ-allâhu ta’âlâ minal âminîn.',
-    indonesianText: 'Tiada Tuhan selain Allah, tiada Tuhan selain Allah, tiada Tuhan selain Allah, Muhammad adalah utusan Allah semoga Allah melimpahkan shalawat dan salam kepadanya. Kalimat kebenaran yang di atasnya kami hidup, di atasnya kami wafat, dan dengannya kami dibangkitkan insya Allah termasuk orang-orang yang aman tenteram.',
-    sundaneseText: 'Teu aya deui Pangeran anging Gusti Allah, Kangjeng Nabi Muhammad utusan Gusti Allah mugia lungsur rohmat sareng kasalametan ka anjeunna. Kalimah hak anu janten tatapakan hirup urang, janten tatapakan maot urang, sareng kalayan kalimah ieu urang bakal dihudangkeun deui insya Allah kalebet jalmi-jalmi anu ginanjar kasalametan.',
-    description: 'Dzikir lisan berirama khidmat yang dihunuskan dari bawah pusar menghujam ke latifah lathifah qolbi membersihkan segala kotoran batin.'
-  },
-  {
-    id: 'bani-hasyim',
-    title: 'Shalawat Bani Hasyim',
-    category: 'Shalawat Barokah & Mahabbah',
-    audioSrc: `${GITHUB_AUDIO_BASE_URL}/bani_hasyim.mp3`,
-    duration: '20:30',
-    arabicText: 'اَللّٰهُمَّ صَلِّ عَلَى النَّبِيِّ الْهَاشِمِيِّ مُحَمَّدٍ وَّعَلَى آلِهِ وَسَلِّمْ تَسْلِيمًا.',
-    transliteration: 'Allâhumma shalli ‘alan-nabiyyil-Hâsyimiyyi Muhammadin wa ‘alâ âlihi wa sallim taslîmâ.',
-    indonesianText: 'Ya Allah, limpahkanlah rahmat dan kesejahteraan yang sempurna kepada Nabi keturunan Bani Hasyim, yakni Baginda Muhammad, beserta keluarga beliau.',
-    sundaneseText: 'Duh Gusti Allah, mugi ngalungsurkeun rahmat sareng kasalametan anu sampurna ka Kangjeng Nabi teureuh Bani Hasyim, Muhammad SAW, sareng ka kulawargina kalayan kasalametan anu saleresna.',
-    description: 'Lantunan shalawat agung pembuka pintu keberkahan rizki, penentram hati, dan pengikat batin dengan Baginda Nabi Muhammad ﷺ.'
-  },
-  {
-    id: 'tanbih',
-    title: 'Wasiat Tanbih Pangersa Guru Mursyid',
-    category: 'Ajaran & Pedoman Luhur TQN',
-    audioSrc: `${GITHUB_AUDIO_BASE_URL}/irama_dzikir.mp3`,
-    duration: '15:09',
-    arabicText: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ. حَبَّبَ إِلَيْكُمُ الْإِيمَانَ وَزَيَّنَهُ فِي قُلُوبِكُمْ وَكَرَّهَ إِلَيْكُمُ الْكُفْرَ وَالْفُسُوقَ وَالْعِصْيَانَ أُولَٰئِكَ هُمُ الرَّاشِدُونَ.',
-    transliteration: 'Bismillâhir-Rahmânir-Rahîm. Habbaba ilaykumul îmâna wa zayyanahu fî qulûbikum wa karraha ilaykumul kufra wal fusûqa wal ‘ishyân, ulâ-ika humur-râsyidûn.',
-    indonesianText: 'Wasiat luhur pengingat diri: Terhadap orang yang lebih tinggi harus saling menghormati, kepada sesama harus saling berkasih sayang, kepada yang lebih rendah harus saling mengasihi, dan kepada fakir miskin harus berbelas kasihan. Jangan ada rasa iri, dengki, dan sombong.',
-    sundaneseText: 'Wasiat piwejang luhung: Ka saluhureun kudu ngahormat, ka sasama kudu silih pikanyaah, ka sahandapeun kudu silih asih, sarta ka fakir miskin kudu welas asih. Ulah aya rasa dengki, jail kaniaya, sirik pidik, sarta adigung adiguna.',
-    description: 'Ajaran budi pekerti luhur TQN untuk menjaga kerukunan beragama, berbangsa, dan bernegara.'
-  },
-  {
-    id: 'manqobah-1',
-    title: 'Manqobah Ke-1: Nasab Syeikh Abdul Qodir Al-Jailani',
-    category: 'Kitab Manaqib 1-56',
-    audioSrc: `${GITHUB_AUDIO_BASE_URL}/dzikir_jahr.mp3`,
-    duration: '04:12',
-    arabicText: 'فَهُوَ سَيِّدِي الشَّيْخُ عَبْدُ الْقَادِرِ الْجَيْلَانِيُّ بْنُ أَبِي صَالِحٍ جَنْكِي دَوْسَتَ بْنِ عَبْدِ اللهِ بْنِ يَحْيَى الزَّاهِدِ بْنِ مُحَمَّدِ بْنِ دَاوُدَ بْنِ مُوسَى بْنِ عَبْدِ اللهِ بْنِ مُوسَى الْجَوْنِ بْنِ عَبْدِ اللهِ الْمَحْضِ بْنِ الْحَسَنِ الْمُثَنَّى بْنِ الْإِمَامِ الْحَسَنِ السِّبْطِ بْنِ أَمِيرِ الْمُؤْمِنِينَ عَلِيِّ بْنِ أَبِي طَالِبٍ كَرَّمَ اللهُ وَجْهَهُ وَابْنِ سَيِّدَتِنَا فَاطِمَةَ الزَّهْرَاءِ بِنْتِ رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ.',
-    transliteration: 'Fahuwa sayyidisy-Syaikhu ‘Abdul Qôdiril Jailâniyyu bnu Abî Shâlih Janki Dausat...',
-    indonesianText: 'Manqobah Pertama: Menyebutkan tentang kesucian nasab keturunan Syeikh Abdul Qodir Al-Jailani r.a. Dari garis ayah bersambung kepada Sayyidina Hasan r.a. cucu Rasulullah SAW (Hasani), dan dari garis ibu bersambung kepada Sayyidina Husain r.a. (Husaini). Beliau adalah Hasani wa Husaini.',
-    sundaneseText: 'Manqobah Kahiji: Nerangkeun kamulyaan nasab katurunan Syeikh Abdul Qodir Al-Jailani r.a. Ti payun rama nyambung ka Sayyidina Hasan r.a. putu Kangjeng Rasulullah SAW, ti payun ibu nyambung ka Sayyidina Husain r.a. Ku margi kitu mantenna disebat Hasani wal Husaini.',
-    description: 'Rangkaian nasab emas muttashil yang menjadi pembuka pintu futuh dan curahan karomah sulthanul auliya.'
-  },
-  {
-    id: 'tarowih',
-    title: 'Langgam Tarowih TQN',
+    id: 'langgam_tarowih',
+    title: 'Tarowih',
     category: 'Langgam Amaliyah Ramadhan',
     audioSrc: `${GITHUB_AUDIO_BASE_URL}/tarowih.mp3`,
     duration: '08:30',
@@ -64,15 +16,123 @@ export const liturgySamples: LiturgySample[] = [
     description: 'Bilal dan langgam sholat tarawih & witir khas TQN.'
   },
   {
-    id: 'sholat-jumat',
-    title: 'Langgam Sholat Jumat',
-    category: 'Langgam Mingguan TQN',
+    id: 'langgam_irama_dzikir',
+    title: 'Irama Dzikir',
+    category: 'Langgam Khidmat Dzikir',
+    audioSrc: `${GITHUB_AUDIO_BASE_URL}/irama_dzikir.mp3`,
+    duration: '15:09',
+    arabicText: 'لَا إِلٰهَ إِلَّا اللهُ',
+    transliteration: 'Lâ ilâha illallâh',
+    indonesianText: 'Tiada Tuhan selain Allah.',
+    sundaneseText: 'Teu aya deui Pangeran anging Gusti Allah.',
+    description: 'Langgam irama penghayatan dzikir TQN untuk menumbuhkan kekhusyukan dzikrullah.'
+  },
+  {
+    id: 'langgam_dzikir_jahr',
+    title: 'Dzikir Jahr',
+    category: 'Amaliyah Harian TQN',
+    audioSrc: `${GITHUB_AUDIO_BASE_URL}/dzikir_jahr.mp3`,
+    duration: '03:23',
+    arabicText: 'لَا إِلٰهَ إِلَّا اللهُ',
+    transliteration: 'Lâ ilâha illallâh',
+    indonesianText: 'Tiada Tuhan selain Allah.',
+    sundaneseText: 'Teu aya deui Pangeran anging Gusti Allah.',
+    description: 'Dzikir lisan berirama khidmat yang dihunuskan dari bawah pusar menghujam ke latifah lathifah qolbi membersihkan segala kotoran batin.'
+  },
+  {
+    id: 'langgam_bani_hasyim',
+    title: 'Bani Hasyim',
+    category: 'Shalawat Barokah & Mahabbah',
+    audioSrc: `${GITHUB_AUDIO_BASE_URL}/bani_hasyim.mp3`,
+    duration: '20:30',
+    arabicText: 'اَللّٰهُمَّ صَلِّ عَلَى النَّبِيِّ الْهَاشِمِيِّ مُحَمَّدٍ وَّعَلَى آلِهِ وَسَلِّمْ تَسْلِيمًا.',
+    transliteration: 'Allâhumma shalli ‘alan-nabiyyil-Hâsyimiyyi Muhammadin wa ‘alâ âlihi wa sallim taslîmâ.',
+    indonesianText: 'Ya Allah, limpahkanlah rahmat dan kesejahteraan yang sempurna kepada Nabi keturunan Bani Hasyim, yakni Baginda Muhammad, beserta keluarga beliau.',
+    sundaneseText: 'Duh Gusti Allah, mugi ngalungsurkeun rahmat sareng kasalametan anu sampurna ka Kangjeng Nabi teureuh Bani Hasyim, Muhammad SAW, sareng ka kulawargina kalayan kasalametan anu saleresna.',
+    description: 'Lantunan shalawat agung pembuka pintu keberkahan rizki, penentram hati, dan pengikat batin dengan Baginda Nabi Muhammad ﷺ.'
+  },
+  {
+    id: 'langgam_fatihah_dhuha',
+    title: 'Al Fatihah + Ad-dhuha',
+    category: 'Subuh Rakaat 1',
+    audioSrc: `${GITHUB_AUDIO_BASE_URL}/al_fatihah_ad_dhuha.mpeg`,
+    duration: '01:45',
+    arabicText: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ ۝ وَالضُّحَىٰ ۝ وَاللَّيْلِ إِذَا سَجَىٰ ۝ مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ ۝',
+    transliteration: 'Bismillâhir-Rahmânir-Rahîm. Wadh-dhuhâ. Wal-layli idzâ sajâ. Mâ wadda‘aka rabbuka wa mâ qalâ.',
+    indonesianText: 'Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Demi waktu dhuha (ketika matahari naik sepenggalah), dan demi malam apabila telah sunyi, Tuhanmu tiada meninggalkanmu dan tiada (pula) benci kepadamu.',
+    sundaneseText: 'Kalayan nyebat asma Allah Nu Maha Welas tur Maha Asih. Demi waktu dhuha, sarta demi peuting nalika geus jempling, Pangeran hidep henteu ninggalkeun hidep sarta henteu mikangewa.',
+    description: 'Langgam bacaan Surah Al-Fatihah dan Surah Ad-Dhuha untuk sholat Subuh rakaat pertama.'
+  },
+  {
+    id: 'langgam_fatihah_insyiroh',
+    title: 'Al-fatihah + Al-insyiroh',
+    category: 'Subuh Rakaat 2',
+    audioSrc: `${GITHUB_AUDIO_BASE_URL}/al_fatihah_al_insyiroh.mpeg`,
+    duration: '01:30',
+    arabicText: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ ۝ أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ ۝ وَوَضَعْنَا عَنْكَ وِزْرَكَ ۝ الَّذِي أَنْقَضَ ظَهْرَكَ ۝ وَرَفَعْنَا لَكَ ذِكْرَكَ ۝',
+    transliteration: 'Bismillâhir-Rahmânir-Rahîm. Alam nasyrah laka shadrak. Wa wadha‘nâ ‘anka wizrak. Alladzî anqadha zhahrak. Wa rafa‘nâ laka dzikrak.',
+    indonesianText: 'Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Bukankah Kami telah melapangkan untukmu dadamu? Dan Kami telah menghilangkan darimu bebanmu, yang memberatkan punggungmu? Dan Kami tinggikan bagimu sebutan (nama)mu.',
+    sundaneseText: 'Naha Kami henteu ngalegakeun dada anjeun? Sarta Kami henteu ngaleungitkeun reregedan anjeun anu ngabeberatan tonggong anjeun? Sarta Kami geus ngaluhurkeun ngaran anjeun.',
+    description: 'Langgam bacaan Surah Al-Fatihah dan Surah Al-Insyiroh (Asy-Syarh) untuk sholat Subuh rakaat kedua.'
+  },
+  {
+    id: 'langgam_fatihah_kafirun',
+    title: 'Al-fatihah + Al-kafirun',
+    category: 'Maghrib Rakaat 1',
+    audioSrc: `${GITHUB_AUDIO_BASE_URL}/al_fatihah_al_kafirun.mpeg`,
+    duration: '01:35',
+    arabicText: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ ۝ قُلْ يَا أَيُّهَا الْكَافِرُونَ ۝ لَا أَعْبُدُ مَا تَعْبُدُونَ ۝ وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ۝',
+    transliteration: 'Bismillâhir-Rahmânir-Rahîm. Qul yâ ayyuhal-kâfirûn. Lâ a‘budu mâ ta‘budûn. Wa lâ antum ‘âbidûna mâ a‘bud.',
+    indonesianText: 'Katakanlah: "Wahai orang-orang kafir! Aku tidak akan menyembah apa yang kamu sembah. Dan kamu bukan penyembah Tuhan yang aku sembah."',
+    sundaneseText: 'Pok caritakeun ku anjeun: "He jalma-jalma kafir! Kaula moal nyembah naon anu ku anjeun disembah. Sarta anjeun lain nu nyembah naon anu ku kaula disembah."',
+    description: 'Langgam bacaan Surah Al-Fatihah dan Surah Al-Kafirun untuk sholat Maghrib rakaat pertama.'
+  },
+  {
+    id: 'langgam_fatihah_quraisy',
+    title: 'Al-fatihah + Al-quraisy',
+    category: 'Maghrib Rakaat 2',
+    audioSrc: `${GITHUB_AUDIO_BASE_URL}/al_fatihah_al_quraisy.mpeg`,
+    duration: '01:30',
+    arabicText: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ ۝ لِإِيلَافِ قُرَيْشٍ ۝ إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ ۝ فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ ۝',
+    transliteration: 'Bismillâhir-Rahmânir-Rahîm. Li-îlâfi quraisy. Îlâfihim rihlatasy-syitâ-i wash-shayf. Falya‘budû rabba hâdzal-bayt.',
+    indonesianText: 'Karena kebiasaan orang-orang Quraisy, (yaitu) kebiasaan mereka bepergian pada musim dingin dan musim panas. Maka hendaklah mereka menyembah Tuhan Pemilik rumah ini (Ka\'bah).',
+    sundaneseText: 'Kusabab kabiasaan urang Quraisy, nyaeta kabiasaan maranehna lalampahan dina usum tiris jeung usum panas. Ku kituna maranehna kudu nyembah ka Pangeran nu kagungan ieu Baitullah (Ka\'bah).',
+    description: 'Langgam bacaan Surah Al-Fatihah dan Surah Quraisy untuk sholat Maghrib rakaat kedua.'
+  },
+  {
+    id: 'langgam_fatihah_fil',
+    title: 'Al-fatihah + Al-fil',
+    category: 'Isya Rakaat 1',
+    audioSrc: `${GITHUB_AUDIO_BASE_URL}/al_fatihah_al_fill.mpeg`,
+    duration: '01:35',
+    arabicText: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ ۝ أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ ۝ أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ ۝',
+    transliteration: 'Bismillâhir-Rahmânir-Rahîm. Alam tara kayfa fa‘ala rabbuka bi-ash-hâbil-fîl. Alam yaj‘al kaydahum fî tadhlîl.',
+    indonesianText: 'Apakah kamu tidak memperhatikan bagaimana Tuhanmu telah bertindak terhadap tentara bergajah? Bukankah Dia telah menjadikan tipu daya mereka itu sia-sia?',
+    sundaneseText: 'Naha anjeun henteu merhatikeun kumaha Pangeran anjeun nandasa pasukan gajah? Naha Anjeunna henteu ngajadikeun tipu daya maranehna teh mubazir?',
+    description: 'Langgam bacaan Surah Al-Fatihah dan Surah Al-Fil untuk sholat Isya rakaat pertama.'
+  },
+  {
+    id: 'langgam_fatihah_nasr',
+    title: 'Al-fatihah + An-nasr',
+    category: 'Isya Rakaat 2',
+    audioSrc: `${GITHUB_AUDIO_BASE_URL}/al_fatihah_an_nasr.mpeg`,
+    duration: '01:25',
+    arabicText: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ ۝ إِذَا جَاءَ نَصْرُ اللّٰهِ وَالْفَتْحُ ۝ وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللّٰهِ أَفْوَاجًا ۝ فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا ۝',
+    transliteration: 'Bismillâhir-Rahmânir-Rahîm. Idzâ jâ-a nashrullâhi wal-fath. Wa ra-aytan-nâsa yadkhulûna fî dînillâhi afwâjâ. Fa sabbih bihamdi rabbika wastaghfirh, innahû kâna tawwâbâ.',
+    indonesianText: 'Apabila telah datang pertolongan Allah dan kemenangan, dan kamu lihat manusia masuk agama Allah dengan berbondong-bondong, maka bertasbihlah dengan memuji Tuhanmu dan mohonlah ampun kepada-Nya. Sesungguhnya Dia adalah Maha Penerima tobat.',
+    sundaneseText: 'Lamun geus datang pitulung Allah jeung kaunggulan, sarta anjeun ningali jalma-jalma maraos lebet kana agama Allah kalayan abring-abringan, mangka kudu maca tasbih kalawan muji Pangeran anjeun sarta nyuhunkeun pangampura ka Mantenna.',
+    description: 'Langgam bacaan Surah Al-Fatihah dan Surah An-Nasr untuk sholat Isya rakaat kedua.'
+  },
+  {
+    id: 'langgam_sholat_jumat',
+    title: 'Sholat Jumat',
+    category: 'Langgam Sholat Jumat',
     audioSrc: `${GITHUB_AUDIO_BASE_URL}/sholat_jumat.mp3`,
     duration: '04:45',
     arabicText: 'إِنَّ اللّٰهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ، يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا.',
     transliteration: 'Innallâha wa malâ-ikatahû yushallûna ‘alan-nabiyyi, yâ ayyuhal-ladzîna âmanû shallû ‘alayhi wa sallimû taslîmâ.',
     indonesianText: 'Sesungguhnya Allah dan para malaikat-Nya bershalawat untuk Nabi. Wahai orang-orang yang beriman! Bershalawatlah kamu untuk Nabi dan ucapkanlah salam dengan penuh penghormatan kepadanya.',
     sundaneseText: 'Satemenna Allah sareng para malaikat-Na maparin sholawat ka Kangjeng Nabi. He jalma-jalma anu ariman, geura maraos sholawat sareng salam kahormatan ka anjeunna.',
-    description: 'Tarhim dan lantunan khidmat adzan serta iqomah sholat Jumat berjamaah.'
+    description: 'Bilal dan lantunan khidmat adzan serta iqomah sholat Jumat berjamaah.'
   }
 ];

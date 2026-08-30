@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Sparkles, QrCode, ShieldCheck, Zap, HardDrive, Smartphone } from 'lucide-react';
+import { Download, Sparkles, QrCode, ShieldCheck, Zap, HardDrive, Smartphone, Clock } from 'lucide-react';
 import { SmartphoneMockup } from './SmartphoneMockup';
 
 interface HeroSectionProps {
@@ -24,7 +24,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-merah-950/60 border border-emas-500/40 text-xs font-bold text-emas-300 shadow-md">
               <Sparkles className="w-3.5 h-3.5 text-emas-400 animate-spin-slow" />
-              <span>Official Release v1.0 • Aplikasi Ibadah &amp; Amaliyah TQN</span>
+              <span>Tersedia di Google Play Store (Akses Awal / Alpha)</span>
             </div>
 
             {/* Main Headline */}
@@ -36,23 +36,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
               </h1>
               
               <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                Satu genggaman khidmat untuk mengamalkan Dzikir Jahr & Khofi, Kitab Manqobah Syeikh Abdul Qodir Al-Jailani 1–56 dalam 3 bahasa, Tasbih Haptik, Al-Qur'an 114 Surah, dan Audio Player dengan arsitektur <strong className="text-emas-400 font-semibold">95% Offline-First</strong>.
+                Satu genggaman khidmat untuk mengamalkan Dzikir Jahr &amp; Khofi, Kitab Manqobah Syeikh Abdul Qodir Al-Jailani 1–56 dalam 3 bahasa, Tasbih Haptik, Al-Qur'an 114 Surah, dan Audio Player dengan arsitektur <strong className="text-emas-400 font-semibold">100% Offline-First</strong>.
               </p>
             </div>
 
             {/* Download CTA Group */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              {/* Primary Direct APK Button */}
-              <button
-                onClick={onOpenDownload}
+              {/* Primary Google Play Button */}
+              <a
+                href="https://play.google.com/store/apps/details?id=com.iqbalwork.robithoh"
+                target="_blank"
+                rel="noreferrer"
                 className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-gradient-to-r from-merah-600 via-merah-500 to-merah-700 hover:from-merah-500 hover:to-merah-600 text-white font-extrabold text-base shadow-xl shadow-merah-600/40 hover:shadow-merah-600/60 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 border border-merah-400/40 group"
               >
-                <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
+                <Smartphone className="w-5 h-5 text-emerald-300 group-hover:scale-110 transition-transform" />
                 <div className="text-left">
-                  <span className="block text-[11px] font-medium text-merah-100 uppercase tracking-wider">Unduh Sekarang</span>
-                  <span className="text-base font-bold">Android APK (Direct)</span>
+                  <span className="block text-[11px] font-medium text-merah-100 uppercase tracking-wider">Unduh Resmi</span>
+                  <span className="text-base font-bold">Google Play Store</span>
                 </div>
-              </button>
+              </a>
 
               {/* QR Code / App Store Modal Trigger */}
               <button
@@ -71,11 +73,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
             <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
               <span className="text-xs text-slate-400 font-medium">Tersedia untuk:</span>
               <div className="flex items-center gap-2">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.iqbalwork.robithoh"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-500/40 text-xs font-semibold text-slate-300 flex items-center gap-1.5 transition-colors"
+                >
+                  <Smartphone className="w-3.5 h-3.5 text-emerald-400" /> Android (Google Play)
+                </a>
                 <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-slate-300 flex items-center gap-1.5">
-                  <Smartphone className="w-3.5 h-3.5 text-emerald-400" /> Android 8.0+
-                </span>
-                <span className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-slate-300 flex items-center gap-1.5">
-                  <Smartphone className="w-3.5 h-3.5 text-sky-400" /> iOS 16+ (CMP)
+                  <Smartphone className="w-3.5 h-3.5 text-sky-400" /> iOS (Coming Soon)
                 </span>
               </div>
             </div>

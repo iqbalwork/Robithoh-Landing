@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Download, X, Check, Copy, ExternalLink, ShieldCheck, Smartphone, AlertCircle } from 'lucide-react';
+import { Download, X, Check, Copy, ExternalLink, ShieldCheck, Smartphone, AlertCircle, Sparkles } from 'lucide-react';
 import QRCode from 'qrcode';
 import confetti from 'canvas-confetti';
 
@@ -8,8 +8,10 @@ interface DownloadCenterModalProps {
   onClose: () => void;
 }
 
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.iqbalwork.robithoh';
+
 export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen, onClose }) => {
-  const [downloadUrl] = useState('https://github.com/iqbalwork/Robithoh-App/releases/latest');
+  const [downloadUrl] = useState(PLAY_STORE_URL);
   const [copiedLink, setCopiedLink] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState<string>('');
 
@@ -28,21 +30,19 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
 
   if (!isOpen) return null;
 
-  const handleTriggerDownload = () => {
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(downloadUrl);
+    setCopiedLink(true);
+    setTimeout(() => setCopiedLink(false), 2000);
+  };
+
+  const handleConfetti = () => {
     confetti({
       particleCount: 40,
       spread: 50,
       origin: { y: 0.6 },
       colors: ['#CE1126', '#D4AF37', '#FFFFFF']
     });
-
-    alert('Mendownload Robithoh v1.0.0 APK... Terima kasih telah mengunduh aplikasi Robithoh!');
-  };
-
-  const handleCopyLink = () => {
-    navigator.clipboard.writeText(downloadUrl);
-    setCopiedLink(true);
-    setTimeout(() => setCopiedLink(false), 2000);
   };
 
   return (
@@ -65,17 +65,17 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
         {/* Header */}
         <div className="flex items-center gap-3 mb-6 relative z-10">
           <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-merah-600 to-merah-900 flex items-center justify-center text-white shadow-lg">
-            <Download className="w-6 h-6 text-emas-300" />
+            <Sparkles className="w-6 h-6 text-emas-300" />
           </div>
           <div>
             <div className="flex items-center gap-2">
               <h3 className="text-xl font-bold text-white">Download Center Robithoh</h3>
               <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/30">
-                v1.0.0 Stable
+                Tersedia di Play Store
               </span>
             </div>
             <p className="text-xs text-slate-400">
-              Instalasi Resmi untuk Android &amp; iOS (Multiplatform)
+              Instalasi Resmi untuk Android (Google Play) &amp; iOS (Coming Soon)
             </p>
           </div>
         </div>
@@ -83,77 +83,68 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
         {/* Modal Body Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
           
-          {/* Left Column: Direct APK & Stores */}
+          {/* Left Column: Play Store & Direct APK */}
           <div className="space-y-4">
             
-            {/* Primary Direct APK Box */}
-            <div className="p-4 rounded-2xl bg-gradient-to-br from-merah-950/80 to-canvas-card border border-merah-500/40 space-y-3">
+            {/* Primary Google Play Store Box */}
+            <div className="p-4 rounded-2xl bg-gradient-to-br from-merah-950/80 to-canvas-card border border-emas-500/40 space-y-3 shadow-lg">
               <div className="flex items-center justify-between">
-                <span className="text-xs uppercase font-bold tracking-wider text-merah-300">
-                  Android Direct APK
+                <span className="text-xs uppercase font-bold tracking-wider text-emas-300">
+                  Google Play Store (Resmi)
                 </span>
-                <span className="text-[10px] font-mono bg-black/40 px-2 py-0.5 rounded text-slate-300">
-                  24.8 MB
+                <span className="text-[10px] font-bold bg-emerald-500/20 border border-emerald-500/30 px-2 py-0.5 rounded text-emerald-300">
+                  Akses Awal (Alpha)
                 </span>
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed">
-                Unduh langsung berkas installer APK tanpa perlu akun Google Play Store. Kompatibel dengan Android 8.0 ke atas.
+                Aplikasi Robithoh telah resmi tersedia di Google Play Store. Dapatkan pembaruan otomatis, keamanan terverifikasi Google Play Protect, dan instalasi 1-klik.
               </p>
 
-              <button
-                onClick={handleTriggerDownload}
+              <a
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noreferrer"
+                onClick={handleConfetti}
                 className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-merah-600 via-merah-500 to-merah-700 hover:from-merah-500 hover:to-merah-600 text-white text-sm font-bold shadow-lg shadow-merah-600/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 border border-merah-400/40"
               >
-                <Download className="w-4 h-4" />
-                <span>Unduh File APK Langsung</span>
-              </button>
+                <Smartphone className="w-4 h-4 text-emerald-300" />
+                <span>Buka di Google Play Store</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
 
               <div className="text-[10px] text-slate-400 font-mono flex items-center justify-between pt-1 border-t border-white/5">
-                <span>SHA256: 8f4a...111d</span>
+                <span>ID: com.iqbalwork.robithoh</span>
                 <span className="text-emerald-400 flex items-center gap-1">
-                  <ShieldCheck className="w-3 h-3" /> Terverifikasi
+                  <ShieldCheck className="w-3 h-3" /> Play Protect
                 </span>
               </div>
             </div>
 
-            {/* Google Play & App Store Links */}
+            {/* iOS App Store Option */}
             <div className="space-y-2">
               <span className="text-xs font-bold text-slate-400 block uppercase tracking-wider">
-                Toko Aplikasi Resmi
+                Platform Lainnya
               </span>
 
               <a
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
-                  alert('Versi Google Play Store sedang dalam proses peninjauan (Review). Silakan gunakan tombol Direct APK untuk langsung menginstal.');
+                  alert('Versi iOS sedang dalam tahap finalisasi dan akan segera hadir (Coming Soon) di Apple App Store!');
                 }}
-                className="p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-between text-xs transition-colors group"
-              >
-                <div className="flex items-center gap-2.5">
-                  <Smartphone className="w-4 h-4 text-emerald-400" />
-                  <div>
-                    <p className="font-bold text-white">Google Play Store</p>
-                    <p className="text-[10px] text-slate-400">Android Instant Update</p>
-                  </div>
-                </div>
-                <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-white" />
-              </a>
-
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('Versi iOS TestFlight / App Store sedang dalam proses distribusi pra-rilis.');
-                }}
-                className="p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-between text-xs transition-colors group"
+                className="p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-between text-xs transition-colors group opacity-90"
               >
                 <div className="flex items-center gap-2.5">
                   <Smartphone className="w-4 h-4 text-sky-400" />
                   <div>
-                    <p className="font-bold text-white">Apple App Store (iOS)</p>
-                    <p className="text-[10px] text-slate-400">Compose Multiplatform for iOS</p>
+                    <div className="flex items-center gap-1.5">
+                      <p className="font-bold text-white">Apple App Store (iOS)</p>
+                      <span className="px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 text-[9px] font-bold border border-amber-500/30">
+                        Coming Soon
+                      </span>
+                    </div>
+                    <p className="text-[10px] text-slate-400">Tahap Pengembangan &amp; Distribusi</p>
                   </div>
                 </div>
                 <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-white" />
@@ -163,68 +154,66 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
           </div>
 
           {/* Right Column: Dynamic QR Code Scanner Box */}
-          <div className="p-6 rounded-2xl bg-black/40 border border-emas-500/20 text-center flex flex-col items-center justify-between">
-            <div className="w-full">
-              <span className="text-xs font-bold text-emas-400 uppercase tracking-wider block mb-1">
-                Pindai di Smartphone Anda
+          <div className="p-5 rounded-2xl bg-canvas-surface border border-white/10 flex flex-col items-center justify-between text-center space-y-4">
+            <div>
+              <span className="text-xs uppercase font-bold tracking-wider text-emas-400 block mb-1">
+                Pindai di Smartphone
               </span>
-              <p className="text-[11px] text-slate-400 mb-4">
-                Buka kamera ponsel atau aplikasi pemindai QR untuk mengunduh instan
+              <p className="text-xs text-slate-300">
+                Arahkan kamera smartphone Anda ke QR code ini untuk langsung membuka Google Play Store.
               </p>
+            </div>
 
-              {/* QR Image Box */}
-              <div className="p-3 bg-white rounded-2xl shadow-xl inline-block border-2 border-emas-500/40">
-                {qrDataUrl ? (
-                  <img
-                    src={qrDataUrl}
-                    alt="QR Code Unduh APK"
-                    className="w-44 h-44 object-contain rounded-lg"
-                  />
-                ) : (
-                  <div className="w-44 h-44 bg-slate-200 animate-pulse rounded-lg" />
-                )}
+            {/* QR Code Canvas Frame */}
+            <div className="p-3 bg-white rounded-2xl shadow-xl border-2 border-emas-500/40">
+              {qrDataUrl ? (
+                <img
+                  src={qrDataUrl}
+                  alt="QR Code Google Play Store Robithoh"
+                  className="w-44 h-44 object-contain rounded-lg"
+                />
+              ) : (
+                <div className="w-44 h-44 bg-slate-100 animate-pulse rounded-lg flex items-center justify-center text-slate-400 text-xs font-mono">
+                  Membuat QR...
+                </div>
+              )}
+            </div>
+
+            {/* Link Copy Box */}
+            <div className="w-full space-y-2">
+              <div className="flex items-center gap-1.5 p-2 rounded-xl bg-black/40 border border-white/10 text-xs">
+                <input
+                  type="text"
+                  readOnly
+                  value={downloadUrl}
+                  className="bg-transparent text-slate-300 font-mono text-[10px] flex-1 outline-none truncate px-1"
+                />
+                <button
+                  onClick={handleCopyLink}
+                  className="px-2.5 py-1 rounded-lg bg-emas-500/20 hover:bg-emas-500/30 text-emas-300 font-semibold text-[10px] flex items-center gap-1 transition-colors flex-shrink-0"
+                >
+                  {copiedLink ? (
+                    <>
+                      <Check className="w-3 h-3 text-emerald-400" />
+                      <span>Tersalin</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3 h-3" />
+                      <span>Salin</span>
+                    </>
+                  )}
+                </button>
+              </div>
+
+              <div className="flex items-center justify-center gap-1.5 text-[10px] text-slate-400">
+                <AlertCircle className="w-3 h-3 text-emas-400" />
+                <span>Bebas iklan &amp; gratis selamanya</span>
               </div>
             </div>
 
-            {/* Copy Link Button */}
-            <div className="w-full mt-4">
-              <button
-                onClick={handleCopyLink}
-                className="w-full py-2 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-slate-300 hover:text-white flex items-center justify-center gap-2 transition-colors"
-              >
-                {copiedLink ? (
-                  <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="text-emerald-400 font-bold">Link Berhasil Disalin!</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3.5 h-3.5 text-emas-400" />
-                    <span>Salin URL Unduh</span>
-                  </>
-                )}
-              </button>
-            </div>
-
           </div>
 
-        </div>
-
-        {/* Installation Instructions Footnote */}
-        <div className="mt-6 p-4 rounded-xl bg-canvas-surface border border-white/5 text-[11px] text-slate-400 space-y-1">
-          <div className="flex items-center gap-1.5 font-bold text-slate-200">
-            <AlertCircle className="w-3.5 h-3.5 text-emas-400" />
-            <span>Panduan Instalasi APK Android:</span>
-          </div>
-          <p>
-            1. Buka file APK yang telah diunduh di smartphone Anda.
-          </p>
-          <p>
-            2. Jika muncul peringatan keamanan, pilih <em>"Izinkan dari sumber ini"</em> (Allow from this source).
-          </p>
-          <p>
-            3. Aplikasi Robithoh 100% aman, bebas iklan, dan bebas malware.
-          </p>
         </div>
 
       </div>

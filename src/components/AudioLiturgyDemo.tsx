@@ -274,7 +274,7 @@ export const AudioLiturgyDemo: React.FC<AudioLiturgyDemoProps> = ({ onPlayStateC
               <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">
                 Daftar Audio Amaliyah
               </span>
-              <div className="space-y-1.5 max-h-48 overflow-y-auto scrollbar-thin">
+              <div className="space-y-1.5 max-h-64 overflow-y-auto scrollbar-thin pr-1">
                 {liturgySamples.map((sample, idx) => (
                   <button
                     key={sample.id}
@@ -294,7 +294,7 @@ export const AudioLiturgyDemo: React.FC<AudioLiturgyDemoProps> = ({ onPlayStateC
                   >
                     <div className="flex items-center gap-2.5 truncate">
                       <span className="w-5 text-center font-mono text-[10px] text-emas-400">
-                        0{idx + 1}
+                        {String(idx + 1).padStart(2, '0')}
                       </span>
                       <span className="truncate">{sample.title}</span>
                     </div>
@@ -464,7 +464,7 @@ export const AudioLiturgyDemo: React.FC<AudioLiturgyDemoProps> = ({ onPlayStateC
                 <Globe className="w-3.5 h-3.5 text-emas-400" />
                 <span>Tersedia luring di aplikasi mobile Robithoh</span>
               </span>
-              <span className="text-emas-400 font-bold">95% Offline</span>
+              <span className="text-emas-400 font-bold">100% Offline</span>
             </div>
 
           </div>
