@@ -72,6 +72,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
               <li>
                 <a href="#infaq" className="hover:text-emas-400 transition-colors">Kanal Infaq &amp; Wakaf</a>
               </li>
+              <li>
+                <a href="./privacy.html" className="text-emas-400/90 hover:text-emas-300 font-semibold transition-colors flex items-center gap-1">
+                  <span>Kebijakan Privasi</span>
+                  <span className="text-[10px]">↗</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -79,13 +85,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
           <div className="space-y-3">
             <h4 className="font-bold text-white uppercase text-xs tracking-wider">Fitur Aplikasi</h4>
             <ul className="space-y-2">
+              <li>• Jadwal Sholat &amp; Notifikasi Adzan</li>
+              <li>• Pengingat 10 Menit Pra-Sholat</li>
               <li>• Dzikir Jahr &amp; Khofi Harian</li>
               <li>• Kitab Manqobah 1–56 (3 Bahasa)</li>
               <li>• Naskah MC Manaqib (Indo/Sunda)</li>
               <li>• Tanbih &amp; Silsilah TQN 1–38</li>
               <li>• Al-Qur'an Digital 114 Surah</li>
-              <li>• Background Audio Player</li>
-              <li>• 95% Offline-First SQLDelight</li>
+              <li>• Audio Downloader &amp; Background Player</li>
+              <li>• 100% Offline-First SQLDelight</li>
             </ul>
           </div>
 
@@ -131,9 +139,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
-          <p>
-            © {new Date().getFullYear()} <strong>Robithoh</strong>. Khidmat Ilmiah Amaliyah Pondok Pesantren Sirnarasa Ciamis Jawa Barat.
-          </p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <p>
+              © {new Date().getFullYear()} <strong>Robithoh</strong>. Khidmat Ilmiah Amaliyah Pondok Pesantren Sirnarasa Ciamis.
+            </p>
+            <span className="text-slate-600">•</span>
+            <a href="./privacy.html" className="text-slate-400 hover:text-emas-400 transition-colors underline underline-offset-2">
+              Kebijakan Privasi
+            </a>
+          </div>
           <div className="flex items-center gap-1 text-slate-400">
             <span>Dirancang dengan</span>
             <Heart className="w-3.5 h-3.5 text-merah-500 fill-merah-500 inline" />

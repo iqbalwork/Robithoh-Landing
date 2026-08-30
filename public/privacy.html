@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="id" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./assets/icons/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Kebijakan Privasi (Privacy Policy) — Robithoh</title>
+    <meta name="title" content="Kebijakan Privasi (Privacy Policy) — Robithoh" />
+    <meta name="description" content="Kebijakan Privasi Aplikasi Robithoh (TQN 38 Pondok Pesantren Sirnarasa). Penjelasan mengenai privasi, izin perangkat, dan perlindungan data pengguna." />
+    <meta name="theme-color" content="#7A0914" />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --color-canvas-dark: #111113;
+        --color-canvas-card: #16181B;
+        --color-canvas-surface: #1A1D20;
+        --color-border: #2A2E33;
+        --color-merah: #CE1126;
+        --color-merah-dark: #7A0914;
+        --color-emas: #D4AF37;
+        --color-emas-light: #F3E5AB;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        background-color: var(--color-canvas-dark);
+        color: #e2e8f0;
+        line-height: 1.7;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        color: var(--color-emas);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--color-emas-light);
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+        flex: 1;
+      }
+
+      /* Header Nav */
+      .header-nav {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        background: rgba(17, 17, 19, 0.95);
+        backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+
+      .nav-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+      }
+
+      .brand-logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--color-merah), var(--color-merah-dark));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(206, 17, 38, 0.3);
+        overflow: hidden;
+      }
+
+      .brand-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .brand-title {
+        font-weight: 800;
+        font-size: 1.15rem;
+        color: #ffffff;
+        letter-spacing: 0.05em;
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #94a3b8;
+        padding: 0.45rem 0.9rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+      }
+
+      .back-btn:hover {
+        background: rgba(212, 175, 55, 0.15);
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      /* Hero Header */
+      .page-hero {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .badge {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-emas);
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        margin-bottom: 0.75rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.25;
+        margin-bottom: 0.5rem;
+      }
+
+      .effective-date {
+        font-size: 0.85rem;
+        color: #94a3b8;
+      }
+
+      /* Card Content */
+      .content-card {
+        background: var(--color-canvas-card);
+        border: 1px solid var(--color-border);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .section:last-child {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      h2::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 1.1rem;
+        background: var(--color-emas);
+        border-radius: 2px;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #cbd5e1;
+        margin-bottom: 0.85rem;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 1rem;
+      }
+
+      li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.6rem;
+        font-size: 0.92rem;
+        color: #cbd5e1;
+      }
+
+      li::before {
+        content: "•";
+        position: absolute;
+        left: 0.4rem;
+        color: var(--color-emas);
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      .highlight-box {
+        background: rgba(206, 17, 38, 0.08);
+        border-left: 4px solid var(--color-merah);
+        border-radius: 0 10px 10px 0;
+        padding: 1rem 1.25rem;
+        margin: 1rem 0;
+      }
+
+      .highlight-box p {
+        margin-bottom: 0;
+        color: #f1f5f9;
+        font-size: 0.92rem;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      @media (min-width: 640px) {
+        .info-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .info-tile {
+        background: var(--color-canvas-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+      }
+
+      .info-tile strong {
+        display: block;
+        color: #ffffff;
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .info-tile span {
+        font-size: 0.85rem;
+        color: #94a3b8;
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        background: #0d0d0f;
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #64748b;
+      }
+
+      @media (max-width: 640px) {
+        h1 {
+          font-size: 1.7rem;
+        }
+        .content-card {
+          padding: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="header-nav">
+      <div class="nav-inner">
+        <a href="./" class="brand">
+          <div class="brand-logo">
+            <img src="./assets/icons/icon.png" alt="Robithoh Logo" onerror="this.style.display='none'" />
+          </div>
+          <span class="brand-title">ROBITHOH</span>
+        </a>
+        <a href="./" class="back-btn">
+          ← Kembali ke Beranda
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+      <div class="page-hero">
+        <div class="badge">Kebijakan Privasi Resmi</div>
+        <h1>Kebijakan Privasi Robithoh</h1>
+        <p class="effective-date">Terakhir diperbarui: 30 Agustus 2026 | Berlaku untuk Aplikasi Mobile Robithoh (Android &amp; iOS)</p>
+      </div>
+
+      <div class="content-card">
+        <!-- 1. Pendahuluan -->
+        <section class="section">
+          <h2>1. Pendahuluan</h2>
+          <p>
+            Selamat datang di <strong>Robithoh</strong> ("Aplikasi"), aplikasi pendamping ibadah dan amaliyah resmi Thoriqoh Qodiriyyah Naqsyabandiyyah (TQN) Silsilah ke-38 Pondok Pesantren Sirnarasa Ciamis, Jawa Barat.
+          </p>
+          <p>
+            Kami sangat menghormati dan berkomitmen untuk melindungi privasi setiap pengguna ("Anda"). Kebijakan Privasi ini menjelaskan bagaimana aplikasi kami mengelola data dan izin perangkat saat Anda menggunakan layanan kami.
+          </p>
+          <div class="highlight-box">
+            <p>
+              <strong>Komitmen Privasi Utama:</strong> Aplikasi Robithoh dirancang dengan prinsip <em>Offline-First</em>. Kami <strong>tidak pernah menjual, menyewakan, membagikan, atau mengomersialisasikan data pribadi Anda</strong> kepada pihak ketiga mana pun.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Izin Perangkat & Penggunaan Data -->
+        <section class="section">
+          <h2>2. Izin Perangkat &amp; Penggunaan Data</h2>
+          <p>
+            Untuk memberikan fungsi ibadah yang akurat dan optimal, Aplikasi Robithoh memerlukan beberapa izin sistem operasional perangkat Anda:
+          </p>
+
+          <div class="info-grid">
+            <div class="info-tile">
+              <strong>📍 Lokasi (GPS / Fine &amp; Coarse Location)</strong>
+              <span>
+                Digunakan murni secara lokal (on-device) untuk menghitung hisab astronomis jadwal sholat presisi, waktu imsakiyah, dan arah kiblat. Data koordinat <strong>tidak pernah diunggah atau disimpan di server luar</strong>.
+              </span>
+            </div>
+
+            <div class="info-tile">
+              <strong>🔔 Notifikasi &amp; Alarm (Post Notifications)</strong>
+              <span>
+                Digunakan untuk membunyikan adzan, alarm waktu sholat maktubah, dan pengingat 10 menit sebelum waktu sholat tiba sesuai preferensi yang Anda aktifkan.
+              </span>
+            </div>
+
+            <div class="info-tile">
+              <strong>💾 Penyimpanan Lokal (Internal Storage)</strong>
+              <span>
+                Digunakan oleh basis data SQLDelight untuk menyimpan penanda baca Al-Qur'an (bookmark), riwayat tasbih haptik, pengaturan suara, dan berkas audio amaliyah yang diunduh secara offline.
+              </span>
+            </div>
+
+            <div class="info-tile">
+              <strong>🎵 Layanan Audio Latar Belakang (Foreground Service)</strong>
+              <span>
+                Memungkinkan pemutar audio langgam Al-Fatihah, Dzikir Jahr, dan sholawat tetap berjalan dengan lancar saat layar mati atau saat Anda membuka aplikasi lain.
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Tidak Ada Iklan & Tidak Ada Pelacak Pihak Ketiga -->
+        <section class="section">
+          <h2>3. Bebas Iklan &amp; Tanpa Pelacak Komersial</h2>
+          <p>
+            Aplikasi Robithoh didedikasikan sepenuhnya untuk kemaslahatan ibadah ummat dan khidmat amaliyah. Oleh karena itu:
+          </p>
+          <ul>
+            <li><strong>Bebas Iklan (Ad-Free):</strong> Aplikasi ini sama sekali tidak memuat SDK periklanan (seperti Google AdMob, Unity Ads, atau jaringan iklan komersial lainnya).</li>
+            <li><strong>Bebas Profiling:</strong> Kami tidak melakukan pelacakan perilaku (behavioral tracking) lintas aplikasi maupun pembuatan profil pengguna untuk tujuan pemasaran.</li>
+          </ul>
+        </section>
+
+        <!-- 4. Basis Data Offline-First & Keamanan Data -->
+        <section class="section">
+          <h2>4. Arsitektur Offline-First &amp; Keamanan Data</h2>
+          <p>
+            Mayoritas fitur di dalam Aplikasi Robithoh (Al-Qur'an 30 Juz, Kitab Manqobah 1–56, Tanbih, Silsilah 38, dan Amaliyah Harian) berjalan 100% luring (offline):
+          </p>
+          <ul>
+            <li>Seluruh data preferensi ibadah disimpan secara aman di dalam sandbox penyimpanan lokal perangkat Anda menggunakan basis data SQLite terenkripsi/terisolasi.</li>
+            <li>Jika Anda menghapus aplikasi dari perangkat, seluruh data lokal (seperti penanda baca dan riwayat tasbih) akan otomatis terhapus dari perangkat Anda.</li>
+          </ul>
+        </section>
+
+        <!-- 5. Perlindungan Privasi Anak -->
+        <section class="section">
+          <h2>5. Perlindungan Privasi Anak (Children's Privacy)</h2>
+          <p>
+            Aplikasi kami aman digunakan oleh segala usia, termasuk anak-anak di bawah bimbingan orang tua dalam belajar membaca Al-Qur'an, wirid, dan amaliyah sholat. Kami tidak secara sengaja mengumpulkan data pribadi yang dapat mengidentifikasi anak-anak.
+          </p>
+        </section>
+
+        <!-- 6. Perubahan Kebijakan Privasi -->
+        <section class="section">
+          <h2>6. Perubahan Kebijakan Privasi</h2>
+          <p>
+            Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu seiring dengan penambahan fitur atau penyesuaian regulasi hukum/kebijakan Google Play. Setiap pembaruan akan dipublikasikan pada halaman ini dengan tanggal pembaruan yang diperbarui di bagian atas.
+          </p>
+        </section>
+
+        <!-- 7. Kontak Resmi Pengembang -->
+        <section class="section">
+          <h2>7. Hubungi Kami</h2>
+          <p>
+            Apabila Anda memiliki pertanyaan, saran, atau masukan mengenai Kebijakan Privasi ini atau pengelolaan data di Aplikasi Robithoh, silakan menghubungi kami melalui:
+          </p>
+          <ul>
+            <li><strong>Sekretariat:</strong> Pondok Pesantren Sirnarasa</li>
+            <li><strong>Alamat:</strong> Jl. Sirnarasa No. 1, Dusun Ciceuri, Desa Ciakar, Kec. Panjalu, Kab. Ciamis, Jawa Barat 46264, Indonesia</li>
+            <li><strong>Email:</strong> <a href="mailto:sekretariat@sirnarasa.id">sekretariat@sirnarasa.id</a></li>
+            <li><strong>Telepon / WhatsApp:</strong> +62 811-111-7890</li>
+            <li><strong>Website Resmi:</strong> <a href="https://sirnarasa.id" target="_blank" rel="noreferrer">https://sirnarasa.id</a></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 <strong>Robithoh</strong>. Khidmat Ilmiah Amaliyah Pondok Pesantren Sirnarasa Ciamis Jawa Barat.</p>
+    </footer>
+  </body>
+</html>

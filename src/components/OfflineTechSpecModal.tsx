@@ -27,8 +27,8 @@ export const OfflineTechSpecModal: React.FC<OfflineTechSpecModalProps> = ({ isOp
             <Cpu className="w-6 h-6 text-emas-300" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-white">Spesifikasi Arsitektur 95% Offline-First</h3>
-            <p className="text-xs text-slate-400">Kotlin Multiplatform 2.1 • Compose Multiplatform 1.7 • SQLDelight 2.3.2</p>
+            <h3 className="text-xl font-bold text-white">Spesifikasi Arsitektur 100% Offline-First</h3>
+            <p className="text-xs text-slate-400">Kotlin Multiplatform 2.4 • Compose Multiplatform 1.11 • SQLDelight • Adhan 2 KMP</p>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ export const OfflineTechSpecModal: React.FC<OfflineTechSpecModalProps> = ({ isOp
               <Database className="w-4 h-4" /> Filosofi Offline-First &amp; Zero Latency
             </h4>
             <p className="leading-relaxed">
-              Aplikasi Robithoh dibangun dengan prinsip bahwa kebutuhan ibadah tidak boleh terhalang oleh ketiadaan kuota atau hilangnya sinyal di dalam masjid dan majlis zikir. Sebanyak 95% fitur (termasuk 56 Bab Manqobah, 114 Surah Al-Qur'an, Wirid Harian, Tanbih, Silsilah 1-38, dan audio inti) tersimpan secara permanen dalam SQLite lokal perangkat.
+              Aplikasi Robithoh dibangun dengan prinsip bahwa kebutuhan ibadah tidak boleh terhalang oleh ketiadaan kuota atau hilangnya sinyal di dalam masjid dan majlis zikir. Seluruh teks amaliyah (56 Bab Manqobah, 114 Surah Al-Qur'an, Wirid Harian, Tanbih, Silsilah 1-38, Jadwal Sholat Kemenag, dan audio inti) tersimpan secara luring dalam SQLite lokal perangkat.
             </p>
           </div>
 
@@ -51,22 +51,22 @@ export const OfflineTechSpecModal: React.FC<OfflineTechSpecModalProps> = ({ isOp
                 <Layers className="w-4 h-4 text-merah-400" /> Database &amp; Data Layer
               </h5>
               <ul className="space-y-1 text-xs text-slate-300">
-                <li>• <strong>SQLDelight 2.3.2:</strong> Schema type-safe SQLite terkompilasi ke Kotlin.</li>
+                <li>• <strong>SQLDelight:</strong> Schema type-safe SQLite terkompilasi ke Kotlin.</li>
                 <li>• <strong>Android:</strong> <code>AndroidSqliteDriver</code> dengan SQLite native.</li>
-                <li>• <strong>iOS:</strong> <code>NativeSqliteDriver</code> berbasis SQLite3 Darwin framework.</li>
-                <li>• <strong>Indexing:</strong> Full-text index pada surah Quran dan bab Manqobah.</li>
+                <li>• <strong>iOS:</strong> <code>NativeSqliteDriver</code> berbasis SQLite3 Darwin.</li>
+                <li>• <strong>Adhan Engine:</strong> Kalkulasi astronomis waktu sholat presisi on-device.</li>
               </ul>
             </div>
 
             <div className="p-4 rounded-xl bg-canvas-surface border border-white/5 space-y-2">
               <h5 className="font-bold text-white flex items-center gap-2">
-                <Terminal className="w-4 h-4 text-emas-400" /> State &amp; Navigation
+                <Terminal className="w-4 h-4 text-emas-400" /> State, Audio &amp; Notifikasi
               </h5>
               <ul className="space-y-1 text-xs text-slate-300">
-                <li>• <strong>MVI Architecture:</strong> UiState, UiIntent, UiEffect dengan StateFlow.</li>
-                <li>• <strong>Navigation 3 (CMP):</strong> Type-safe <code>ScreenKey</code> routing.</li>
+                <li>• <strong>MVI Architecture:</strong> Clean Architecture dengan Reactive StateFlow.</li>
                 <li>• <strong>Koin 4.0:</strong> Multiplatform Dependency Injection tanpa refleksi.</li>
-                <li>• <strong>Audio:</strong> Media3 ExoPlayer (Android) &amp; AVPlayer (iOS).</li>
+                <li>• <strong>Alarm &amp; Notifikasi:</strong> Pengingat Adzan &amp; 10 menit pra-sholat.</li>
+                <li>• <strong>Audio Engine:</strong> Media3 / AVPlayer dengan Audio Downloader pintar.</li>
               </ul>
             </div>
           </div>
