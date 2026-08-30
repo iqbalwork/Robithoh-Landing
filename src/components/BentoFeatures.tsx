@@ -214,7 +214,7 @@ export const BentoFeatures: React.FC<BentoFeaturesProps> = ({ onOpenTechSpec }) 
 
               <div className="pt-4 border-t border-white/5 flex items-center justify-between">
                 <span className="text-xs text-slate-400">
-                  Lantunan Asli Khidmat Pesantren Sirnarasa
+                  Lantunan Asli Khidmat Dzikir &amp; Shalawat TQN
                 </span>
                 <a
                   href="#audio-demo"
@@ -288,7 +288,7 @@ export const BentoFeatures: React.FC<BentoFeaturesProps> = ({ onOpenTechSpec }) 
                   </div>
                   <div className="p-3 rounded-xl bg-black/40 border border-white/5 text-xs text-slate-300 flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emas-400 flex-shrink-0" />
-                    <span>Silsilah Mutashil 1 s/d 38 Sirnarasa</span>
+                    <span>Silsilah Mutashil 1 s/d 38 Mursyid TQN</span>
                   </div>
                 </div>
               </div>

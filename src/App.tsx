@@ -4,8 +4,6 @@ import { HeroSection } from './components/HeroSection';
 import { BentoFeatures } from './components/BentoFeatures';
 import { InteractiveTasbihPreview } from './components/InteractiveTasbihPreview';
 import { AudioLiturgyDemo } from './components/AudioLiturgyDemo';
-import { SirnarasaProfile } from './components/SirnarasaProfile';
-import { InfaqDonationSection } from './components/InfaqDonationSection';
 import { Footer } from './components/Footer';
 import { DownloadCenterModal } from './components/DownloadCenterModal';
 import { OfflineTechSpecModal } from './components/OfflineTechSpecModal';
@@ -39,10 +37,6 @@ export function App() {
         <AudioLiturgyDemo
           onPlayStateChange={setIsPlayingAudio}
         />
-
-        <SirnarasaProfile />
-
-        <InfaqDonationSection />
       </main>
 
       {/* Footer */}

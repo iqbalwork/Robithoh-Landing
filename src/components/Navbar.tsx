@@ -20,10 +20,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
 
   const navLinks = [
     { label: 'Fitur Utama', href: '#fitur' },
-    { label: 'Tasbih Interaktif', href: '#tasbih' },
+    { label: 'Tasbih Digital', href: '#tasbih' },
     { label: 'Audio & Liturgi', href: '#audio-demo' },
-    { label: 'Profil Sirnarasa', href: '#sirnarasa' },
-    { label: 'Infaq & Wakaf', href: '#infaq' },
+    { label: 'Kebijakan Privasi', href: './privacy.html' },
   ];
 
   return (
@@ -60,10 +59,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
                   ROBITHOH
                 </span>
                 <span className="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-merah-500/20 text-merah-300 border border-merah-500/30">
-                  TQN 38
+                  TQN
                 </span>
               </div>
-              <p className="text-[11px] text-slate-400 font-medium">Sirnarasa Panjalu Ciamis</p>
+              <p className="text-[11px] text-slate-400 font-medium">Panduan Ibadah &amp; Amaliyah</p>
             </div>
           </a>
 

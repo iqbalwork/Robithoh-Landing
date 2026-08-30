@@ -72,7 +72,7 @@ export const SmartphoneMockup: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-xs font-bold text-white tracking-wide">ROBITHOH</h4>
-                <p className="text-[9px] text-emas-400/90 font-medium">Silsilah 38 Sirnarasa</p>
+                <p className="text-[9px] text-emas-400/90 font-medium">Silsilah Mursyid TQN</p>
               </div>
             </div>
             <span className="px-2 py-0.5 rounded-full bg-emas-500/10 border border-emas-500/30 text-[9px] font-bold text-emas-300">

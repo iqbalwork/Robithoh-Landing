@@ -37,7 +37,7 @@ export const liturgySamples: LiturgySample[] = [
     transliteration: 'Bismillâhir-Rahmânir-Rahîm. Habbaba ilaykumul îmâna wa zayyanahu fî qulûbikum wa karraha ilaykumul kufra wal fusûqa wal ‘ishyân, ulâ-ika humur-râsyidûn.',
     indonesianText: 'Wasiat luhur pengingat diri: Terhadap orang yang lebih tinggi harus saling menghormati, kepada sesama harus saling berkasih sayang, kepada yang lebih rendah harus saling mengasihi, dan kepada fakir miskin harus berbelas kasihan. Jangan ada rasa iri, dengki, dan sombong.',
     sundaneseText: 'Wasiat piwejang luhung: Ka saluhureun kudu ngahormat, ka sasama kudu silih pikanyaah, ka sahandapeun kudu silih asih, sarta ka fakir miskin kudu welas asih. Ulah aya rasa dengki, jail kaniaya, sirik pidik, sarta adigung adiguna.',
-    description: 'Ajaran budi pekerti luhur TQN Suryalaya-Sirnarasa untuk menjaga kerukunan beragama, berbangsa, dan bernegara.'
+    description: 'Ajaran budi pekerti luhur TQN untuk menjaga kerukunan beragama, berbangsa, dan bernegara.'
   },
   {
     id: 'manqobah-1',
@@ -61,7 +61,7 @@ export const liturgySamples: LiturgySample[] = [
     transliteration: 'Subhânal malikil ma‘bûd, Subhânal malikil maujûd, Subhânal malikil hayyil-ladzî lâ yanâmu wa lâ yamûtu abadâ, Subbûhun Quddûsun Rabbunâ wa Rabbul-malâ-ikati war-rûh.',
     indonesianText: 'Maha Suci Dzat Yang Maha Menguasai lagi Maha Disembah, Maha Suci Dzat Yang Maha Menguasai lagi Maha Ada, Maha Suci Dzat Yang Maha Hidup yang tidak pernah tidur dan tidak pernah mati selamanya. Maha Suci dan Maha Quddus Tuhan kami dan Tuhan seluruh malaikat serta Malaikat Jibril.',
     sundaneseText: 'Maha Suci Dzat Nu Maha Ngawasa tur Maha Diibadahan, Maha Suci Dzat Nu Maha Hirup anu henteu kulem tur henteu pupus salalanggengna.',
-    description: 'Bilal dan langgam sholat tarawih & witir khas TQN PP Suryalaya Sirnarasa.'
+    description: 'Bilal dan langgam sholat tarawih & witir khas TQN.'
   },
   {
     id: 'sholat-jumat',

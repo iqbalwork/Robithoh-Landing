@@ -24,14 +24,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-merah-950/60 border border-emas-500/40 text-xs font-bold text-emas-300 shadow-md">
               <Sparkles className="w-3.5 h-3.5 text-emas-400 animate-spin-slow" />
-              <span>Official Release v1.0 • Pondok Pesantren Sirnarasa</span>
+              <span>Official Release v1.0 • Aplikasi Ibadah &amp; Amaliyah TQN</span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
-                Aplikasi Ibadah & Amaliyah{' '}
-                <span className="crimson-gradient-text">TQN 38</span> Modern{' '}
+                Aplikasi Ibadah &amp; Amaliyah{' '}
+                <span className="crimson-gradient-text">TQN</span> Modern{' '}
                 <span className="gold-gradient-text">Multiplatform</span>
               </h1>
               

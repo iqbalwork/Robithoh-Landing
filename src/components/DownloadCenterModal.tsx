@@ -9,7 +9,7 @@ interface DownloadCenterModalProps {
 }
 
 export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen, onClose }) => {
-  const [downloadUrl] = useState('https://robithoh.sirnarasa.id/download/Robithoh-v1.0.0-release.apk');
+  const [downloadUrl] = useState('https://github.com/iqbalwork/Robithoh-App/releases/latest');
   const [copiedLink, setCopiedLink] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState<string>('');
 
@@ -36,7 +36,7 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
       colors: ['#CE1126', '#D4AF37', '#FFFFFF']
     });
 
-    alert('Mendownload Robithoh v1.0.0 APK (24.8 MB)... Terima kasih telah mengunduh aplikasi Robithoh!');
+    alert('Mendownload Robithoh v1.0.0 APK... Terima kasih telah mengunduh aplikasi Robithoh!');
   };
 
   const handleCopyLink = () => {
@@ -75,7 +75,7 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
               </span>
             </div>
             <p className="text-xs text-slate-400">
-              Instalasi Resmi untuk Android &amp; iOS (Pondok Pesantren Sirnarasa)
+              Instalasi Resmi untuk Android &amp; iOS (Multiplatform)
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
-                  alert('Versi iOS TestFlight / App Store sedang dalam proses distribusi. Hubungi tim IT Sirnarasa untuk akses pra-rilis.');
+                  alert('Versi iOS TestFlight / App Store sedang dalam proses distribusi pra-rilis.');
                 }}
                 className="p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-between text-xs transition-colors group"
               >
@@ -223,7 +223,7 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
             2. Jika muncul peringatan keamanan, pilih <em>"Izinkan dari sumber ini"</em> (Allow from this source).
           </p>
           <p>
-            3. Aplikasi Robithoh 100% aman, bebas malware, dan resmi dari Pesantren Sirnarasa.
+            3. Aplikasi Robithoh 100% aman, bebas iklan, dan bebas malware.
           </p>
         </div>
 
