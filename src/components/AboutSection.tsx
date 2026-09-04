@@ -17,16 +17,16 @@ interface ProfileCard {
 const profiles: ProfileCard[] = [
   {
     name: 'Eyang Epi Ruhiat Ganefi',
-    role: 'Wakil Talqin Pangersa Abah Aos',
+    role: 'Pembimbing Padepokan Talangraga · Wakil Talqin Abah Aos',
     category: 'mentor',
     badge: 'Pembimbing dan Penasihat',
     badgeColor: 'bg-emas-500/10 text-emas-400 border-emas-500/30',
     description:
-      'Sesepuh serta pembimbing dan penasihat yang senantiasa memberikan arahan, restu, dan bimbingan amaliyah agar seluruh kaifiyat dzikir dalam aplikasi Robithoh senantiasa terjaga kemurniannya dan muttashil dengan tuntunan Guru Mursyid.',
+      'Pembimbing Roudhoh Padepokan Talangraga Ponpes Suryalaya Sirnarasa yang bertempat di Indihiang (Tasikmalaya), sekaligus Wakil Talqin Pangersa Abah Aos. Beliau senantiasa memberikan arahan, restu, dan bimbingan amaliyah agar seluruh kaifiyat dzikir dalam aplikasi Robithoh senantiasa terjaga kemurniannya dan muttashil dengan tuntunan Guru Mursyid.',
     highlights: [
-      'Wakil Talqin Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III',
-      'Pembimbing Kaifiyat & Adab Dzikir',
-      'Pengayom & Penasihat Amaliyah'
+      'Pembimbing Roudhoh Padepokan Talangraga (Indihiang)',
+      'Wakil Talqin Pangersa Abah Aos (Silsilah Ke-38)',
+      'Pengayom & Penasihat Amaliyah Thoriqoh'
     ],
     avatarText: 'EG'
   },
@@ -37,11 +37,11 @@ const profiles: ProfileCard[] = [
     badge: 'Pembimbing dan Penasihat',
     badgeColor: 'bg-emas-500/10 text-emas-400 border-emas-500/30',
     description:
-      'Pembimbing dan penasihat yang memverifikasi keaslian naskah Kitab Manaqib 1–56, teks sanad Tawassul Silsilah, susunan MC Manaqib, serta rujukan liturgi amaliyah dalam aplikasi Robithoh.',
+      'Wakil Talqin Pangersa Abah Aos yang juga merupakan bagian dari didikan Eyang Epi Ruhiat Ganefi di Padepokan Talangraga Indihiang. Beliau bertindak sebagai pembimbing dan penasihat yang memverifikasi keaslian naskah Kitab Manaqib 1–56, teks sanad Tawassul Silsilah, susunan MC Manaqib, serta rujukan liturgi amaliyah dalam aplikasi Robithoh.',
     highlights: [
-      'Wakil Talqin Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III',
-      'Verifikasi Sanad & Kitab Amaliyah',
-      'Penasihat Konsep & Khidmat Ilmiah'
+      'Bagian dari Didikan Eyang Epi Ruhiat Ganefi',
+      'Wakil Talqin Pangersa Abah Aos (Silsilah Ke-38)',
+      'Verifikasi Sanad & Liturgi Kitab Manaqib'
     ],
     avatarText: 'EY'
   },
@@ -52,11 +52,11 @@ const profiles: ProfileCard[] = [
     badge: 'Pengembang Aplikasi',
     badgeColor: 'bg-merah-500/10 text-merah-400 border-merah-500/30',
     description:
-      'Software engineer independen yang merancang arsitektur, mengembangkan, dan memelihara aplikasi Robithoh secara multiplatform (Kotlin Multiplatform & Compose Multiplatform) sebagai dedikasi teknologi untuk kemaslahatan ikhwan dan akhwat.',
+      'Software engineer yang juga merupakan bagian dari didikan Eyang Epi Ruhiat Ganefi di Padepokan Talangraga Indihiang. Merancang arsitektur, mengembangkan, dan memelihara aplikasi Robithoh secara multiplatform (Kotlin Multiplatform & Compose Multiplatform) sebagai dedikasi teknologi untuk kemaslahatan ikhwan dan akhwat.',
     highlights: [
+      'Bagian dari Didikan Eyang Epi Ruhiat Ganefi',
       'Kotlin Multiplatform & Mobile Specialist',
-      'Arsitek 100% Offline-First Engine',
-      'Pemelihara & Pengembang Mandiri'
+      'Arsitek 100% Offline-First Engine Robithoh'
     ],
     link: 'https://iqbalwork.github.io/',
     linkText: 'Portfolio: iqbalwork.github.io',
@@ -84,7 +84,7 @@ export const AboutSection: React.FC = () => {
             <span className="gold-gradient-text">Guru Mursyid</span> &amp; Pembimbing
           </h2>
           <p className="text-slate-400 text-base leading-relaxed">
-            Aplikasi Robithoh dihadirkan sebagai wujud khidmat dan mahabbah kepada Pangersa Guru Mursyid, dibangun dengan bimbingan dan nasihat para Wakil Talqin guna menjaga keaslian sanad serta kemurnian amaliyah Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III.
+            Aplikasi Robithoh dihadirkan sebagai wujud khidmat dan mahabbah kepada Pangersa Guru Mursyid, dibangun di bawah bimbingan Roudhoh Padepokan Talangraga Indihiang serta para Wakil Talqin guna menjaga keaslian sanad dan kemurnian amaliyah Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III.
           </p>
         </div>
 
