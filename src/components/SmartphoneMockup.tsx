@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, Compass, Clock, BookOpen, Layers } from 'lucide-react';
+import { Sparkles, Compass, Clock, BookOpen, Layers, Volume2 } from 'lucide-react';
 
 interface ScreenTab {
   id: string;
@@ -23,6 +23,13 @@ const screenTabs: ScreenTab[] = [
     imageSrc: './assets/screenshots/sholat.png',
     badge: 'Jadwal Adzan',
     icon: <Clock className="w-3.5 h-3.5" />
+  },
+  {
+    id: 'adzan',
+    label: 'Suara Adzan',
+    imageSrc: './assets/screenshots/adzan_volume.png',
+    badge: 'Slider 0-100%',
+    icon: <Volume2 className="w-3.5 h-3.5" />
   },
   {
     id: 'kiblat',

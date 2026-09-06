@@ -108,6 +108,40 @@ const screenshots: ScreenshotItem[] = [
     ],
     color: '#E11D48',
     badgeBg: 'bg-rose-500/10 text-rose-400 border-rose-500/30'
+  },
+  {
+    id: 'adzan',
+    title: 'Pengaturan Suara Adzan Mandiri',
+    category: 'Audio & Notifikasi Sholat',
+    tagline: 'Slider 0%–100% Fleksibel & Mode Senyap Praktis',
+    description:
+      'Penyesuaian mandiri intensitas suara kumandang adzan tanpa terpengaruh volume dering telepon ponsel Anda. Menggeser slider ke 0% membisukan suara audio saat rapat atau berada di masjid, sementara pengingat visual tetap muncul tepat waktu.',
+    imageSrc: './assets/screenshots/adzan_volume.png',
+    features: [
+      'Slider Volume Mandiri 0%–100%',
+      'Mode Senyap (Audio Mute, Visual On)',
+      'Alarm Subuh Terintegrasi Sistem Android',
+      'Koreksi Menit Manual (Ihtiyat)'
+    ],
+    color: '#D4AF37',
+    badgeBg: 'bg-emas-500/10 text-emas-400 border-emas-500/30'
+  },
+  {
+    id: 'pengaturan',
+    title: 'Pengaturan & Reset Panduan Spotlight',
+    category: 'Bantuan & Kustomisasi',
+    tagline: 'Informasi Versi 1.1.0 & Akses Ulang Panduan Visual',
+    description:
+      'Layar pengaturan yang komprehensif menampilkan informasi versi resmi aplikasi, tautan beri rating dan periksa pembaruan di Google Play, serta opsi jalankan ulang panduan interaktif Spotlight kapan saja bagi pemula maupun sesepuh.',
+    imageSrc: './assets/screenshots/pengaturan.png',
+    features: [
+      'Tombol Reset Panduan Interaktif (Spotlight)',
+      'Cek Pembaruan Google Play Langsung',
+      'Beri Rating & Masukan Aplikasi',
+      'Info Nomor Versi Resmi v1.1.0'
+    ],
+    color: '#CE1126',
+    badgeBg: 'bg-merah-500/10 text-merah-400 border-merah-500/30'
   }
 ];
 

@@ -22,9 +22,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
             
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-merah-950/60 border border-emas-500/40 text-xs font-bold text-emas-300 shadow-md">
-              <Sparkles className="w-3.5 h-3.5 text-emas-400 animate-spin-slow" />
-              <span>Tersedia di Google Play Store (Akses Awal / Alpha)</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-merah-950/70 border border-emas-500/40 text-xs font-bold text-emas-300 shadow-md">
+              <Sparkles className="w-3.5 h-3.5 text-emas-400 animate-pulse" />
+              <span>Pembaruan v1.1.0: Home Screen Widget, Spotlight, Onboarding &amp; Kontrol Adzan</span>
             </div>
 
             {/* Main Headline */}
@@ -36,7 +36,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
               </h1>
               
               <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                Satu genggaman khidmat untuk mengamalkan Dzikir Jahr &amp; Khofi, Kitab Manqobah Syeikh Abdul Qodir Al-Jailani 1–56 dalam 3 bahasa, Tasbih Haptik, Al-Qur'an 114 Surah, dan Audio Player dengan arsitektur <strong className="text-emas-400 font-semibold">100% Offline-First</strong>.
+                Satu genggaman khidmat dengan 8 varian <strong className="text-emas-400 font-semibold">Home Screen Widget</strong>, panduan visual <strong className="text-emas-400 font-semibold">Spotlight &amp; Onboarding</strong> ramah semua usia, kendali volume suara adzan mandiri, naskah Manqobah 3 bahasa, dan arsitektur <strong className="text-emas-400 font-semibold">100% Offline-First</strong>.
               </p>
             </div>
 
