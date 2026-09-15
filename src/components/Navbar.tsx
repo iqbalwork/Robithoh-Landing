@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Sparkles, Menu, X, Volume2, Clock } from 'lucide-react';
+import { Download, Sparkles, Menu, X, Volume2, ArrowRight } from 'lucide-react';
 
 interface NavbarProps {
   onOpenDownload: () => void;
+  onOpenReleaseModal?: () => void;
   isPlayingAudio?: boolean;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio = false }) => {
+export const Navbar: React.FC<NavbarProps> = ({
+  onOpenDownload,
+  onOpenReleaseModal,
+  isPlayingAudio = false
+}) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
   }, []);
 
   const navLinks = [
-    { label: 'Fitur Utama', href: '#fitur' },
+    { label: 'Fitur v1.2.0', href: '#fitur' },
     { label: 'Tampilan Layar', href: '#screenshots' },
     { label: 'Tasbih Digital', href: '#tasbih' },
     { label: 'Audio & Liturgi', href: '#audio-demo' },
@@ -31,10 +37,44 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-canvas-dark/90 backdrop-blur-md border-b border-emas-500/20 py-3 shadow-lg shadow-black/40'
-          : 'bg-transparent py-5'
+          ? 'bg-canvas-dark/95 backdrop-blur-md border-b border-emas-500/20 py-2.5 shadow-lg shadow-black/50'
+          : 'bg-transparent py-3'
       }`}
     >
+      {/* Top Announcement Bar for v1.2.0 Release */}
+      {showAnnouncement && (
+        <div className="mb-2.5 px-4">
+          <div className="max-w-7xl mx-auto py-1.5 px-3.5 rounded-full bg-gradient-to-r from-merah-950/90 via-[#36080E]/90 to-merah-950/90 border border-emas-500/30 flex items-center justify-between gap-2 text-xs shadow-md">
+            <div className="flex-1 flex items-center justify-center gap-2 flex-wrap text-center">
+              <span className="inline-flex items-center gap-1 px-2 py-0.2 rounded-full bg-emas-500/20 text-emas-300 font-bold text-[10px] uppercase tracking-wider border border-emas-500/30">
+                <Sparkles className="w-2.5 h-2.5 text-emas-400 animate-pulse" />
+                v1.2.0 Rilis Resmi
+              </span>
+              <span className="text-slate-200 text-[11px] sm:text-xs">
+                Mode Mushaf Al-Qur'an Kemenag RI, Halaman Doa Live Search &amp; Wirid Kemalaikatan kini tersedia!
+              </span>
+              {onOpenReleaseModal && (
+                <button
+                  onClick={onOpenReleaseModal}
+                  className="text-[11px] sm:text-xs font-bold text-emas-400 hover:text-emas-300 underline underline-offset-2 flex items-center gap-1 transition-colors"
+                >
+                  <span>Lihat Pembaruan</span>
+                  <ArrowRight className="w-3 h-3" />
+                </button>
+              )}
+            </div>
+
+            <button
+              onClick={() => setShowAnnouncement(false)}
+              className="p-1 rounded-full text-slate-400 hover:text-white transition-colors"
+              aria-label="Tutup Pengumuman"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo & Brand */}
@@ -57,7 +97,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
                   ROBITHOH
                 </span>
                 <span className="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-merah-500/20 text-merah-300 border border-merah-500/30">
-                  MTQN
+                  v1.2.0
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 font-medium">Panduan Ibadah &amp; Amaliyah</p>
@@ -65,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -78,7 +118,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
           </nav>
 
           {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-2.5">
+            {onOpenReleaseModal && (
+              <button
+                onClick={onOpenReleaseModal}
+                className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emas-500/10 hover:bg-emas-500/20 border border-emas-500/30 text-emas-300 text-xs font-bold transition-all shadow-sm"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-emas-400 animate-pulse" />
+                <span>Rilis v1.2.0</span>
+              </button>
+            )}
+
             {isPlayingAudio && (
               <a
                 href="#audio-demo"
@@ -88,6 +138,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
                 <span>Audio Sedang Diputar</span>
               </a>
             )}
+
             <button
               onClick={onOpenDownload}
               className="relative group overflow-hidden px-4 py-2 rounded-xl bg-gradient-to-r from-merah-600 via-merah-500 to-merah-700 text-white text-xs sm:text-sm font-bold shadow-md shadow-merah-600/30 hover:shadow-merah-600/60 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border border-merah-400/30 flex items-center gap-2"
@@ -121,6 +172,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
         {mobileMenuOpen && (
           <div className="sm:hidden mt-4 pt-4 pb-3 border-t border-slate-800 bg-canvas-surface/95 backdrop-blur-xl rounded-2xl p-4 shadow-xl border border-emas-500/20">
             <div className="flex flex-col gap-3">
+              {onOpenReleaseModal && (
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenReleaseModal();
+                  }}
+                  className="w-full py-2 px-3 rounded-xl bg-emas-500/15 border border-emas-500/30 text-emas-300 font-bold text-xs flex items-center justify-center gap-2"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-emas-400" />
+                  <span>Yang Baru di v1.2.0</span>
+                </button>
+              )}
+
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -131,6 +195,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
                   {link.label}
                 </a>
               ))}
+
               <div className="pt-2 border-t border-slate-800 flex flex-col gap-2">
                 <button
                   onClick={() => {
@@ -140,7 +205,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, isPlayingAudio =
                   className="w-full py-2.5 rounded-xl bg-gradient-to-r from-merah-600 to-merah-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md"
                 >
                   <Download className="w-4 h-4" />
-                  <span>Unduh Aplikasi Mobile (APK & Stores)</span>
+                  <span>Unduh Aplikasi di Play Store</span>
                 </button>
               </div>
             </div>

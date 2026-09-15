@@ -5,9 +5,10 @@ import { SmartphoneMockup } from './SmartphoneMockup';
 interface HeroSectionProps {
   onOpenDownload: () => void;
   onOpenQrModal: () => void;
+  onOpenReleaseModal?: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpenQrModal }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpenQrModal, onOpenReleaseModal }) => {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-islamic-pattern">
       {/* Dynamic Background Glows */}
@@ -21,10 +22,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
           {/* Left Column: Copy & CTAs */}
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
             
-            {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-merah-950/70 border border-emas-500/40 text-xs font-bold text-emas-300 shadow-md">
-              <Sparkles className="w-3.5 h-3.5 text-emas-400 animate-pulse" />
-              <span>Pembaruan v1.1.0: Home Screen Widget, Spotlight, Onboarding &amp; Kontrol Adzan</span>
+            {/* Top Badge: v1.2.0 Release */}
+            <div>
+              <button
+                type="button"
+                onClick={onOpenReleaseModal}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-merah-950/80 hover:bg-merah-900/90 border border-emas-500/40 text-xs font-bold text-emas-300 shadow-md hover:shadow-gold-glow transition-all cursor-pointer group text-left"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-emas-400 animate-pulse flex-shrink-0" />
+                <span>Update Resmi v1.2.0 Rilis: Mode Mushaf Al-Qur'an Kemenag RI, Doa &amp; Wirid Kemalaikatan</span>
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 group-hover:bg-emerald-500/30 transition-colors whitespace-nowrap">
+                  Detail Rilis →
+                </span>
+              </button>
             </div>
 
             {/* Main Headline */}
@@ -36,7 +46,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
               </h1>
               
               <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                Satu genggaman khidmat dengan 8 varian <strong className="text-emas-400 font-semibold">Home Screen Widget</strong>, panduan visual <strong className="text-emas-400 font-semibold">Spotlight &amp; Onboarding</strong> ramah semua usia, kendali volume suara adzan mandiri, naskah Manqobah 3 bahasa, dan arsitektur <strong className="text-emas-400 font-semibold">100% Offline-First</strong>.
+                Satu genggaman khidmat dengan <strong className="text-emas-400 font-semibold">Mode Mushaf Al-Qur'an Kemenag RI (604 Halaman)</strong>, <strong className="text-emas-400 font-semibold">Halaman Khusus Doa &amp; Live Search</strong>, 8 varian <strong className="text-emas-400 font-semibold">Home Screen Widget</strong>, <strong className="text-emas-400 font-semibold">Wirid Kemalaikatan</strong> pada Tasbih Digital, naskah Manqobah 12 bulan 3 bahasa, dan arsitektur <strong className="text-emas-400 font-semibold">100% Offline-First</strong>.
               </p>
             </div>
 
@@ -91,9 +101,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
             <div className="pt-6 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div className="p-3 rounded-xl bg-canvas-card/60 border border-white/5 text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-1.5 text-emas-400 font-extrabold text-xl">
-                  <HardDrive className="w-4 h-4" /> 95%
+                  <HardDrive className="w-4 h-4" /> 604 Hal
                 </div>
-                <p className="text-xs text-slate-400 font-medium mt-0.5">Offline-First DB</p>
+                <p className="text-xs text-slate-400 font-medium mt-0.5">Mushaf Kemenag RI</p>
               </div>
 
               <div className="p-3 rounded-xl bg-canvas-card/60 border border-white/5 text-center lg:text-left">

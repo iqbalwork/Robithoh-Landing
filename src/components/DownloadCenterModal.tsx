@@ -71,11 +71,11 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
             <div className="flex items-center gap-2">
               <h3 className="text-xl font-bold text-white">Download Center Robithoh</h3>
               <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/30">
-                Tersedia di Play Store
+                v1.2.0 Resmi Rilis
               </span>
             </div>
             <p className="text-xs text-slate-400">
-              Instalasi Resmi untuk Android (Google Play) &amp; iOS (Coming Soon)
+              Instalasi Resmi untuk Android (Google Play Store) &amp; iOS (Coming Soon)
             </p>
           </div>
         </div>
@@ -93,12 +93,12 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
                   Google Play Store (Resmi)
                 </span>
                 <span className="text-[10px] font-bold bg-emerald-500/20 border border-emerald-500/30 px-2 py-0.5 rounded text-emerald-300">
-                  Akses Awal (Alpha)
+                  Versi 1.2.0
                 </span>
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed">
-                Aplikasi Robithoh telah resmi tersedia di Google Play Store. Dapatkan pembaruan otomatis, keamanan terverifikasi Google Play Protect, dan instalasi 1-klik.
+                Aplikasi Robithoh versi 1.2.0 telah resmi tersedia di Google Play Store dengan fitur Mode Mushaf Al-Qur'an Kemenag RI, Halaman Doa Live Search, dan Wirid Kemalaikatan.
               </p>
 
               <a
@@ -109,14 +109,22 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
                 className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-merah-600 via-merah-500 to-merah-700 hover:from-merah-500 hover:to-merah-600 text-white text-sm font-bold shadow-lg shadow-merah-600/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 border border-merah-400/40"
               >
                 <Smartphone className="w-4 h-4 text-emerald-300" />
-                <span>Buka di Google Play Store</span>
+                <span>Perbarui / Pasang di Play Store</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
+
+              <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 space-y-1 text-[11px] text-slate-300">
+                <span className="font-bold text-emas-400 block text-[10px] uppercase tracking-wider">Highlight v1.2.0:</span>
+                <p>• Mode Al-Qur'an Per Halaman Mushaf Kemenag RI (604 Hal)</p>
+                <p>• Halaman Khusus Doa &amp; Live Search Instan</p>
+                <p>• Wirid Kemalaikatan di Tasbih Digital</p>
+                <p>• Notifikasi Sholat Nama Kota Bersih &amp; Bebas Freeze</p>
+              </div>
 
               <div className="text-[10px] text-slate-400 font-mono flex items-center justify-between pt-1 border-t border-white/5">
                 <span>ID: com.iqbalwork.robithoh</span>
                 <span className="text-emerald-400 flex items-center gap-1">
-                  <ShieldCheck className="w-3 h-3" /> Play Protect
+                  <ShieldCheck className="w-3 h-3" /> Play Protect Terverifikasi
                 </span>
               </div>
             </div>

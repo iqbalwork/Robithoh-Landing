@@ -84,15 +84,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDownload }) => {
 
           {/* Col 4: Fitur Utama Aplikasi */}
           <div className="space-y-3">
-            <h4 className="font-bold text-white uppercase text-xs tracking-wider">Fitur Aplikasi</h4>
+            <h4 className="font-bold text-white uppercase text-xs tracking-wider">Fitur Aplikasi v1.2.0</h4>
             <ul className="space-y-2">
-              <li>• Jadwal Sholat &amp; Notifikasi Adzan</li>
-              <li>• Pengingat 10 Menit Pra-Sholat</li>
+              <li>• Mode Mushaf Al-Qur'an Kemenag RI (604 Hal)</li>
+              <li>• Halaman Khusus Doa &amp; Live Search</li>
+              <li>• Wirid Kemalaikatan di Tasbih Haptik</li>
+              <li>• Kitab Manqobah 12 Bulan (3 Bahasa)</li>
+              <li>• Jadwal Sholat &amp; Notifikasi Nama Kota Bersih</li>
+              <li>• 8 Varian Home Screen Widget</li>
               <li>• Dzikir Jahr &amp; Khofi Harian</li>
-              <li>• Kitab Manqobah 1–56 (3 Bahasa)</li>
-              <li>• Naskah MC Manaqib (Indo/Sunda)</li>
-              <li>• Tanbih &amp; Silsilah 1–38</li>
-              <li>• Al-Qur'an Digital 114 Surah</li>
+              <li>• Tanbih &amp; Silsilah Sanad 1–38</li>
               <li>• Audio Downloader &amp; Background Player</li>
               <li>• 100% Offline-First SQLDelight</li>
             </ul>

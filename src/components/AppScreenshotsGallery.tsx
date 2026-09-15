@@ -45,13 +45,13 @@ const screenshots: ScreenshotItem[] = [
     id: 'sholat',
     title: 'Jadwal Sholat & Notifikasi Adzan',
     category: 'Waktu Sholat Kemenag',
-    tagline: 'Kalkulasi Astronomis GPS & Notifikasi Tepat Waktu',
+    tagline: 'Kalkulasi Astronomis GPS & Nama Kota Bersih',
     description:
-      'Perhitungan waktu sholat 5 waktu, Imsak, dan Syuruq dengan hisab astronomis akurat berbasis koordinat GPS perangkat. Dilengkapi penanda waktu yang sedang berlangsung, status waktu sholat, dan tombol cepat pembuka kompas kiblat.',
+      'Perhitungan waktu sholat 5 waktu, Imsak, dan Syuruq dengan hisab astronomis akurat berbasis koordinat perangkat. Di versi 1.2.0, notifikasi sholat kini menampilkan nama kota yang bersih dan rapi (bukan titik koordinat GPS mentah).',
     imageSrc: './assets/screenshots/sholat.png',
     features: [
+      'Notifikasi Nama Kota Bersih (Bukan GPS)',
       'Standar Hisab Kemenag RI & Internasional',
-      'Indikator Sholat yang Sedang Berlangsung',
       'Pengingat 10 Menit Pra-Sholat & Adzan',
       'Koreksi Menit Manual (Ihtiyat)'
     ],
@@ -77,34 +77,34 @@ const screenshots: ScreenshotItem[] = [
   },
   {
     id: 'quran',
-    title: 'Al-Qur\'an Digital 114 Surah',
-    category: 'Mushaf 30 Juz',
-    tagline: 'Mushaf Standar Jernih & Bookmark Otomatis',
+    title: 'Al-Qur\'an 114 Surah & Mode Mushaf',
+    category: 'Mushaf Standar Kemenag RI',
+    tagline: 'Mode Lembaran Mushaf Utuh 604 Halaman & Interaktif',
     description:
-      'Daftar lengkap 114 Surah Makkiyah & Madaniyah dengan penulisan Arab berharakat tajam, terjemahan resmi Bahasa Indonesia, banner pembacaan terakhir (Last Read), serta fitur pencarian surah yang cepat.',
+      'Nikmati kemudahan membaca Al-Qur\'an dengan tampilan lembaran mushaf utuh standar Kementerian Agama RI lengkap 604 halaman atau mode per ayat. Dilengkapi pemetaan ayat interaktif, loncat juz & surah seketika, serta penanda bacaan terakhir otomatis.',
     imageSrc: './assets/screenshots/quran.png',
     features: [
-      '114 Surah Lengkap 30 Juz Offline',
-      'Banner Lanjut Baca Ayat Terakhir',
-      'Pencarian Cepat Nomor & Nama Surah',
-      'Pewarnaan Klasifikasi Makkiyah/Madaniyah'
+      'Mode Mushaf 604 Halaman Kemenag RI',
+      'Pemetaan Ayat Interaktif & Audio',
+      '114 Surah Lengkap 30 Juz 100% Offline',
+      'Banner Lanjut Baca Ayat Terakhir'
     ],
     color: '#0284C7',
     badgeBg: 'bg-sky-500/10 text-sky-400 border-sky-500/30'
   },
   {
     id: 'tasbih',
-    title: 'Tasbih Digital Interaktif Haptik',
+    title: 'Tasbih Digital & Wirid Kemalaikatan',
     category: 'Dzikir Taktil Berirama',
-    tagline: 'Getaran Milestone & Preset Dzikir 165x',
+    tagline: 'Preset Wirid Kemalaikatan & Dzikir Jahr 165x',
     description:
-      'Penghitung dzikir berlayar penuh dengan lingkaran progres dinamis, pilihan preset amaliyah (Dzikir Jahr 165x, 33x, 100x, atau target kustom), statistik putaran selesai, serta respon getaran taktil haptic feedback pada tiap ketukan.',
+      'Penghitung dzikir berlayar penuh dengan respon getaran haptic berirama. Di versi 1.2.0, hadir pilihan khusus Wirid Kemalaikatan (Ahad s.d. Jum\'at 222x–777x sesuai Malaikat penjaga), preset Dzikir Jahr 165x, 33x, 100x, serta target kustom.',
     imageSrc: './assets/screenshots/tasbih.png',
     features: [
+      'Preset Wirid Kemalaikatan 7 Hari (222x–777x)',
       'Preset Khusus Dzikir Jahr 165x & 33x',
       'Haptic Feedback pada Setiap Hitungan',
-      'Statistik Putaran & Kemajuan Sesi',
-      'Tombol Koreksi (-1) & Reset Aman'
+      'Statistik Putaran & Reset Aman'
     ],
     color: '#E11D48',
     badgeBg: 'bg-rose-500/10 text-rose-400 border-rose-500/30'
@@ -128,17 +128,17 @@ const screenshots: ScreenshotItem[] = [
   },
   {
     id: 'pengaturan',
-    title: 'Pengaturan & Reset Panduan Spotlight',
-    category: 'Bantuan & Kustomisasi',
-    tagline: 'Informasi Versi 1.1.0 & Akses Ulang Panduan Visual',
+    title: 'Pengaturan & Informasi Versi 1.2.0',
+    category: 'Bantuan & Pembaruan Resmi',
+    tagline: 'Informasi Versi 1.2.0 & Akses Ulang Panduan Visual',
     description:
-      'Layar pengaturan yang komprehensif menampilkan informasi versi resmi aplikasi, tautan beri rating dan periksa pembaruan di Google Play, serta opsi jalankan ulang panduan interaktif Spotlight kapan saja bagi pemula maupun sesepuh.',
+      'Layar pengaturan komprehensif menampilkan informasi versi resmi aplikasi v1.2.0, tautan langsung pembaruan Google Play Store, penilaian aplikasi, serta opsi jalankan ulang panduan interaktif Spotlight kapan saja.',
     imageSrc: './assets/screenshots/pengaturan.png',
     features: [
-      'Tombol Reset Panduan Interaktif (Spotlight)',
+      'Info Nomor Versi Resmi v1.2.0',
       'Cek Pembaruan Google Play Langsung',
-      'Beri Rating & Masukan Aplikasi',
-      'Info Nomor Versi Resmi v1.1.0'
+      'Tombol Reset Panduan Interaktif (Spotlight)',
+      'Beri Rating & Masukan Aplikasi'
     ],
     color: '#CE1126',
     badgeBg: 'bg-merah-500/10 text-merah-400 border-merah-500/30'

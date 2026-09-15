@@ -9,17 +9,20 @@ import { AboutSection } from './components/AboutSection';
 import { Footer } from './components/Footer';
 import { DownloadCenterModal } from './components/DownloadCenterModal';
 import { OfflineTechSpecModal } from './components/OfflineTechSpecModal';
+import { ReleaseModal } from './components/ReleaseModal';
 
 export function App() {
   const [isDownloadOpen, setIsDownloadOpen] = useState(false);
+  const [isReleaseModalOpen, setIsReleaseModalOpen] = useState(false);
   const [isTechSpecOpen, setIsTechSpecOpen] = useState(false);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
   return (
     <div className="min-h-screen bg-canvas-dark text-slate-100 font-sans selection:bg-merah-600 selection:text-white">
-      {/* Navigation Bar */}
+      {/* Navigation Bar with v1.2.0 Announcement */}
       <Navbar
         onOpenDownload={() => setIsDownloadOpen(true)}
+        onOpenReleaseModal={() => setIsReleaseModalOpen(true)}
         isPlayingAudio={isPlayingAudio}
       />
 
@@ -28,10 +31,12 @@ export function App() {
         <HeroSection
           onOpenDownload={() => setIsDownloadOpen(true)}
           onOpenQrModal={() => setIsDownloadOpen(true)}
+          onOpenReleaseModal={() => setIsReleaseModalOpen(true)}
         />
 
         <BentoFeatures
           onOpenTechSpec={() => setIsTechSpecOpen(true)}
+          onOpenReleaseModal={() => setIsReleaseModalOpen(true)}
         />
 
         {/* Real Screenshots Showcase Gallery */}
@@ -53,6 +58,11 @@ export function App() {
       />
 
       {/* Modals */}
+      <ReleaseModal
+        isOpen={isReleaseModalOpen}
+        onClose={() => setIsReleaseModalOpen(false)}
+      />
+
       <DownloadCenterModal
         isOpen={isDownloadOpen}
         onClose={() => setIsDownloadOpen(false)}

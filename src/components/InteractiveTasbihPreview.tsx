@@ -1,19 +1,81 @@
 import React, { useState } from 'react';
-import { Sparkles, RotateCcw, Volume2, VolumeX, Flame, Award } from 'lucide-react';
+import { Sparkles, RotateCcw, Volume2, VolumeX, Flame, Award, BookOpen } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
+interface PresetItem {
+  val: number;
+  label: string;
+  category: 'standard' | 'kemalaikatan';
+  title: string;
+  arabic: string;
+  info: string;
+}
+
+const PRESETS: PresetItem[] = [
+  {
+    val: 33,
+    label: '33x',
+    category: 'standard',
+    title: 'Tasbih & Tahmid',
+    arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
+    info: 'Amaliyah rutin ba\'da sholat fardhu 5 waktu.'
+  },
+  {
+    val: 100,
+    label: '100x',
+    category: 'standard',
+    title: 'Istighfar & Shalawat',
+    arabic: 'أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ',
+    info: 'Pembersih noda hati dan pembuka pintu ketenangan.'
+  },
+  {
+    val: 165,
+    label: '165x',
+    category: 'standard',
+    title: 'Dzikir Jahr (Tahlil)',
+    arabic: 'لَا إِلٰهَ إِلَّا اللَّهُ',
+    info: 'Amaliyah utama Dzikir Jahr sesudah sholat fardhu.'
+  },
+  {
+    val: 222,
+    label: 'Ahad (222x)',
+    category: 'kemalaikatan',
+    title: 'Wirid Kemalaikatan: Ahad',
+    arabic: 'حَيٌّ قَيُّومٌ',
+    info: 'HAYYUN QOYYUUM • Malaikat Syamsayaa Yayil • Malam Ahad.'
+  },
+  {
+    val: 333,
+    label: 'Senin (333x)',
+    category: 'kemalaikatan',
+    title: 'Wirid Kemalaikatan: Senin',
+    arabic: 'رَحْمٰنُ الرَّحِيمُ',
+    info: 'ROHMAANUR ROHIIM • Malaikat Karmayaa Yayil • Malam Senin.'
+  },
+  {
+    val: 777,
+    label: 'Jum\'at (777x)',
+    category: 'kemalaikatan',
+    title: 'Wirid Kemalaikatan: Jum\'at',
+    arabic: 'شَدِيدٌ ذُو قُوَّةٍ',
+    info: 'SYADIIDUN DZUUQUWWATIN • Malaikat Jabroyaa Yayil • Malam Jum\'at.'
+  }
+];
+
 export const InteractiveTasbihPreview: React.FC = () => {
+  const [selectedPreset, setSelectedPreset] = useState<PresetItem>(PRESETS[2]); // Default 165x
   const [count, setCount] = useState(0);
-  const [basePreset, setBasePreset] = useState(33);
   const [isPressed, setIsPressed] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
+
+  const basePreset = selectedPreset.val;
 
   // Dynamic calculations for continuous multi-round rotation (33 -> 66 -> 99 ...)
   const completedRounds = Math.floor(count / basePreset);
   const isAtMilestone = count > 0 && count % basePreset === 0;
   const currentTarget = Math.max(basePreset, Math.ceil(Math.max(1, count) / basePreset) * basePreset);
   
-  // Progress within current round (resets each 33/100/165 cycle to show 0% -> 100%)
+  // Progress within current round (resets each cycle to show 0% -> 100%)
   const progressInCurrentRound = count === 0 ? 0 : (count % basePreset === 0 ? basePreset : count % basePreset);
   const progressPercent = Math.min(100, Math.round((progressInCurrentRound / basePreset) * 100));
 
@@ -52,7 +114,7 @@ export const InteractiveTasbihPreview: React.FC = () => {
     playClickSound(isMilestone);
 
     if (isMilestone) {
-      // Celebrate each finished round (33, 66, 99...)
+      // Celebrate each finished round
       confetti({
         particleCount: 50,
         spread: 60,
@@ -63,6 +125,11 @@ export const InteractiveTasbihPreview: React.FC = () => {
   };
 
   const handleReset = () => {
+    setCount(0);
+  };
+
+  const handleSelectPreset = (preset: PresetItem) => {
+    setSelectedPreset(preset);
     setCount(0);
   };
 
@@ -77,57 +144,72 @@ export const InteractiveTasbihPreview: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emas-500/10 border border-emas-500/30 text-xs font-bold text-emas-400">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Interactive Haptic Tasbih Engine</span>
+            <span>Interactive Haptic Tasbih Engine • Update v1.2.0</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Penghitung Dzikir Digital{' '}
             <span className="crimson-gradient-text">Berdaya Haptik</span>
           </h2>
           <p className="text-slate-400 text-base leading-relaxed">
-            Rasakan kelembutan dan kepuasan sentuhan saat melantunkan dzikir harian. Lengkap dengan target preset amaliyah Dzikir Jahr 165x.
+            Rasakan kelembutan dan kepuasan sentuhan saat melantunkan dzikir harian. Kini dilengkapi preset <strong className="text-emas-400 font-semibold">Wirid Kemalaikatan</strong> dan Dzikir Jahr 165x.
           </p>
         </div>
 
         {/* Interactive Tasbih Box */}
         <div className="max-w-xl mx-auto glass-card rounded-3xl p-6 sm:p-10 text-center border-emas-500/30 shadow-2xl relative">
           
-          {/* Target Presets & Sound Toggle */}
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-8">
-            <div className="flex items-center gap-1.5 bg-black/40 p-1 rounded-xl border border-white/10">
-              {[
-                { val: 33, label: '33x' },
-                { val: 100, label: '100x' },
-                { val: 165, label: '165x' },
-              ].map((p) => (
-                <button
-                  key={p.val}
-                  onClick={() => {
-                    setBasePreset(p.val);
-                    setCount(0);
-                  }}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                    basePreset === p.val
-                      ? 'bg-gradient-to-r from-merah-600 to-merah-700 text-white shadow-md'
-                      : 'text-slate-400 hover:text-white'
-                  }`}
-                >
-                  {p.label}
-                </button>
-              ))}
+          {/* Target Presets Bar */}
+          <div className="space-y-3 mb-6">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                Pilih Target Dzikir:
+              </span>
+              <button
+                onClick={() => setSoundEnabled(!soundEnabled)}
+                className={`p-1.5 px-2.5 rounded-xl border text-xs flex items-center gap-1.5 transition-colors ${
+                  soundEnabled
+                    ? 'bg-emas-500/10 border-emas-500/30 text-emas-400'
+                    : 'bg-white/5 border-white/5 text-slate-500'
+                }`}
+                title={soundEnabled ? 'Suara Aktif' : 'Suara Mati'}
+              >
+                {soundEnabled ? <Volume2 className="w-3.5 h-3.5" /> : <VolumeX className="w-3.5 h-3.5" />}
+                <span className="font-semibold text-[11px]">{soundEnabled ? 'Suara ON' : 'MUTE'}</span>
+              </button>
             </div>
 
-            <button
-              onClick={() => setSoundEnabled(!soundEnabled)}
-              className={`p-2 rounded-xl border text-xs flex items-center gap-1.5 transition-colors ${
-                soundEnabled
-                  ? 'bg-emas-500/10 border-emas-500/30 text-emas-400'
-                  : 'bg-white/5 border-white/5 text-slate-500'
-              }`}
-              title={soundEnabled ? 'Suara Aktif' : 'Suara Mati'}
-            >
-              {soundEnabled ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
-              <span className="hidden sm:inline font-semibold">{soundEnabled ? 'Suara ON' : 'MUTE'}</span>
-            </button>
+            {/* Presets Button Row */}
+            <div className="flex flex-wrap items-center justify-center gap-1.5 bg-black/40 p-1.5 rounded-2xl border border-white/10">
+              {PRESETS.map((p) => {
+                const isSelected = selectedPreset.val === p.val;
+                return (
+                  <button
+                    key={p.val}
+                    onClick={() => handleSelectPreset(p)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                      isSelected
+                        ? 'bg-gradient-to-r from-merah-600 to-merah-700 text-white shadow-md shadow-merah-600/40 scale-105'
+                        : 'text-slate-400 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    <span>{p.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Selected Dzikir Arabic & Description Card */}
+            <div className="p-3 rounded-2xl bg-canvas-surface/80 border border-emas-500/20 text-center space-y-1">
+              <span className="text-[10px] uppercase font-bold tracking-wider text-emas-400">
+                {selectedPreset.title}
+              </span>
+              <p className="text-xl font-bold text-white font-amiri leading-relaxed" dir="rtl">
+                {selectedPreset.arabic}
+              </p>
+              <p className="text-[11px] text-slate-400">
+                {selectedPreset.info}
+              </p>
+            </div>
           </div>
 
           {/* Main Tap Counter Disk */}
@@ -165,7 +247,7 @@ export const InteractiveTasbihPreview: React.FC = () => {
                 <span>Target: {currentTarget}x</span>
               </div>
 
-              {/* Radial or circular progress bar indicator */}
+              {/* Progress bar indicator */}
               <div className="w-36 h-2 bg-black/60 rounded-full mt-4 overflow-hidden p-0.5 border border-white/10">
                 <div
                   className="h-full bg-gradient-to-r from-merah-500 via-emas-400 to-emas-300 rounded-full transition-all duration-150"
