@@ -164,7 +164,7 @@ export const Footer: React.FC<FooterProps> = () => {
                 Distribusi &amp; Kontak
               </h4>
               <p className="text-slate-600 leading-relaxed text-xs">
-                Aplikasi Robithoh dapat diunduh langsung secara gratis melalui Google Play Store untuk seluruh perangkat Android (Android 7.0 Nougat ke atas). Versi iOS sedang dalam tahap finalisasi dan segera hadir di Apple App Store.
+                Aplikasi Robithoh dapat diunduh langsung secara gratis melalui Google Play Store untuk seluruh perangkat Android (Android 7.0 Nougat ke atas). Versi iOS sedang dalam tahap pengembangan dan segera hadir di Apple App Store.
               </p>
 
               <div className="space-y-2 pt-1">

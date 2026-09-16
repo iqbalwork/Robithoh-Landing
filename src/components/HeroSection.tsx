@@ -76,7 +76,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
 
               <button
                 type="button"
-                onClick={() => alert('Versi iOS sedang dalam tahap finalisasi dan akan segera hadir (Coming Soon) di Apple App Store!')}
+                onClick={() => alert('Versi iOS sedang dalam tahap pengembangan dan akan segera hadir (Coming Soon) di Apple App Store!')}
                 className="inline-flex items-center gap-2.5 bg-surface-warm hover:bg-slate-100 text-on-surface px-4 py-3.5 rounded-xl text-sm font-bold transition-all shadow-sm border border-border-hairline cursor-pointer group"
               >
                 <svg className="w-5 h-5 fill-current text-slate-800 group-hover:text-primary transition-colors shrink-0" viewBox="0 0 24 24">
@@ -89,7 +89,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
                       Coming Soon
                     </span>
                   </div>
-                  <span className="text-[10px] text-text-muted mt-1 font-normal">Tahap Distribusi</span>
+                  <span className="text-[10px] text-text-muted mt-1 font-normal">Tahap Pengembangan</span>
                 </div>
               </button>
 

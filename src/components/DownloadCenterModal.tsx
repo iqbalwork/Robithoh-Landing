@@ -168,7 +168,7 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
                         Coming Soon
                       </span>
                     </div>
-                    <p className="text-[10px] text-text-muted">Tahap Pengembangan &amp; Distribusi</p>
+                    <p className="text-[10px] text-text-muted">Tahap Pengembangan</p>
                   </div>
                 </div>
                 <ExternalLink className="w-3.5 h-3.5 text-text-muted group-hover:text-on-surface" />
