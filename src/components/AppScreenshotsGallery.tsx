@@ -6,322 +6,327 @@ import {
   Clock,
   BookOpen,
   CheckCircle2,
-  ChevronLeft,
-  ChevronRight,
-  Eye
+  Eye,
+  X,
+  Volume2,
+  Layers,
+  Settings,
+  ShieldCheck
 } from 'lucide-react';
 
-interface ScreenshotItem {
+interface ShowcaseScreen {
   id: string;
+  badge: string;
+  badgeType: 'primary' | 'secondary' | 'gold' | 'emerald';
   title: string;
-  category: string;
-  tagline: string;
+  subtitle: string;
   description: string;
   imageSrc: string;
   features: string[];
-  color: string;
-  badgeBg: string;
 }
 
-const screenshots: ScreenshotItem[] = [
+const showcaseScreens: ShowcaseScreen[] = [
   {
     id: 'home',
-    title: 'Beranda & Amaliyah Harian',
-    category: 'Dashboard Utama',
-    tagline: 'Akses Cepat Seluruh Amaliyah & Countdown Sholat',
-    description:
-      'Tampilan beranda yang intuitif menyajikan hitung mundur waktu sholat berikutnya, 12 menu amaliyah lengkap (Dzikir, Tasbih, Khotaman, Manaqib, Sholat, Kiblat, Langgam, Tarhim, Sholawat, Doa, Silsilah, Tahlil & Ziyaroh), serta mutiara wasiat Tanbih harian.',
+    badge: 'Layar 01 • Beranda',
+    badgeType: 'primary',
+    title: 'Beranda & Hitung Sholat',
+    subtitle: 'Dashboard Amaliyah Terpadu',
+    description: 'Countdown sholat presisi, quote mutiara hikmah harian, dan akses langsung ke menu amaliyah utama.',
     imageSrc: './assets/screenshots/home.png',
     features: [
       'Countdown Sholat Presisi per Kota',
       '12 Menu Amaliyah Cepat & Terstruktur',
-      'Wasiat Tanbih & Kutipan Harian',
+      'Wasiat Tanbih & Mutiara Hikmah',
       'Floating Pill Navigation Bar'
-    ],
-    color: '#CE1126',
-    badgeBg: 'bg-merah-500/10 text-merah-400 border-merah-500/30'
+    ]
   },
   {
     id: 'sholat',
-    title: 'Jadwal Sholat & Notifikasi Adzan',
-    category: 'Waktu Sholat Kemenag',
-    tagline: 'Kalkulasi Astronomis GPS & Nama Kota Bersih',
-    description:
-      'Perhitungan waktu sholat 5 waktu, Imsak, dan Syuruq dengan hisab astronomis akurat berbasis koordinat perangkat. Di versi 1.2.0, notifikasi sholat kini menampilkan nama kota yang bersih dan rapi (bukan titik koordinat GPS mentah).',
+    badge: 'Layar 02 • Ibadah',
+    badgeType: 'secondary',
+    title: 'Jadwal Sholat 5 Waktu',
+    subtitle: 'Hisab Astronomis GPS',
+    description: 'Tabel jadwal imsakiyah, sholat fardhu, dhuha, dan terbit matahari berdasarkan garis lintang lokasi Anda.',
     imageSrc: './assets/screenshots/sholat.png',
     features: [
       'Notifikasi Nama Kota Bersih (Bukan GPS)',
       'Standar Hisab Kemenag RI & Internasional',
       'Pengingat 10 Menit Pra-Sholat & Adzan',
       'Koreksi Menit Manual (Ihtiyat)'
-    ],
-    color: '#D4AF37',
-    badgeBg: 'bg-emas-500/10 text-emas-400 border-emas-500/30'
+    ]
+  },
+  {
+    id: 'quran',
+    badge: 'Layar 03 • Tilawah',
+    badgeType: 'primary',
+    title: 'Mushaf Digital Kemenag',
+    subtitle: '604 Halaman Standar Kemenag RI',
+    description: 'Tampilan 604 halaman mushaf standar dengan navigasi nomor halaman dan indeks surah cepat.',
+    imageSrc: './assets/screenshots/quran.png',
+    features: [
+      'Mode Mushaf 604 Halaman Kemenag RI',
+      'Pemetaan Ayat Interaktif & Terjemah',
+      '114 Surah Lengkap 30 Juz 100% Offline',
+      'Banner Lanjut Baca Ayat Terakhir'
+    ]
+  },
+  {
+    id: 'tasbih',
+    badge: 'Layar 04 • Tasbih',
+    badgeType: 'primary',
+    title: 'Tasbih Digital Haptik',
+    subtitle: 'Penghitung Dzikir Interaktif',
+    description: 'Penghitung wirid dan dzikir jahr 165x atau target kustom dengan getaran haptik taktil.',
+    imageSrc: './assets/screenshots/tasbih.png',
+    features: [
+      'Preset Dzikir Jahr 165x & Target Kustom',
+      'Respon Getaran Haptik Taktil & Suara',
+      'Indikator Putaran Selesai & Persentase',
+      'Tombol Hitung Luas 1-Ketukan Nyaman'
+    ]
+  },
+  {
+    id: 'dzikir',
+    badge: 'Layar 05 • Dzikir',
+    badgeType: 'primary',
+    title: 'Dzikir Harian TQN Suryalaya',
+    subtitle: 'Amaliyah Dzikir & Khotaman',
+    description: 'Panduan bacaan tasbih, lafadz tahlil, shalawat bani hasyim, dan urutan khotaman lengkap dengan transliterasi serta terjemah.',
+    imageSrc: './assets/screenshots/dzikir_harian.png',
+    features: [
+      'Dzikir Jahr 165x & Dzikir Khofi',
+      'Khotaman & Tawassul Silsilah',
+      'Transliterasi Latin & Terjemah',
+      'Navigasi Ayat Amaliyah Halus'
+    ]
   },
   {
     id: 'kiblat',
-    title: 'Kompas Arah Kiblat Presisi',
-    category: 'Arah Ka\'bah Akurat',
-    tagline: 'Kalibrasi Sensor Kompas & Derajat Azimuth',
-    description:
-      'Penunjuk arah Ka\'bah Al-Mukarromah berbasis sensor magnetik perangkat dengan perhitungan derajat azimuth (misal: 295.17° WNW), informasi jarak kilometer langsung ke Ka\'bah, dan panduan putar arah yang interaktif.',
+    badge: 'Layar 06 • Kompas',
+    badgeType: 'gold',
+    title: 'Penunjuk Arah Kiblat',
+    subtitle: 'Sensor Magnetik & Derajat Azimuth',
+    description: 'Kompas visual sensor magnetik real-time yang menunjukkan derajat ke Ka\'bah secara tepat.',
     imageSrc: './assets/screenshots/kiblat.png',
     features: [
       'Derajat Azimuth & Arah Kompas Realtime',
       'Jarak Presisi ke Ka\'bah (km)',
       'Deteksi Status Akurasi Sensor GPS',
       'Petunjuk Kalibrasi Putar Derajat'
-    ],
-    color: '#10B981',
-    badgeBg: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
-  },
-  {
-    id: 'quran',
-    title: 'Al-Qur\'an 114 Surah & Mode Mushaf',
-    category: 'Mushaf Standar Kemenag RI',
-    tagline: 'Mode Lembaran Mushaf Utuh 604 Halaman & Interaktif',
-    description:
-      'Nikmati kemudahan membaca Al-Qur\'an dengan tampilan lembaran mushaf utuh standar Kementerian Agama RI lengkap 604 halaman atau mode per ayat. Dilengkapi pemetaan ayat interaktif, loncat juz & surah seketika, serta penanda bacaan terakhir otomatis.',
-    imageSrc: './assets/screenshots/quran.png',
-    features: [
-      'Mode Mushaf 604 Halaman Kemenag RI',
-      'Pemetaan Ayat Interaktif & Audio',
-      '114 Surah Lengkap 30 Juz 100% Offline',
-      'Banner Lanjut Baca Ayat Terakhir'
-    ],
-    color: '#0284C7',
-    badgeBg: 'bg-sky-500/10 text-sky-400 border-sky-500/30'
-  },
-  {
-    id: 'tasbih',
-    title: 'Tasbih Digital & Wirid Kemalaikatan',
-    category: 'Dzikir Taktil Berirama',
-    tagline: 'Preset Wirid Kemalaikatan & Dzikir Jahr 165x',
-    description:
-      'Penghitung dzikir berlayar penuh dengan respon getaran haptic berirama. Di versi 1.2.0, hadir pilihan khusus Wirid Kemalaikatan (Ahad s.d. Jum\'at 222x–777x sesuai Malaikat penjaga), preset Dzikir Jahr 165x, 33x, 100x, serta target kustom.',
-    imageSrc: './assets/screenshots/tasbih.png',
-    features: [
-      'Preset Wirid Kemalaikatan 7 Hari (222x–777x)',
-      'Preset Khusus Dzikir Jahr 165x & 33x',
-      'Haptic Feedback pada Setiap Hitungan',
-      'Statistik Putaran & Reset Aman'
-    ],
-    color: '#E11D48',
-    badgeBg: 'bg-rose-500/10 text-rose-400 border-rose-500/30'
-  },
-  {
-    id: 'adzan',
-    title: 'Pengaturan Suara Adzan Mandiri',
-    category: 'Audio & Notifikasi Sholat',
-    tagline: 'Slider 0%–100% Fleksibel & Mode Senyap Praktis',
-    description:
-      'Penyesuaian mandiri intensitas suara kumandang adzan tanpa terpengaruh volume dering telepon ponsel Anda. Menggeser slider ke 0% membisukan suara audio saat rapat atau berada di masjid, sementara pengingat visual tetap muncul tepat waktu.',
-    imageSrc: './assets/screenshots/adzan_volume.png',
-    features: [
-      'Slider Volume Mandiri 0%–100%',
-      'Mode Senyap (Audio Mute, Visual On)',
-      'Alarm Subuh Terintegrasi Sistem Android',
-      'Koreksi Menit Manual (Ihtiyat)'
-    ],
-    color: '#D4AF37',
-    badgeBg: 'bg-emas-500/10 text-emas-400 border-emas-500/30'
+    ]
   },
   {
     id: 'pengaturan',
-    title: 'Pengaturan & Informasi Versi 1.2.0',
-    category: 'Bantuan & Pembaruan Resmi',
-    tagline: 'Informasi Versi 1.2.0 & Akses Ulang Panduan Visual',
-    description:
-      'Layar pengaturan komprehensif menampilkan informasi versi resmi aplikasi v1.2.0, tautan langsung pembaruan Google Play Store, penilaian aplikasi, serta opsi jalankan ulang panduan interaktif Spotlight kapan saja.',
+    badge: 'Layar 07 • Pengaturan',
+    badgeType: 'secondary',
+    title: 'Pengaturan & Notifikasi Adzan',
+    subtitle: 'Kustomisasi Pribadi & Volume',
+    description: 'Atur suara notifikasi adzan mandiri, koreksi manual waktu sholat, dan preferensi widget home screen.',
     imageSrc: './assets/screenshots/pengaturan.png',
     features: [
-      'Info Nomor Versi Resmi v1.2.0',
-      'Cek Pembaruan Google Play Langsung',
-      'Tombol Reset Panduan Interaktif (Spotlight)',
-      'Beri Rating & Masukan Aplikasi'
-    ],
-    color: '#CE1126',
-    badgeBg: 'bg-merah-500/10 text-merah-400 border-merah-500/30'
+      'Slider Volume Adzan Mandiri 0%–100%',
+      'Mode Senyap Praktis Saat Ibadah',
+      'Informasi Pembaruan v1.2.0',
+      'Akses Ulang Panduan Spotlight'
+    ]
   }
 ];
 
 export const AppScreenshotsGallery: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const activeItem = screenshots[activeIndex];
+  const [selectedScreen, setSelectedScreen] = useState<ShowcaseScreen | null>(null);
 
-  const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? screenshots.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev === screenshots.length - 1 ? 0 : prev + 1));
+  const getBadgeStyle = (type: ShowcaseScreen['badgeType']) => {
+    switch (type) {
+      case 'primary':
+        return 'bg-red-soft text-primary';
+      case 'secondary':
+        return 'bg-amber-100 text-secondary';
+      case 'gold':
+        return 'bg-gold-light text-amber-800';
+      case 'emerald':
+        return 'bg-emerald-50 text-emerald-700';
+    }
   };
 
   return (
-    <section id="screenshots" className="py-24 bg-canvas-dark relative overflow-hidden">
-      {/* Dynamic Background Glows */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-merah-900/20 via-emas-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-80 h-80 bg-merah-600/10 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="w-full py-20 sm:py-28 bg-surface-pure relative overflow-hidden" id="tampilan">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emas-500/10 border border-emas-500/30 text-xs font-bold text-emas-400">
-            <Smartphone className="w-3.5 h-3.5" />
-            <span>Tampilan Nyata Aplikasi</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Antarmuka Modern, Bersih &amp;{' '}
-            <span className="crimson-gradient-text">Ramah Pengguna</span>
-          </h2>
-          <p className="text-slate-400 text-base leading-relaxed">
-            Didesain dengan tipografi mushaf berharakat tajam, kontras warna hangat yang ramah mata, dan kemudahan akses satu jempol untuk seluruh kebutuhan ibadah Anda.
-          </p>
-        </div>
-
-        {/* Tab Navigation Buttons */}
-        <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-12">
-          {screenshots.map((item, idx) => {
-            const isActive = idx === activeIndex;
-            return (
-              <button
-                key={item.id}
-                onClick={() => setActiveIndex(idx)}
-                className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 flex items-center gap-2 border ${
-                  isActive
-                    ? 'bg-gradient-to-r from-merah-600 to-merah-700 text-white border-merah-400 shadow-lg shadow-merah-600/30 scale-105'
-                    : 'bg-canvas-card hover:bg-canvas-surface text-slate-300 hover:text-white border-white/10 hover:border-emas-500/30'
-                }`}
-              >
-                <span>{item.title.split('&')[0].trim()}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Main Showcase Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          
-          {/* Left Column: Phone Mockup Frame */}
-          <div className="lg:col-span-5 flex justify-center relative">
-            
-            {/* Phone Frame */}
-            <div className="relative w-[280px] sm:w-[320px] rounded-[42px] p-3 bg-gradient-to-b from-[#383D45] via-[#1E2126] to-[#121417] shadow-2xl shadow-black/90 border border-slate-700/50 group">
-              
-              {/* Screen Bezel (exact 460/1024 aspect ratio) */}
-              <div className="relative rounded-[32px] overflow-hidden bg-black border border-slate-800 shadow-inner w-full aspect-[460/1024]">
-                
-                {/* Active Screenshot Image */}
-                <img
-                  key={activeItem.id}
-                  src={activeItem.imageSrc}
-                  alt={activeItem.title}
-                  className="w-full h-full object-cover animate-fadeIn transition-opacity duration-300"
-                />
-
-                {/* Subtle Glass Reflection Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none" />
-              </div>
-
-              {/* Navigation Arrows for Mobile */}
-              <button
-                onClick={handlePrev}
-                className="absolute -left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-canvas-card/90 hover:bg-merah-600 text-slate-200 hover:text-white border border-white/15 shadow-xl transition-all"
-                aria-label="Previous screenshot"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={handleNext}
-                className="absolute -right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-canvas-card/90 hover:bg-merah-600 text-slate-200 hover:text-white border border-white/15 shadow-xl transition-all"
-                aria-label="Next screenshot"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div>
+            <div className="inline-flex items-center gap-1.5 bg-gold-light px-3 py-1 rounded-full mb-3 border border-gold-accent/30">
+              <Sparkles className="w-3.5 h-3.5 text-secondary" />
+              <span className="text-[11px] font-bold text-secondary uppercase tracking-wider">
+                Tangkap Layar Aplikasi Nyata
+              </span>
             </div>
-
-          </div>
-
-          {/* Right Column: Feature Details & Explanation */}
-          <div className="lg:col-span-7 space-y-6">
-            
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border ${activeItem.badgeBg}`}>
-                  {activeItem.category}
-                </span>
-                <span className="text-xs text-slate-400 font-mono">
-                  Layar {activeIndex + 1} dari {screenshots.length}
-                </span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
-                {activeItem.title}
-              </h3>
-              <p className="text-emas-400 font-semibold text-sm sm:text-base">
-                {activeItem.tagline}
-              </p>
-            </div>
-
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              {activeItem.description}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-surface tracking-tight">
+              Eksplorasi Antarmuka Elegan Robithoh
+            </h2>
+            <p className="text-base sm:text-lg text-text-muted max-w-2xl mt-2 leading-relaxed">
+              Desain visual bernuansa putih bersih, aksen merah bersahaja, dan tipografi Al-Qur'an berskala tinggi yang nyaman dipandang.
             </p>
-
-            {/* Feature Bullet Points */}
-            <div className="p-5 rounded-2xl bg-canvas-card border border-white/10 space-y-3 shadow-lg">
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-emas-400" />
-                <span>Fitur Utama Layar Ini:</span>
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-                {activeItem.features.map((feat, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                    <span>{feat}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Bottom Screen Switcher Bar */}
-            <div className="flex items-center justify-between pt-2 border-t border-white/10">
-              <div className="flex items-center gap-2">
-                {screenshots.map((_, dotIdx) => (
-                  <button
-                    key={dotIdx}
-                    onClick={() => setActiveIndex(dotIdx)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      dotIdx === activeIndex ? 'w-8 bg-merah-500' : 'w-2 bg-slate-600 hover:bg-slate-400'
-                    }`}
-                    aria-label={`Go to slide ${dotIdx + 1}`}
-                  />
-                ))}
-              </div>
-
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={handlePrev}
-                  className="px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 text-xs font-semibold transition-colors flex items-center gap-1"
-                >
-                  <ChevronLeft className="w-3.5 h-3.5" />
-                  <span>Sebelumnya</span>
-                </button>
-                <button
-                  onClick={handleNext}
-                  className="px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 text-xs font-semibold transition-colors flex items-center gap-1"
-                >
-                  <span>Berikutnya</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </div>
-
           </div>
 
+          <div className="flex items-center gap-2 bg-surface-container-high px-4 py-2.5 rounded-xl text-on-surface text-xs font-bold shrink-0 self-start md:self-end">
+            <Smartphone className="w-4 h-4 text-primary" />
+            <span>Pratinjau Layar v1.2.0</span>
+          </div>
+        </div>
+
+        {/* 4 Main Screen Cards Showcase */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {showcaseScreens.slice(0, 4).map((screen) => (
+            <div
+              key={screen.id}
+              onClick={() => setSelectedScreen(screen)}
+              className="bg-surface-warm rounded-3xl p-4 flex flex-col gap-3.5 shadow-sm hover:shadow-md border border-border-hairline transition-all cursor-pointer group hover:-translate-y-1"
+            >
+              {/* Device Frame */}
+              <div className="w-full rounded-2xl overflow-hidden bg-slate-900 p-1.5 shadow-inner">
+                <div className="rounded-xl overflow-hidden aspect-[1008/2244] bg-surface relative">
+                  <img
+                    alt={screen.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    src={screen.imageSrc}
+                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="bg-white/90 text-on-surface px-3 py-1.5 rounded-xl text-xs font-bold shadow-md flex items-center gap-1.5">
+                      <Eye className="w-3.5 h-3.5 text-primary" /> Perbesar
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card Meta */}
+              <div className="flex flex-col px-1 pt-1">
+                <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md self-start ${getBadgeStyle(screen.badgeType)}`}>
+                  {screen.badge}
+                </span>
+                <h4 className="text-base font-bold text-on-surface mt-2 group-hover:text-primary transition-colors">
+                  {screen.title}
+                </h4>
+                <p className="text-xs text-text-muted mt-1 leading-snug">
+                  {screen.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Screen Preview Row: Dzikir, Kiblat & Pengaturan */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {showcaseScreens.slice(4).map((screen) => (
+            <div
+              key={screen.id}
+              onClick={() => setSelectedScreen(screen)}
+              className="bg-surface-warm p-5 sm:p-6 rounded-3xl flex items-center gap-4 sm:gap-5 shadow-sm hover:shadow-md border border-border-hairline transition-all cursor-pointer group hover:-translate-y-0.5"
+            >
+              <div className="w-18 sm:w-20 rounded-2xl overflow-hidden bg-slate-900 p-1 shrink-0 shadow-inner">
+                <img
+                  alt={screen.title}
+                  className="w-full aspect-[1008/2244] object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                  src={screen.imageSrc}
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md self-start ${getBadgeStyle(screen.badgeType)}`}>
+                  {screen.badge}
+                </span>
+                <h4 className="text-base font-bold text-on-surface mt-1.5 group-hover:text-primary transition-colors">
+                  {screen.title}
+                </h4>
+                <p className="text-xs text-text-muted mt-1 leading-snug">
+                  {screen.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>
+
+      {/* Full-Screen Detail Modal */}
+      {selectedScreen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
+          onClick={() => setSelectedScreen(null)}
+        >
+          <div
+            className="relative w-full max-w-2xl bg-white border border-border-hairline rounded-3xl p-6 sm:p-8 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedScreen(null)}
+              className="absolute top-5 right-5 p-2 rounded-xl bg-surface-warm hover:bg-slate-200 text-slate-500 hover:text-on-surface transition-colors cursor-pointer z-20"
+              aria-label="Tutup"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+              <div className="sm:col-span-5 flex justify-center">
+                <div className="w-[200px] sm:w-[220px] rounded-[36px] p-2 bg-slate-900 shadow-xl">
+                  <div className="rounded-[28px] overflow-hidden bg-black aspect-[1008/2244]">
+                    <img
+                      src={selectedScreen.imageSrc}
+                      alt={selectedScreen.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="sm:col-span-7 space-y-4">
+                <span className={`text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md inline-block ${getBadgeStyle(selectedScreen.badgeType)}`}>
+                  {selectedScreen.badge}
+                </span>
+
+                <h3 className="text-2xl font-extrabold text-on-surface">
+                  {selectedScreen.title}
+                </h3>
+
+                <p className="text-sm font-semibold text-secondary">
+                  {selectedScreen.subtitle}
+                </p>
+
+                <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
+                  {selectedScreen.description}
+                </p>
+
+                <div className="pt-2 space-y-2">
+                  <h5 className="text-xs font-bold text-on-surface uppercase tracking-wider">
+                    Keunggulan Fitur:
+                  </h5>
+                  <div className="space-y-1.5">
+                    {selectedScreen.features.map((feat, i) => (
+                      <div key={i} className="flex items-center gap-2 text-xs text-on-surface">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <span>{feat}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-3">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.iqbalwork.robithoh"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 bg-primary text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm hover:bg-primary-container transition-colors"
+                  >
+                    <Smartphone className="w-4 h-4" />
+                    <span>Coba di Aplikasi Robithoh</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
+

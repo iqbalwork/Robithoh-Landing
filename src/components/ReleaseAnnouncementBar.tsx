@@ -17,7 +17,7 @@ export const ReleaseAnnouncementBar: React.FC<ReleaseAnnouncementBarProps> = ({
         <div className="flex-1 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-center">
           <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emas-500/20 text-emas-300 font-extrabold text-[10px] tracking-wide uppercase border border-emas-500/40">
             <Sparkles className="w-3 h-3 text-emas-400 animate-pulse" />
-            Update Resmi v1.2.0
+            Pembaruan v1.2.0
           </span>
 
           <span className="text-slate-200 font-medium">

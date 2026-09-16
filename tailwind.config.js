@@ -8,6 +8,47 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: '#970012',
+          container: '#c1121f',
+          fixed: '#ffdad6',
+          'fixed-dim': '#ffb3ad',
+        },
+        secondary: {
+          DEFAULT: '#904d00',
+          container: '#fe932c',
+          fixed: '#ffdcc3',
+          'fixed-dim': '#ffb77d',
+        },
+        tertiary: {
+          DEFAULT: '#8e1b20',
+          container: '#af3435',
+        },
+        surface: {
+          DEFAULT: '#faf8ff',
+          pure: '#ffffff',
+          warm: '#fafaf9',
+          subtle: '#f5f5f4',
+          dim: '#d2d9f4',
+          bright: '#faf8ff',
+          variant: '#dae2fd',
+          container: {
+            DEFAULT: '#eaedff',
+            low: '#f2f3ff',
+            high: '#e2e7ff',
+            highest: '#dae2fd',
+            lowest: '#ffffff',
+          }
+        },
+        'on-surface': {
+          DEFAULT: '#131b2e',
+          variant: '#5c403d',
+        },
+        'text-muted': '#64748B',
+        'border-hairline': '#E2E8F0',
+        'gold-accent': '#F59E0B',
+        'gold-light': '#FEF3C7',
+        'red-soft': '#FEE2E2',
         merah: {
           50: '#fff1f2',
           100: '#ffe4e6',
@@ -46,6 +87,19 @@ export default {
           muted: '#E4E4E7',
         }
       },
+      spacing: {
+        'space-xs': '0.25rem',
+        'space-sm': '0.5rem',
+        'space-md': '1rem',
+        'space-lg': '1.5rem',
+        'space-xl': '2.5rem',
+        'space-2xl': '4rem',
+        'gutter': '1.5rem',
+        'gutter-lg': '2rem',
+        'margin': '1.25rem',
+        'margin-md': '2.5rem',
+        'margin-lg': '5rem',
+      },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         arabic: ['Amiri', '"Amiri Quran"', '"Scheherazade New"', 'serif'],
@@ -53,13 +107,14 @@ export default {
       backgroundImage: {
         'gold-gradient': 'linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%)',
         'crimson-gradient': 'linear-gradient(135deg, #CE1126 0%, #7A0914 100%)',
+        'clean-glass': 'linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 250, 249, 0.9) 100%)',
         'dark-glass': 'linear-gradient(145deg, rgba(26, 29, 32, 0.85) 0%, rgba(17, 17, 19, 0.95) 100%)',
         'gold-glass': 'linear-gradient(145deg, rgba(212, 175, 55, 0.08) 0%, rgba(206, 17, 38, 0.04) 100%)',
       },
       boxShadow: {
         'gold-glow': '0 0 25px -5px rgba(212, 175, 55, 0.35)',
         'gold-glow-lg': '0 0 45px -5px rgba(212, 175, 55, 0.45)',
-        'crimson-glow': '0 0 25px -5px rgba(206, 17, 38, 0.4)',
+        'crimson-glow': '0 0 25px -5px rgba(151, 0, 18, 0.3)',
         'inner-gold': 'inset 0 1px 1px 0 rgba(212, 175, 55, 0.3)',
       },
       animation: {

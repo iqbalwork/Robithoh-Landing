@@ -134,42 +134,41 @@ export const InteractiveTasbihPreview: React.FC = () => {
   };
 
   return (
-    <section id="tasbih" className="py-24 bg-gradient-to-b from-canvas-dark via-canvas-surface to-canvas-dark relative overflow-hidden">
-      {/* Dynamic Glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-merah-600/10 rounded-full blur-3xl pointer-events-none" />
+    <section id="tasbih" className="py-20 sm:py-28 bg-surface-warm border-t border-slate-200/60 relative overflow-hidden">
+      {/* Subtle Glows */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-soft/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emas-500/10 border border-emas-500/30 text-xs font-bold text-emas-400">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Interactive Haptic Tasbih Engine • Update v1.2.0</span>
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gold-light border border-gold-accent/30 text-xs font-bold text-secondary">
+            <Sparkles className="w-3.5 h-3.5 text-secondary" />
+            <span>Interactive Haptic Tasbih • Update v1.2.0</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Penghitung Dzikir Digital{' '}
-            <span className="crimson-gradient-text">Berdaya Haptik</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+            Penghitung Dzikir Digital <span className="text-primary">Berdaya Haptik</span>
           </h2>
-          <p className="text-slate-400 text-base leading-relaxed">
-            Rasakan kelembutan dan kepuasan sentuhan saat melantunkan dzikir harian. Kini dilengkapi preset <strong className="text-emas-400 font-semibold">Wirid Kemalaikatan</strong> dan Dzikir Jahr 165x.
+          <p className="text-text-muted text-base leading-relaxed">
+            Rasakan kelembutan dan kepuasan sentuhan saat melantunkan dzikir harian. Dilengkapi preset <strong className="text-on-surface font-semibold">Wirid Kemalaikatan</strong> dan Dzikir Jahr 165x.
           </p>
         </div>
 
         {/* Interactive Tasbih Box */}
-        <div className="max-w-xl mx-auto glass-card rounded-3xl p-6 sm:p-10 text-center border-emas-500/30 shadow-2xl relative">
+        <div className="max-w-xl mx-auto bg-white rounded-3xl p-6 sm:p-10 text-center border border-border-hairline shadow-sm hover:shadow-md transition-shadow relative">
           
           {/* Target Presets Bar */}
           <div className="space-y-3 mb-6">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-text-muted">
                 Pilih Target Dzikir:
               </span>
               <button
                 onClick={() => setSoundEnabled(!soundEnabled)}
-                className={`p-1.5 px-2.5 rounded-xl border text-xs flex items-center gap-1.5 transition-colors ${
+                className={`p-1.5 px-2.5 rounded-xl border text-xs flex items-center gap-1.5 transition-colors cursor-pointer ${
                   soundEnabled
-                    ? 'bg-emas-500/10 border-emas-500/30 text-emas-400'
-                    : 'bg-white/5 border-white/5 text-slate-500'
+                    ? 'bg-gold-light border-gold-accent/30 text-secondary'
+                    : 'bg-slate-100 border-slate-200 text-slate-400'
                 }`}
                 title={soundEnabled ? 'Suara Aktif' : 'Suara Mati'}
               >
@@ -178,18 +177,18 @@ export const InteractiveTasbihPreview: React.FC = () => {
               </button>
             </div>
 
-            {/* Presets Button Row */}
-            <div className="flex flex-wrap items-center justify-center gap-1.5 bg-black/40 p-1.5 rounded-2xl border border-white/10">
+            {/* Presets Grid */}
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
               {PRESETS.map((p) => {
                 const isSelected = selectedPreset.val === p.val;
                 return (
                   <button
                     key={p.val}
                     onClick={() => handleSelectPreset(p)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                    className={`py-2 px-2 rounded-xl text-xs font-bold transition-all cursor-pointer border ${
                       isSelected
-                        ? 'bg-gradient-to-r from-merah-600 to-merah-700 text-white shadow-md shadow-merah-600/40 scale-105'
-                        : 'text-slate-400 hover:text-white hover:bg-white/5'
+                        ? 'bg-primary text-white border-primary shadow-sm scale-105'
+                        : 'bg-surface-warm hover:bg-slate-100 text-on-surface border-border-hairline'
                     }`}
                   >
                     <span>{p.label}</span>
@@ -199,42 +198,31 @@ export const InteractiveTasbihPreview: React.FC = () => {
             </div>
 
             {/* Selected Dzikir Arabic & Description Card */}
-            <div className="p-3 rounded-2xl bg-canvas-surface/80 border border-emas-500/20 text-center space-y-1">
-              <span className="text-[10px] uppercase font-bold tracking-wider text-emas-400">
+            <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline text-center space-y-1">
+              <span className="text-xs uppercase font-bold tracking-wider text-primary">
                 {selectedPreset.title}
               </span>
-              <p className="text-xl font-bold text-white font-amiri leading-relaxed" dir="rtl">
+              <p className="text-2xl font-semibold text-on-surface font-arabic py-1" dir="rtl">
                 {selectedPreset.arabic}
               </p>
-              <p className="text-[11px] text-slate-400">
+              <p className="text-xs text-text-muted italic">
                 {selectedPreset.info}
               </p>
             </div>
           </div>
 
           {/* Main Tap Counter Disk */}
-          <div className="relative my-4 flex justify-center">
-            {/* Pulsing ring */}
-            <div
-              className={`absolute -inset-4 rounded-full transition-all duration-300 blur-xl ${
-                isAtMilestone
-                  ? 'bg-emas-500/30 opacity-100 animate-pulse'
-                  : isPressed
-                  ? 'bg-merah-500/40 opacity-80'
-                  : 'bg-merah-600/15 opacity-50'
-              }`}
-            />
-
+          <div className="relative my-6 flex justify-center">
             {/* Clickable Button Disk */}
             <button
               onClick={handleTap}
-              className={`relative w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-merah-950 via-canvas-card to-[#1d0508] border-4 ${
+              className={`relative w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-tr from-primary to-primary-container text-white border-4 ${
                 isAtMilestone
-                  ? 'border-emas-400 shadow-gold-glow-lg'
-                  : 'border-merah-600/50 shadow-crimson-glow'
+                  ? 'border-gold-accent shadow-2xl shadow-gold-accent/30'
+                  : 'border-white/40 shadow-xl shadow-primary/25'
               } flex flex-col items-center justify-center p-6 cursor-pointer active:scale-95 transition-all duration-100 select-none group`}
             >
-              <span className="text-xs uppercase font-bold tracking-widest text-slate-400 group-hover:text-emas-400 transition-colors">
+              <span className="text-xs uppercase font-bold tracking-widest text-white/80">
                 {isAtMilestone ? `🎉 Target ${count}x Tercapai!` : 'Ketuk untuk Menghitung'}
               </span>
 
@@ -242,15 +230,15 @@ export const InteractiveTasbihPreview: React.FC = () => {
                 {count}
               </span>
 
-              <div className="flex items-center gap-1.5 text-sm font-bold text-emas-400">
-                <Flame className="w-4 h-4 text-merah-400" />
+              <div className="flex items-center gap-1.5 text-sm font-bold text-gold-light">
+                <Flame className="w-4 h-4 text-gold-accent" />
                 <span>Target: {currentTarget}x</span>
               </div>
 
               {/* Progress bar indicator */}
-              <div className="w-36 h-2 bg-black/60 rounded-full mt-4 overflow-hidden p-0.5 border border-white/10">
+              <div className="w-36 h-2 bg-black/20 rounded-full mt-4 overflow-hidden p-0.5">
                 <div
-                  className="h-full bg-gradient-to-r from-merah-500 via-emas-400 to-emas-300 rounded-full transition-all duration-150"
+                  className="h-full bg-white rounded-full transition-all duration-150"
                   style={{ width: `${progressPercent}%` }}
                 />
               </div>
@@ -258,23 +246,23 @@ export const InteractiveTasbihPreview: React.FC = () => {
           </div>
 
           {/* Stats Bar */}
-          <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-around text-xs">
+          <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-around text-xs">
             <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-emas-400" />
-              <span className="text-slate-300">
-                Putaran Selesai: <strong className="text-white font-mono">{completedRounds}x</strong>
+              <Award className="w-4 h-4 text-secondary" />
+              <span className="text-text-muted">
+                Putaran Selesai: <strong className="text-on-surface font-mono">{completedRounds}x</strong>
               </span>
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="text-slate-300">
-                Kemajuan: <strong className="text-emas-400 font-mono">{progressPercent}%</strong>
+              <span className="text-text-muted">
+                Kemajuan: <strong className="text-primary font-mono">{progressPercent}%</strong>
               </span>
             </div>
 
             <button
               onClick={handleReset}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors active:scale-95"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-warm hover:bg-slate-100 text-on-surface border border-border-hairline transition-colors active:scale-95 cursor-pointer font-semibold"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Reset</span>
@@ -287,3 +275,4 @@ export const InteractiveTasbihPreview: React.FC = () => {
     </section>
   );
 };
+

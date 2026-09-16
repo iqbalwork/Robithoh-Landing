@@ -3,27 +3,21 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { BentoFeatures } from './components/BentoFeatures';
 import { AppScreenshotsGallery } from './components/AppScreenshotsGallery';
-import { InteractiveTasbihPreview } from './components/InteractiveTasbihPreview';
-import { AudioLiturgyDemo } from './components/AudioLiturgyDemo';
 import { AboutSection } from './components/AboutSection';
 import { Footer } from './components/Footer';
 import { DownloadCenterModal } from './components/DownloadCenterModal';
-import { OfflineTechSpecModal } from './components/OfflineTechSpecModal';
 import { ReleaseModal } from './components/ReleaseModal';
 
 export function App() {
   const [isDownloadOpen, setIsDownloadOpen] = useState(false);
   const [isReleaseModalOpen, setIsReleaseModalOpen] = useState(false);
-  const [isTechSpecOpen, setIsTechSpecOpen] = useState(false);
-  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
   return (
-    <div className="min-h-screen bg-canvas-dark text-slate-100 font-sans selection:bg-merah-600 selection:text-white">
+    <div className="min-h-screen bg-surface text-on-surface font-sans selection:bg-primary selection:text-white">
       {/* Navigation Bar with v1.2.0 Announcement */}
       <Navbar
         onOpenDownload={() => setIsDownloadOpen(true)}
         onOpenReleaseModal={() => setIsReleaseModalOpen(true)}
-        isPlayingAudio={isPlayingAudio}
       />
 
       {/* Main Content Sections */}
@@ -35,18 +29,11 @@ export function App() {
         />
 
         <BentoFeatures
-          onOpenTechSpec={() => setIsTechSpecOpen(true)}
           onOpenReleaseModal={() => setIsReleaseModalOpen(true)}
         />
 
         {/* Real Screenshots Showcase Gallery */}
         <AppScreenshotsGallery />
-
-        <InteractiveTasbihPreview />
-
-        <AudioLiturgyDemo
-          onPlayStateChange={setIsPlayingAudio}
-        />
 
         {/* About & Mentors Section */}
         <AboutSection />
@@ -66,11 +53,6 @@ export function App() {
       <DownloadCenterModal
         isOpen={isDownloadOpen}
         onClose={() => setIsDownloadOpen(false)}
-      />
-
-      <OfflineTechSpecModal
-        isOpen={isTechSpecOpen}
-        onClose={() => setIsTechSpecOpen(false)}
       />
     </div>
   );

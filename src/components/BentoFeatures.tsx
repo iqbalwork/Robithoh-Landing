@@ -14,474 +14,329 @@ import {
   Search,
   MapPin,
   Zap,
-  Bookmark
+  Bookmark,
+  WifiOff,
+  ShieldCheck,
+  Check
 } from 'lucide-react';
 
 interface BentoFeaturesProps {
-  onOpenTechSpec: () => void;
   onOpenReleaseModal?: () => void;
 }
 
-export const BentoFeatures: React.FC<BentoFeaturesProps> = ({ onOpenTechSpec, onOpenReleaseModal }) => {
+export const BentoFeatures: React.FC<BentoFeaturesProps> = ({ onOpenReleaseModal }) => {
   return (
-    <section id="fitur" className="py-24 bg-canvas-dark relative overflow-hidden">
-      {/* Subtle Background Glows */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-merah-950/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-3/4 right-10 w-96 h-96 bg-emas-500/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section id="fitur" className="py-20 sm:py-28 bg-surface-warm relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emas-500/10 border border-emas-500/30 text-xs font-bold text-emas-400">
-            <Cpu className="w-3.5 h-3.5" />
-            <span>Pembaruan Resmi v1.2.0 &amp; Arsitektur Unggulan</span>
+        {/* Section Header: Keunggulan Hakiki */}
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-soft text-primary font-bold text-xs uppercase tracking-wider">
+            <ShieldCheck className="w-4 h-4 text-primary" />
+            <span>Keunggulan Hakiki</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Dirancang Khusus untuk{' '}
-            <span className="gold-gradient-text">Kekhusyukan &amp; Kemudahan</span> Ibadah
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-surface tracking-tight leading-tight">
+            Dirancang Khusus untuk Kekhusyukan &amp; Kemudahan Ibadah
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-            Hadir dengan inovasi <strong className="text-emas-400 font-semibold">Mode Mushaf Al-Qur'an Standar Kemenag RI</strong>, <strong className="text-emas-400 font-semibold">Halaman Khusus Doa &amp; Live Search</strong>, <strong className="text-emas-400 font-semibold">Wirid Kemalaikatan</strong>, naskah Manqobah 12 bulan yang disempurnakan, serta <strong className="text-emas-400 font-semibold">8 Home Screen Widget</strong>.
+          <p className="text-text-muted text-base sm:text-lg leading-relaxed">
+            Setiap detail fitur disesuaikan dengan amaliyah thoriqoh yang sahih, memprioritaskan ketenangan qalbu tanpa distraksi digital atau ketergantungan internet.
           </p>
         </div>
 
-        {/* Bento Grid Container */}
+        {/* 4-Column Core Pillar Grid (Direct from Stitch) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {/* Pillar 1 */}
+          <div className="bg-white p-7 rounded-2xl shadow-sm border border-border-hairline hover:shadow-md transition-all flex flex-col gap-4 group">
+            <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <WifiOff className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-on-surface">100% Offline-First</h3>
+              <p className="text-sm text-text-muted mt-2 leading-relaxed">
+                Dapat diakses lancar di zawiyah terpencil, masjid pelosok, safar pedalaman, maupun penerbangan tanpa butuh jaringan internet sama sekali.
+              </p>
+            </div>
+            <div className="mt-auto pt-4 border-t border-slate-100 flex items-center gap-1.5 text-primary text-xs font-bold">
+              <span>Tanpa Kuota Data</span>
+              <CheckCircle2 className="w-4 h-4" />
+            </div>
+          </div>
+
+          {/* Pillar 2 */}
+          <div className="bg-white p-7 rounded-2xl shadow-sm border border-border-hairline hover:shadow-md transition-all flex flex-col gap-4 group">
+            <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <BookOpen className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-on-surface">Mushaf Standar Kemenag</h3>
+              <p className="text-sm text-text-muted mt-2 leading-relaxed">
+                Format 604 halaman mushaf standar Kemenag RI dengan tajwid rapi, rendering tajam, serta kenyamanan navigasi ayat dan juz.
+              </p>
+            </div>
+            <div className="mt-auto pt-4 border-t border-slate-100 flex items-center gap-1.5 text-secondary text-xs font-bold">
+              <span>Standar Kemenag RI</span>
+              <CheckCircle2 className="w-4 h-4" />
+            </div>
+          </div>
+
+          {/* Pillar 3 */}
+          <div className="bg-white p-7 rounded-2xl shadow-sm border border-border-hairline hover:shadow-md transition-all flex flex-col gap-4 group">
+            <div className="w-12 h-12 rounded-xl bg-gold-accent flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <Compass className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-on-surface">Jadwal &amp; Kompas Kiblat</h3>
+              <p className="text-sm text-text-muted mt-2 leading-relaxed">
+                Kalkulasi waktu sholat wajib &amp; sunnah presisi berbasis koordinat satelit GPS serta sensor kompas arah Ka'bah waktu-nyata.
+              </p>
+            </div>
+            <div className="mt-auto pt-4 border-t border-slate-100 flex items-center gap-1.5 text-amber-700 text-xs font-bold">
+              <span>Akurasi Sensor Tinggi</span>
+              <CheckCircle2 className="w-4 h-4" />
+            </div>
+          </div>
+
+          {/* Pillar 4 */}
+          <div className="bg-white p-7 rounded-2xl shadow-sm border border-border-hairline hover:shadow-md transition-all flex flex-col gap-4 group">
+            <div className="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <Sparkles className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-on-surface">Amaliyah Suryalaya</h3>
+              <p className="text-sm text-text-muted mt-2 leading-relaxed">
+                Lengkap dengan Dzikir Harian, Khotaman, Manaqib Syaikh Abdul Qodir Al-Jaelani, Tarhim, serta Tanbih Pangersa Abah Sepuh &amp; Abah Anom.
+              </p>
+            </div>
+            <div className="mt-auto pt-4 border-t border-slate-100 flex items-center gap-1.5 text-primary text-xs font-bold">
+              <span>Sanad Terverifikasi</span>
+              <CheckCircle2 className="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Feature Showcase (Clean Modern Bento) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          {/* Tile 1: Mode Baru Al-Qur'an Per Halaman Kemenag RI (Wide 2-col) */}
-          <div className="md:col-span-2 glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-emas-500/50 transition-all duration-300">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-emas-500/15 via-merah-600/10 to-transparent rounded-bl-full pointer-events-none" />
+          {/* Tile 1: Mode Baru Al-Qur'an Per Halaman (Wide 2-col) */}
+          <div className="md:col-span-2 bg-white rounded-3xl p-8 border border-border-hairline shadow-sm hover:shadow-md transition-all relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-red-soft/30 rounded-bl-full pointer-events-none" />
             
-            <div className="flex flex-col h-full justify-between relative z-10 space-y-6">
+            <div className="relative z-10 space-y-6">
               <div>
                 <div className="flex items-center justify-between gap-4 mb-4 flex-wrap">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-merah-950 to-canvas-card border border-emas-500/40 flex items-center justify-center shadow-md">
-                    <BookOpen className="w-6 h-6 text-emas-400" />
+                  <div className="w-12 h-12 rounded-2xl bg-surface-warm border border-border-hairline flex items-center justify-center shadow-sm">
+                    <BookOpen className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold tracking-wider uppercase">
+                    <span className="px-3 py-1 rounded-full bg-red-soft text-primary text-xs font-bold tracking-wider uppercase">
                       Baru di v1.2.0
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-emas-500/10 border border-emas-500/30 text-emas-400 text-xs font-bold tracking-wider uppercase">
+                    <span className="px-3 py-1 rounded-full bg-gold-light text-secondary text-xs font-bold tracking-wider uppercase">
                       Standar Kemenag RI
                     </span>
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emas-300 transition-colors">
+                <h3 className="text-2xl font-bold text-on-surface mb-2">
                   Mode Baru Al-Qur'an Per Halaman (Mushaf Page)
                 </h3>
-                <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                <p className="text-text-muted text-sm leading-relaxed mb-6">
                   Rasakan kenyamanan membaca Al-Qur'an otentik layaknya memegang mushaf fisik standar Kementerian Agama RI lengkap 604 halaman. Navigasi lembaran utuh yang mulus, pemetaan ayat interaktif, loncat cepat juz dan surah, serta penanda bacaan terakhir otomatis.
                 </p>
 
-                {/* Feature Highlights Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
-                  <div className="p-3.5 rounded-2xl bg-black/50 border border-emas-500/20 space-y-1.5">
+                {/* Sub-cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline space-y-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-emas-400 flex items-center gap-1.5">
-                        <BookOpen className="w-3.5 h-3.5" /> 604 Halaman Utuh
+                      <span className="text-xs font-bold text-on-surface flex items-center gap-1.5">
+                        <BookOpen className="w-3.5 h-3.5 text-primary" /> 604 Halaman
                       </span>
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-semibold">Offline</span>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 font-bold">Offline</span>
                     </div>
-                    <p className="text-xs text-slate-300">Tampilan mushaf resmi Kemenag RI 30 juz siap dibaca kapan saja tanpa internet.</p>
+                    <p className="text-xs text-text-muted">Mushaf standar Kemenag RI 30 juz siap dibaca tanpa jaringan.</p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-black/50 border border-emas-500/20 space-y-1.5">
+                  <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline space-y-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-merah-400 flex items-center gap-1.5">
-                        <Bookmark className="w-3.5 h-3.5" /> Pemetaan Interaktif
+                      <span className="text-xs font-bold text-on-surface flex items-center gap-1.5">
+                        <Bookmark className="w-3.5 h-3.5 text-secondary" /> Interaktif
                       </span>
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-emas-500/20 text-emas-300 font-semibold">Taktil</span>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-gold-light text-secondary font-bold">Taktil</span>
                     </div>
-                    <p className="text-xs text-slate-300">Deteksi sentuh ayat di lembaran mushaf untuk melihat detail terjemahan &amp; audio.</p>
+                    <p className="text-xs text-text-muted">Deteksi sentuh ayat di lembaran untuk melihat terjemah dan audio.</p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-black/50 border border-emas-500/20 space-y-1.5">
+                  <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline space-y-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-sky-400 flex items-center gap-1.5">
-                        <Layers className="w-3.5 h-3.5" /> Dual Mode Reader
+                      <span className="text-xs font-bold text-on-surface flex items-center gap-1.5">
+                        <Layers className="w-3.5 h-3.5 text-emerald-600" /> Dual Mode
                       </span>
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-300 font-semibold">Fleksibel</span>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-sky-50 text-sky-700 font-bold">Fleksibel</span>
                     </div>
-                    <p className="text-xs text-slate-300">Bebas beralih antara Mode Lembaran Mushaf Kemenag atau Mode Ayat Tradisional.</p>
+                    <p className="text-xs text-text-muted">Bebas beralih antara Mode Lembaran Mushaf atau Mode Ayat Tradisional.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 flex-wrap gap-2">
+              <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-text-muted flex-wrap gap-2">
                 <span>Rendering Vektor Tajam &amp; Navigasi Halaman Cepat</span>
-                <span className="text-emas-400 font-bold">114 Surah • 30 Juz • 604 Halaman</span>
+                <span className="text-primary font-bold">114 Surah • 30 Juz • 604 Halaman</span>
               </div>
             </div>
           </div>
 
           {/* Tile 2: Halaman Khusus Doa & Live Search (1-col) */}
-          <div className="glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-emas-500/50 transition-all duration-300 flex flex-col justify-between">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-emerald-500/10 to-transparent rounded-bl-full pointer-events-none" />
-            
+          <div className="bg-white rounded-3xl p-8 border border-border-hairline shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between gap-4 mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-merah-950 to-canvas-card border border-emerald-500/40 flex items-center justify-center shadow-md">
-                  <Search className="w-6 h-6 text-emerald-400" />
+                <div className="w-12 h-12 rounded-2xl bg-surface-warm border border-border-hairline flex items-center justify-center shadow-sm">
+                  <Search className="w-6 h-6 text-emerald-600" />
                 </div>
-                <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold tracking-wider uppercase">
+                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold uppercase">
                   Baru di v1.2.0
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emas-300 transition-colors">
+              <h3 className="text-xl font-bold text-on-surface mb-2">
                 Halaman Khusus Doa &amp; Live Search
               </h3>
-              <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                Tampilan baru yang lebih luas untuk mencari kumpulan doa amaliyah tarekat dengan bilah pencarian cerdas seketika.
+              <p className="text-text-muted text-sm leading-relaxed mb-4">
+                Pencarian doa amaliyah tarekat dengan fitur live search seketika untuk menemukan doa harian maupun doa khusus.
               </p>
 
               <div className="space-y-2 text-xs">
-                <div className="p-3 rounded-xl bg-black/50 border border-emerald-500/30 flex items-center justify-between">
+                <div className="p-3 rounded-xl bg-emerald-50/60 border border-emerald-200 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-slate-200 font-semibold">Live Search Realtime</span>
+                    <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
+                    <span className="text-on-surface font-semibold">Live Search Realtime</span>
                   </div>
-                  <span className="text-emerald-400 font-bold">Cepat &amp; Akurat</span>
+                  <span className="text-emerald-700 font-bold">Cepat</span>
                 </div>
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
+                <div className="p-2.5 rounded-xl bg-surface-warm border border-border-hairline flex items-center justify-between text-text-muted">
                   <span>Nadzom Shalawat Bani Hasyim</span>
-                  <span className="text-emas-400 font-semibold">Teks &amp; Terjemah</span>
+                  <span className="text-on-surface font-semibold">Teks &amp; Terjemah</span>
                 </div>
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
+                <div className="p-2.5 rounded-xl bg-surface-warm border border-border-hairline flex items-center justify-between text-text-muted">
                   <span>Doa Ba'da Sholat Jumat</span>
-                  <span className="text-emas-400 font-semibold">Lengkap &amp; Sahih</span>
+                  <span className="text-on-surface font-semibold">Sahih</span>
                 </div>
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>Kaifiyat Wirid Kemalaikatan</span>
-                  <span className="text-sky-400 font-semibold">7 Hari Lahir</span>
+                <div className="p-2.5 rounded-xl bg-surface-warm border border-border-hairline flex items-center justify-between text-text-muted">
+                  <span>Wirid Kemalaikatan</span>
+                  <span className="text-primary font-semibold">7 Hari Lahir</span>
                 </div>
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
+            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-text-muted">
               <span>Amaliyah Harian &amp; Khusus MTQN</span>
-              <span className="text-emerald-400 font-bold">Pencarian 1-Ketukan</span>
+              <span className="text-emerald-700 font-bold">1-Ketukan</span>
             </div>
           </div>
 
-          {/* Tile 3: Penyempurnaan Naskah Manqobah 12 Bulan (1-col) */}
-          <div className="glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-emas-500/50 transition-all duration-300 flex flex-col justify-between">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-merah-600/10 to-transparent rounded-bl-full pointer-events-none" />
+          {/* Tile 3: 8 Varian Home Screen Widget (Wide 2-col) */}
+          <div className="md:col-span-2 bg-white rounded-3xl p-8 border border-border-hairline shadow-sm hover:shadow-md transition-all relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-gold-light/40 rounded-bl-full pointer-events-none" />
             
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-merah-950 to-canvas-card border border-merah-500/30 flex items-center justify-center shadow-md">
-                  <Layers className="w-6 h-6 text-merah-400" />
-                </div>
-                <span className="px-3 py-1 rounded-full bg-merah-500/10 border border-merah-500/30 text-merah-400 text-xs font-bold tracking-wider uppercase">
-                  Penyempurnaan v1.2.0
-                </span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emas-300 transition-colors">
-                Naskah Manqobah 12 Bulan
-              </h3>
-              <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                Naskah Manqobah Karomah Syeikh Abdul Qodir Al-Jailani r.a. untuk 12 bulan hijriyah (Muharrom s.d. Dzulhijjah) dan teks dzikir ditata lebih rapi dan presisi.
-              </p>
-
-              <div className="space-y-2 text-xs">
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>12 Bulan Hijriyah Lengkap</span>
-                  <span className="text-emas-400 font-bold">Muharrom–Dzulhijjah</span>
-                </div>
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>Pilihan Dwi-Bahasa Terjemahan</span>
-                  <span className="text-white font-semibold">Indonesia &amp; Basa Sunda</span>
-                </div>
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>Mode Presentasi Majlis</span>
-                  <span className="text-emerald-400 font-bold">Wake Lock Layar ON</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
-              <span>Teks Arab Berharakat Jernih</span>
-              <span className="text-merah-400 font-bold">56 Bab Karomah</span>
-            </div>
-          </div>
-
-          {/* Tile 4: 8 Home Screen Widget (Wide 2-col) */}
-          <div className="md:col-span-2 glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-emas-500/50 transition-all duration-300">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-emas-500/15 via-merah-600/10 to-transparent rounded-bl-full pointer-events-none" />
-            
-            <div className="flex flex-col h-full justify-between relative z-10 space-y-6">
+            <div className="relative z-10 space-y-6">
               <div>
                 <div className="flex items-center justify-between gap-4 mb-4 flex-wrap">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-merah-950 to-canvas-card border border-emas-500/40 flex items-center justify-center shadow-md">
-                    <LayoutGrid className="w-6 h-6 text-emas-400" />
+                  <div className="w-12 h-12 rounded-2xl bg-surface-warm border border-border-hairline flex items-center justify-center shadow-sm">
+                    <LayoutGrid className="w-6 h-6 text-secondary" />
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-emas-500/10 border border-emas-500/30 text-emas-400 text-xs font-bold tracking-wider uppercase">
+                    <span className="px-3 py-1 rounded-full bg-gold-light text-secondary text-xs font-bold uppercase">
                       Android Native
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-merah-500/10 border border-merah-500/30 text-merah-400 text-xs font-bold tracking-wider uppercase">
+                    <span className="px-3 py-1 rounded-full bg-red-soft text-primary text-xs font-bold uppercase">
                       8 Varian Widget
                     </span>
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emas-300 transition-colors">
+                <h3 className="text-2xl font-bold text-on-surface mb-2">
                   8 Varian Home Screen Widget Interaktif
                 </h3>
-                <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  Amalkan wirid dan pantau waktu sholat langsung dari layar utama ponsel Anda tanpa perlu membuka aplikasi. Perhitungan hisab realtime, sinkronisasi seketika, dan ornamen Emas Khidmat.
+                <p className="text-text-muted text-sm leading-relaxed mb-6">
+                  Amalkan wirid dan pantau waktu sholat langsung dari layar utama ponsel Anda tanpa perlu membuka aplikasi. Perhitungan hisab realtime, sinkronisasi seketika, dan ornamen bersih.
                 </p>
 
-                {/* Simulated Widget Mini Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                  <div className="p-3.5 rounded-2xl bg-black/50 border border-emas-500/20 space-y-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline space-y-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-emas-400 flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5" /> Jadwal Sholat (4x2 &amp; 4x1)
+                      <span className="text-xs font-bold text-on-surface flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5 text-primary" /> Jadwal Sholat (4x2 &amp; 4x1)
                       </span>
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-semibold">Realtime</span>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 font-bold">Realtime</span>
                     </div>
-                    <p className="text-xs text-slate-300">Hitung mundur sholat berikutnya, 5 waktu fardhu &amp; waktu tarekat (Imsak, Syuruq, Tahajjud).</p>
+                    <p className="text-xs text-text-muted">Hitung mundur sholat fardhu &amp; waktu tarekat (Imsak, Syuruq, Tahajjud).</p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-black/50 border border-emas-500/20 space-y-2">
+                  <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline space-y-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-merah-400 flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5" /> Tasbih Digital (2x2 &amp; 4x1)
+                      <span className="text-xs font-bold text-on-surface flex items-center gap-1.5">
+                        <Sparkles className="w-3.5 h-3.5 text-secondary" /> Tasbih Digital (2x2 &amp; 4x1)
                       </span>
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-emas-500/20 text-emas-300 font-semibold">1-Ketukan</span>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-gold-light text-secondary font-bold">1-Ketukan</span>
                     </div>
-                    <p className="text-xs text-slate-300">Penghitung wirid di layar beranda dengan tombol tambah cepat dan setel ulang target.</p>
-                  </div>
-
-                  <div className="p-3.5 rounded-2xl bg-black/50 border border-white/5 space-y-1">
-                    <span className="text-xs font-bold text-slate-200">Mutiara Tanbih &amp; Manqobah (4x2)</span>
-                    <p className="text-xs text-slate-400">Petuah hikmah Abah Sepuh, Abah Anom, dan Abah Aos yang berganti berkala.</p>
-                  </div>
-
-                  <div className="p-3.5 rounded-2xl bg-black/50 border border-white/5 space-y-1">
-                    <span className="text-xs font-bold text-slate-200">Terakhir Tilawah &amp; Akses Cepat (4x1)</span>
-                    <p className="text-xs text-slate-400">Lanjut baca Al-Qur'an 1 ketuk &amp; tombol pintas 4 menu amaliyah utama.</p>
+                    <p className="text-xs text-text-muted">Penghitung wirid di layar beranda dengan tombol tambah cepat dan setel ulang target.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
+              <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-text-muted">
                 <span>Didukung Jetpack Glance &amp; WidgetSync Otomatis</span>
-                <span className="text-emas-400 font-bold">Android 8.0 s/d 15+</span>
+                <span className="text-secondary font-bold">Android 8.0 s/d 15+</span>
               </div>
             </div>
           </div>
 
-          {/* Tile 5: Tasbih Digital & Wirid Kemalaikatan (1-col) */}
-          <div className="glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-emas-500/50 transition-all duration-300 flex flex-col justify-between">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-emas-500/10 to-transparent rounded-bl-full pointer-events-none" />
-            
+          {/* Tile 4: Kitab Manqobah 1–56 (3 Bahasa) & Amaliyah Lengkap */}
+          <div className="bg-white rounded-3xl p-8 border border-border-hairline shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between gap-4 mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-merah-950 to-canvas-card border border-emas-500/40 flex items-center justify-center shadow-md">
-                  <Sparkles className="w-6 h-6 text-emas-400" />
+                <div className="w-12 h-12 rounded-2xl bg-surface-warm border border-border-hairline flex items-center justify-center shadow-sm">
+                  <BookOpen className="w-6 h-6 text-secondary" />
                 </div>
-                <span className="px-3 py-1 rounded-full bg-emas-500/10 border border-emas-500/30 text-emas-400 text-xs font-bold tracking-wider uppercase">
-                  Wirid Kemalaikatan
+                <span className="px-3 py-1 rounded-full bg-gold-light text-secondary text-xs font-bold uppercase">
+                  3 Bahasa
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emas-300 transition-colors">
-                Tasbih &amp; Wirid Kemalaikatan
+              <h3 className="text-xl font-bold text-on-surface mb-2">
+                Kitab Manqobah 1–56
               </h3>
-              <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                Kini dilengkapi preset pilihan Wirid Kemalaikatan harian sesuai hari lahir dan Malaikat penjaga, disamping Dzikir Jahr 165x.
+              <p className="text-text-muted text-sm leading-relaxed mb-4">
+                Naskah lengkap Manqobah Syekh Abdul Qodir Al-Jailani r.a. untuk khidmah 12 bulan, Khotaman, serta Tawassul Silsilah Tarekat.
               </p>
 
               <div className="space-y-1.5 text-xs">
-                <div className="p-2 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>Ahad: Hayyun Qoyyuum</span>
-                  <span className="text-emas-400 font-mono font-bold">222x</span>
+                <div className="p-2.5 rounded-xl bg-surface-warm border border-border-hairline flex items-center justify-between text-on-surface">
+                  <span className="font-medium">Teks Arab Berharokat</span>
+                  <span className="text-secondary font-bold">Sahih &amp; Jelas</span>
                 </div>
-                <div className="p-2 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>Senin: Rohmaanur Rohiim</span>
-                  <span className="text-emas-400 font-mono font-bold">333x</span>
+                <div className="p-2.5 rounded-xl bg-surface-warm border border-border-hairline flex items-center justify-between text-on-surface">
+                  <span className="font-medium">Terjemah Bahasa Indonesia</span>
+                  <span className="text-secondary font-bold">Lengkap</span>
                 </div>
-                <div className="p-2 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>Jum'at: Syadiidun Dzuuquwwatin</span>
-                  <span className="text-emas-400 font-mono font-bold">777x</span>
+                <div className="p-2.5 rounded-xl bg-surface-warm border border-border-hairline flex items-center justify-between text-on-surface">
+                  <span className="font-medium">Terjemah Basa Sunda</span>
+                  <span className="text-secondary font-bold">Halus</span>
                 </div>
-                <div className="p-2 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>Dzikir Jahr Ba'da Sholat</span>
-                  <span className="text-merah-400 font-mono font-bold">165x / 33x</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
-              <span>Haptic Feedback Taktil</span>
-              <span className="text-emas-400 font-bold">Getaran Milestone</span>
-            </div>
-          </div>
-
-          {/* Tile 6: Perbaikan Sistem v1.2.0 (1-col) */}
-          <div className="glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-emas-500/50 transition-all duration-300 flex flex-col justify-between">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-sky-500/10 to-transparent rounded-bl-full pointer-events-none" />
-            
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-merah-950 to-canvas-card border border-sky-500/30 flex items-center justify-center shadow-md">
-                  <Zap className="w-6 h-6 text-sky-400" />
-                </div>
-                <span className="px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold tracking-wider uppercase">
-                  Perbaikan Sistem
-                </span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emas-300 transition-colors">
-                Notifikasi Sholat &amp; Performa
-              </h3>
-              <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                Peningkatan kualitas kenyamanan penggunaan harian berdasarkan masukan para ikhwan dan jama'ah.
-              </p>
-
-              <div className="space-y-2 text-xs">
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <span className="text-white font-bold block">Nama Kota Notifikasi Bersih</span>
-                    <span className="text-slate-400 text-[11px]">Bukan lagi koordinat GPS mentah.</span>
-                  </div>
-                </div>
-
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-start gap-2">
-                  <Zap className="w-4 h-4 text-emas-400 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <span className="text-white font-bold block">Buka Aplikasi Instan</span>
-                    <span className="text-slate-400 text-[11px]">Splash screen fix tanpa jeda / freeze.</span>
-                  </div>
-                </div>
-
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <span className="text-white font-bold block">Ukuran Aplikasi Lebih Ringan</span>
-                    <span className="text-slate-400 text-[11px]">Pembaruan Google Play lebih lancar.</span>
-                  </div>
+                <div className="p-2.5 rounded-xl bg-surface-warm border border-border-hairline flex items-center justify-between text-on-surface">
+                  <span className="font-medium">Manqobah 1 s/d 56</span>
+                  <span className="text-primary font-bold">12 Bulan Amaliyah</span>
                 </div>
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
-              <span>Teruji di Berbagai Merek HP</span>
-              <span className="text-emerald-400 font-bold">Stabil &amp; Cepat</span>
-            </div>
-          </div>
-
-          {/* Tile 7: 100% Offline-First Architecture (Wide 2-col) */}
-          <div className="md:col-span-2 glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-emas-500/50 transition-all duration-300">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-merah-600/15 via-emas-500/10 to-transparent rounded-bl-full pointer-events-none" />
-            
-            <div className="flex flex-col h-full justify-between relative z-10 space-y-6">
-              <div>
-                <div className="flex items-center justify-between gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-merah-950 to-canvas-card border border-merah-500/30 flex items-center justify-center shadow-md">
-                    <Database className="w-6 h-6 text-emas-400" />
-                  </div>
-                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold tracking-wider uppercase">
-                    SQLDelight 2.3.2 • 100% Luring
-                  </span>
-                </div>
-
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emas-300 transition-colors">
-                  100% Arsitektur Offline-First
-                </h3>
-                <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  Tidak ada kekhawatiran kehilangan sinyal saat berada di ruang bawah tanah masjid, pegunungan, atau majlis zikir. Seluruh teks doa amaliyah, wirid kemalaikatan, mushaf 114 surah 604 halaman, silsilah 1-38, dan kitab manqobah tersimpan luring langsung di memori perangkat SQLite type-safe.
-                </p>
-
-                {/* Micro tech pills */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5 flex items-center gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                    <span>Zero Cloud Latency</span>
-                  </div>
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5 flex items-center gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                    <span>Cold Startup &lt; 850ms</span>
-                  </div>
-                  <div className="p-3 rounded-xl bg-black/40 border border-white/5 flex items-center gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                    <span>Memory &lt; 70MB</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between flex-wrap gap-2">
-                <span className="text-xs text-slate-400 font-medium">
-                  AndroidSqliteDriver &amp; NativeSqliteDriver
-                </span>
-                <button
-                  onClick={onOpenTechSpec}
-                  className="text-xs font-bold text-emas-400 hover:text-emas-300 underline underline-offset-4 flex items-center gap-1"
-                >
-                  <span>Lihat Spesifikasi Arsitektur</span>
-                  <span>→</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Tile 8: Background Audio Player (1-col) */}
-          <div className="glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-emas-500/50 transition-all duration-300 flex flex-col justify-between">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-merah-600/10 to-transparent rounded-bl-full pointer-events-none" />
-            
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-merah-950 to-canvas-card border border-merah-500/30 flex items-center justify-center shadow-md">
-                  <Music className="w-6 h-6 text-merah-400" />
-                </div>
-                <span className="px-3 py-1 rounded-full bg-merah-500/10 border border-merah-500/30 text-merah-400 text-xs font-bold tracking-wider uppercase">
-                  Background Audio
-                </span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emas-300 transition-colors">
-                Audio Player di Latar Belakang
-              </h3>
-              <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                Lantunan Dzikir Jahr berirama, Shalawat Bani Hasyim, dan audio amaliyah tetap mengalun saat layar mati atau saat membuka aplikasi lain.
-              </p>
-
-              <div className="space-y-2 text-xs">
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>Media3 ExoPlayer</span>
-                  <span className="text-emerald-400 font-semibold">Android Native</span>
-                </div>
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>AVPlayer MPNowPlaying</span>
-                  <span className="text-sky-400 font-semibold">iOS Lockscreen</span>
-                </div>
-                <div className="p-2.5 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between text-slate-300">
-                  <span>Mini Floating Bar</span>
-                  <span className="text-emas-400 font-semibold">Semua Layar</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
-              <span>Langgam HQ Asli Suryalaya</span>
-              <a
-                href="#audio-demo"
-                className="text-xs font-bold text-emas-400 hover:text-emas-300 underline underline-offset-4"
-              >
-                Coba Demo Audio →
-              </a>
+            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-text-muted">
+              <span>Sanad TQN PP Suryalaya Sirnarasa</span>
+              <span className="text-secondary font-bold">100% Offline</span>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
   );
