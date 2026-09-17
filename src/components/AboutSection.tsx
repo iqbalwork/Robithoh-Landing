@@ -175,12 +175,9 @@ export const AboutSection: React.FC = () => {
                   <div className="w-9 h-9 rounded-xl bg-gold-light text-amber-900 border border-gold-accent/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <ShieldCheck className="w-5 h-5 text-gold-accent" />
                   </div>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h4 className="text-sm font-bold text-on-surface">
-                        Verifikasi &amp; Koordinasi Langsung Guru Mursyid
-                      </h4>
-                      <span className="px-2 py-0.5 rounded-full bg-gold-light text-amber-900 text-[10px] font-extrabold uppercase tracking-wider border border-gold-accent/30">
+                  <div className="space-y-1.5">
+                    <div>
+                      <span className="px-2.5 py-0.5 rounded-full bg-gold-light text-amber-900 text-[10px] font-extrabold uppercase tracking-wider border border-gold-accent/30 inline-flex items-center">
                         Terverifikasi Langsung
                       </span>
                     </div>
