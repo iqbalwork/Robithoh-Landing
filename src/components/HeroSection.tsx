@@ -49,7 +49,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-on-surface tracking-tight leading-[1.12]">
               Aplikasi Ibadah &amp; Amaliyah{' '}
               <span className="text-primary underline decoration-gold-accent decoration-wavy decoration-2 underline-offset-8">
-                MTQN Modern
+                TQN Modern
               </span>{' '}
               Multiplatform
             </h1>

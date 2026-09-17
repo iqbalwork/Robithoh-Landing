@@ -101,7 +101,7 @@ export const AboutSection: React.FC = () => {
             <span className="text-gold-accent">Guru Mursyid</span> &amp; Pembimbing
           </h2>
           <p className="text-text-muted text-base leading-relaxed">
-            Aplikasi Robithoh dihadirkan sebagai wujud khidmat dan mahabbah kepada Pangersa Guru Mursyid, dibangun di bawah bimbingan Roudhoh Padepokan Talangraga Indihiang serta para Wakil Talqin guna menjaga keaslian sanad dan kemurnian amaliyah Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III.
+            Aplikasi Robithoh dihadirkan sebagai wujud khidmat dan mahabbah kepada Pangersa Guru Mursyid, dibangun di bawah bimbingan Roudhoh Padepokan Talangraga Indihiang serta para Wakil Talqin guna menjaga keaslian sanad dan kemurnian amaliyah Madrasah Thoriqoh Qodiriyyah Naqsyabandiyyah Suryalaya Sirnarasa PPKN III.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export const AboutSection: React.FC = () => {
                   </div>
                   <div className="absolute -bottom-3 -right-3 px-3 py-1 rounded-full bg-white border border-gold-accent/40 text-amber-900 text-[11px] font-extrabold shadow-md flex items-center gap-1.5">
                     <Award className="w-3.5 h-3.5 text-gold-accent" />
-                    <span>Mursyid Ke-38 Roudloh Merah Putih</span>
+                    <span>Mursyid Silsilah Ke-38</span>
                   </div>
                 </div>
 
@@ -157,20 +157,20 @@ export const AboutSection: React.FC = () => {
                     Syaikh Muhammad Abdul Gaos Saefulloh Maslul Ra. Qs.
                   </h3>
                   <p className="text-sm sm:text-base font-bold text-primary mt-1">
-                    Pangersa Abah Aos — Guru Mursyid Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III (Silsilah Ke-38)
+                    Pangersa Abah Aos
                   </p>
                 </div>
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-white border border-border-hairline text-slate-700 text-sm sm:text-base leading-relaxed italic space-y-3 shadow-xs">
                   <p>
-                    &ldquo;Rasa syukur dan terima kasih tak terhingga kami haturkan kepada Pangersa Guru Mursyid Syaikh Muhammad Abdul Gaos Saefulloh Maslul Ra. Qs. (Abah Aos) atas limpahan karomah, doa, restu, dan bimbingan ruhani yang senantiasa menaungi para murid.&rdquo;
+                    &ldquo;Rasa syukur dan terima kasih tak terhingga kami haturkan kepada Pangersa Guru Agung atas limpahan karomah, doa, restu, dan bimbingan ruhani yang senantiasa menaungi para murid.&rdquo;
                   </p>
                   <p className="text-xs sm:text-sm text-text-muted not-italic font-normal">
-                    Aplikasi <strong>Robithoh</strong> ini didedikasikan secara tulus sebagai washilah kemudahan mengamalkan Dzikir, Kitab Manaqib, dan seluruh Amaliyah Roudloh Merah Putih MTQN Suryalaya Sirnarasa PPKN III bagi ikhwan dan akhwat di seluruh penjuru dunia.
+                    Aplikasi <strong>Robithoh</strong> ini didedikasikan secara tulus sebagai washilah kemudahan mengamalkan Dzikir, Kitab Manaqib, dan seluruh Amaliyah Madrasah Thoriqoh Qodiriyyah Naqsyabandiyyah Suryalaya Sirnarasa PPKN III bagi ikhwan dan akhwat di seluruh penjuru dunia.
                   </p>
                 </div>
 
-                {/* Verifikasi & Koordinasi Langsung via Ustadz Lukman */}
+                {/* Verifikasi & Koordinasi Langsung via Usluk */}
                 <div className="p-4 sm:p-5 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 text-left shadow-xs">
                   <div className="w-9 h-9 rounded-xl bg-gold-light text-amber-900 border border-gold-accent/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <ShieldCheck className="w-5 h-5 text-gold-accent" />
@@ -185,7 +185,7 @@ export const AboutSection: React.FC = () => {
                       </span>
                     </div>
                     <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
-                      Aplikasi ini bekerja sama langsung dengan asisten pribadi Pangersa Abah yaitu <strong className="text-on-surface font-semibold">Ustadz Lukman</strong> untuk verifikasi dan koordinasi langsung dengan Pangersa Abah.
+                      Aplikasi ini bekerja sama langsung dengan asisten pribadi Pangersa Abah yaitu <strong className="text-on-surface font-semibold">Usluk</strong> untuk verifikasi dan koordinasi langsung dengan Pangersa Abah.
                     </p>
                   </div>
                 </div>

@@ -228,7 +228,7 @@ export const BentoFeatures: React.FC<BentoFeaturesProps> = ({ onOpenReleaseModal
             </div>
 
             <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-text-muted">
-              <span>Amaliyah Harian &amp; Khusus MTQN</span>
+              <span>Amaliyah Harian &amp; Khusus TQN</span>
               <span className="text-emerald-700 font-bold">1-Ketukan</span>
             </div>
           </div>

@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = () => {
                 </h2>
 
                 <p className="text-white/90 text-sm sm:text-base leading-relaxed max-w-xl">
-                  Jadikan smartphone Anda pendamping ibadah yang penuh berkah. Akses mushaf Kemenag 604 halaman, jadwal sholat presisi, kompas kiblat, dan amaliyah harian MTQN kapan saja tanpa kuota internet.
+                  Jadikan smartphone Anda pendamping ibadah yang penuh berkah. Akses mushaf Kemenag 604 halaman, jadwal sholat presisi, kompas kiblat, dan amaliyah harian TQN kapan saja tanpa kuota internet.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3 pt-2 w-full sm:w-auto">
@@ -115,7 +115,7 @@ export const Footer: React.FC<FooterProps> = () => {
               </div>
 
               <p className="text-text-muted text-xs sm:text-sm leading-relaxed max-w-md">
-                Platform pendamping ibadah harian, jadwal sholat presisi, dzikir amaliyah, dan khidmah spiritual digital untuk ikhwan &amp; akhwat MTQN Pondok Pesantren Suryalaya Sirnarasa.
+                Platform pendamping ibadah harian, jadwal sholat presisi, dzikir amaliyah, dan khidmah spiritual digital untuk ikhwan &amp; akhwat TQN Pondok Pesantren Suryalaya Sirnarasa.
               </p>
 
               <div className="flex items-center gap-2 text-xs font-semibold text-on-surface">
