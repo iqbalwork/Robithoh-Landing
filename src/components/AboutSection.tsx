@@ -25,7 +25,7 @@ const profiles: ProfileCard[] = [
       'Pembimbing Roudhoh Padepokan Talangraga Ponpes Suryalaya Sirnarasa yang bertempat di Indihiang (Tasikmalaya), sekaligus Wakil Talqin Pangersa Abah Aos. Beliau senantiasa memberikan arahan, restu, dan bimbingan amaliyah agar seluruh kaifiyat dzikir dalam aplikasi Robithoh senantiasa terjaga kemurniannya dan muttashil dengan tuntunan Guru Mursyid.',
     highlights: [
       'Pembimbing Roudhoh Padepokan Talangraga (Indihiang)',
-      'Wakil Talqin Pangersa Abah Aos (Silsilah Ke-38)',
+      'Wakil Talqin Pangersa Abah Aos',
       'Pengayom & Penasihat Amaliyah Thoriqoh'
     ],
     avatarText: 'EG'
@@ -40,7 +40,7 @@ const profiles: ProfileCard[] = [
       'Wakil Talqin Pangersa Abah Aos yang juga merupakan bagian dari didikan Eyang Epi Ruhiat Ganefi di Padepokan Talangraga Indihiang. Beliau bertindak sebagai pembimbing dan penasihat yang memverifikasi keaslian naskah Kitab Manaqib 1–56, teks sanad Tawassul Silsilah, susunan MC Manaqib, serta rujukan liturgi amaliyah dalam aplikasi Robithoh.',
     highlights: [
       'Bagian dari Didikan Eyang Epi Ruhiat Ganefi',
-      'Wakil Talqin Pangersa Abah Aos (Silsilah Ke-38)',
+      'Wakil Talqin Pangersa Abah Aos',
       'Verifikasi Sanad & Liturgi Kitab Manaqib'
     ],
     avatarText: 'EY'
@@ -89,7 +89,7 @@ export const AboutSection: React.FC = () => {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[550px] bg-gradient-to-tr from-red-50/50 via-amber-50/40 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-light/60 border border-gold-accent/30 text-xs font-bold text-amber-900">
@@ -98,10 +98,10 @@ export const AboutSection: React.FC = () => {
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
             Tentang <span className="text-primary">Robithoh</span>,{' '}
-            <span className="text-gold-accent">Guru Mursyid</span> &amp; Pembimbing
+            <span className="text-gold-accent">Mursyid</span> &amp; Pembimbing
           </h2>
           <p className="text-text-muted text-base leading-relaxed">
-            Aplikasi Robithoh dihadirkan sebagai wujud khidmat dan mahabbah kepada Pangersa Guru Mursyid, dibangun di bawah bimbingan Roudhoh Padepokan Talangraga Indihiang serta para Wakil Talqin guna menjaga keaslian sanad dan kemurnian amaliyah Madrasah Thoriqoh Qodiriyyah Naqsyabandiyyah Suryalaya Sirnarasa PPKN III.
+            Aplikasi Robithoh dihadirkan sebagai wujud khidmat dan mahabbah kepada Pangersa Abah, dibangun di bawah bimbingan Roudhoh Padepokan Talangraga Indihiang serta para Wakil Talqin guna menjaga keaslian sanad dan kemurnian amaliyah Madrasah Thoriqoh Qodiriyyah Naqsyabandiyyah Suryalaya Sirnarasa PPKN III.
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export const AboutSection: React.FC = () => {
             <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-gold-light/30 via-transparent to-transparent rounded-bl-full pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              
+
               {/* Photo Column */}
               <div className="lg:col-span-4 flex flex-col items-center">
                 <div className="relative">
@@ -200,17 +200,16 @@ export const AboutSection: React.FC = () => {
               className="bg-white rounded-3xl p-6 relative overflow-hidden border border-border-hairline hover:border-primary/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between group shadow-xs hover:-translate-y-1"
             >
               <div className="space-y-4 relative z-10">
-                
+
                 {/* Avatar & Badges Header */}
                 <div className="flex items-center justify-between gap-3">
                   <div
-                    className={`w-12 h-12 rounded-2xl flex items-center justify-center font-extrabold text-base tracking-wider ${
-                      profile.category === 'developer'
-                        ? 'bg-red-soft text-primary'
-                        : profile.category === 'partner'
+                    className={`w-12 h-12 rounded-2xl flex items-center justify-center font-extrabold text-base tracking-wider ${profile.category === 'developer'
+                      ? 'bg-red-soft text-primary'
+                      : profile.category === 'partner'
                         ? 'bg-emerald-50 text-emerald-700'
                         : 'bg-gold-light text-amber-900'
-                    }`}
+                      }`}
                   >
                     <span>{profile.avatarText}</span>
                   </div>
@@ -254,11 +253,10 @@ export const AboutSection: React.FC = () => {
                     href={profile.link}
                     target="_blank"
                     rel="noreferrer"
-                    className={`${
-                      profile.category === 'partner'
-                        ? 'text-emerald-700 hover:text-emerald-900'
-                        : 'text-primary hover:text-red-800'
-                    } font-bold flex items-center gap-1.5 transition-colors underline underline-offset-4 text-xs`}
+                    className={`${profile.category === 'partner'
+                      ? 'text-emerald-700 hover:text-emerald-900'
+                      : 'text-primary hover:text-red-800'
+                      } font-bold flex items-center gap-1.5 transition-colors underline underline-offset-4 text-xs`}
                   >
                     {profile.category === 'partner' ? (
                       <MessageCircle className="w-3.5 h-3.5" />
