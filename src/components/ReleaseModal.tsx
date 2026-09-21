@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Sparkles, Smartphone, Check, Share2, ExternalLink, BookOpen, Compass, Layers, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
+import { X, Sparkles, Smartphone, Check, Share2, ExternalLink, FileText, ArrowUp, Zap, BookMarked, Type } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface ReleaseModalProps {
@@ -23,20 +23,20 @@ export const ReleaseModal: React.FC<ReleaseModalProps> = ({ isOpen, onClose }) =
     });
   };
 
-  const shareText = `📢 UPDATE TERBARU: ROBITHOH APP v1.2.0 SUDAH RILIS! 🎉
+  const shareText = `📢 UPDATE RESMI: ROBITHOH APP v1.2.1 SUDAH RILIS! 🎉
 
-Alhamdulillah, pembaruan versi 1.2.0 untuk aplikasi amaliyah dan ibadah Robithoh telah hadir di Google Play Store!
+Alhamdulillah, pembaruan versi 1.2.1 untuk aplikasi amaliyah dan ibadah Robithoh telah hadir di Google Play Store!
 
-✨ Yang Baru di v1.2.0:
-📖 Mode Baru Al-Qur'an Per Halaman (Mushaf Page): Tampilan lembaran mushaf utuh standar Kemenag RI, pemetaan ayat interaktif, dan 100% offline.
-🤲 Halaman Khusus Doa & Live Search: Tampilan luas mencari doa amaliyah (Nadzom Bani Hasyim, Doa Ba'da Jumat, Wirid Kemalaikatan, dll).
-🌿 Penyempurnaan Naskah Manqobah: Naskah 12 bulan (Bahasa Indonesia & Sunda) dan teks dzikir lebih rapi & presisi.
-🤲 Wirid Kemalaikatan: Panduan kaifiyat & teks wirid kemalaikatan 7 hari lahir langsung di menu Doa.
+✨ Yang Baru di v1.2.1:
+📖 Pembaruan naskah dzikir, khotaman, dan lainnya sesuai cetakan Amaliyah Mursyid Terbaru.
+⚡ Optimasi performa aplikasi.
+👆 Pintasan kembali ke atas naskah.
 
-🛠️ Perbaikan Sistem:
-• Notifikasi jadwal sholat kini menampilkan nama kota yang bersih.
-• Buka aplikasi lebih cepat tanpa jeda/freeze (splash screen fix).
+🛠️ Perbaikan Sistem & Peningkatan Pengalaman Pengguna:
 • Perbaikan update Google Play & ukuran aplikasi lebih ringan.
+• Pintasan kembali ke atas naskah.
+• Posisi naskah tetap berada di posisi terakhir dibuka.
+• Teks transliterasi sudah lebih tebal (bold).
 
 Yuk langsung perbarui aplikasi Robithoh di Google Play Store:
 👉 ${PLAY_STORE_URL}
@@ -70,74 +70,74 @@ Barokallohu fiikum! 🙏✨`;
             <Sparkles className="w-3.5 h-3.5 text-primary" />
             <span>Pembaruan Baru Telah Rilis</span>
             <span className="px-2 py-0.2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold">
-              v1.2.0
+              v1.2.1
             </span>
           </div>
 
           <h3 className="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight leading-tight">
-            Robithoh App <span className="text-primary">v1.2.0</span> Sudah Hadir di{' '}
+            Robithoh App <span className="text-primary">v1.2.1</span> Sudah Hadir di{' '}
             <span className="text-gold-accent">Google Play Store</span>! 🎉
           </h3>
           <p className="text-text-muted text-sm mt-1">
-            Alhamdulillah, pembaruan versi terbaru membawa fitur besar yang dinantikan para ikhwan &amp; akhwat pengamal dzikir.
+            Alhamdulillah, pembaruan versi 1.2.1 hadir dengan naskah amaliyah yang diperbarui sesuai cetakan Mursyid terbaru dan berbagai peningkatan pengalaman pengguna.
           </p>
         </div>
 
-        {/* Features & Changelog Section (Poster Removed) */}
+        {/* Features & Changelog Section */}
         <div className="space-y-5 relative z-10">
           
           {/* New Features Highlights (2x2 Grid) */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-gold-accent" />
-              <span>Yang Baru di Versi 1.2.0:</span>
+              <span>Yang Baru di Versi 1.2.1:</span>
             </h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 shadow-xs">
                 <div className="w-9 h-9 rounded-xl bg-red-soft text-primary flex items-center justify-center shrink-0 mt-0.5">
-                  <BookOpen className="w-4.5 h-4.5" />
+                  <FileText className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-on-surface">Mode Al-Qur'an Per Halaman (Mushaf Page)</h5>
+                  <h5 className="text-sm font-bold text-on-surface">Pembaruan Naskah Amaliyah Mursyid</h5>
                   <p className="text-xs text-text-muted mt-1 leading-relaxed">
-                    Tampilan lembaran mushaf utuh standar Kemenag RI lengkap 604 halaman, pemetaan ayat interaktif, dan dukungan 100% offline tanpa kuota.
+                    Naskah dzikir, khotaman, dan lainnya telah diperbarui sesuai cetakan Amaliyah Mursyid terbaru — lebih akurat dan sesuai panduan terkini.
                   </p>
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 shadow-xs">
                 <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Compass className="w-4.5 h-4.5" />
+                  <ArrowUp className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-on-surface">Halaman Khusus Doa &amp; Live Search</h5>
+                  <h5 className="text-sm font-bold text-on-surface">Pintasan Kembali ke Atas</h5>
                   <p className="text-xs text-text-muted mt-1 leading-relaxed">
-                    Tampilan pencarian baru yang luas untuk mencari doa amaliyah: Nadzom Bani Hasyim, Doa Ba'da Sholat Jumat, Kaifiyat Wirid Kemalaikatan, dll.
+                    Tombol pintasan baru untuk langsung kembali ke bagian atas naskah dengan satu sentuhan, lebih mudah saat membaca teks panjang.
                   </p>
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 shadow-xs">
                 <div className="w-9 h-9 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Layers className="w-4.5 h-4.5" />
+                  <BookMarked className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-on-surface">Penyempurnaan Naskah Manqobah 12 Bulan</h5>
+                  <h5 className="text-sm font-bold text-on-surface">Posisi Naskah Tersimpan Otomatis</h5>
                   <p className="text-xs text-text-muted mt-1 leading-relaxed">
-                    Naskah 12 bulan hijriyah (Bahasa Indonesia &amp; Basa Sunda halus) serta teks dzikir ditata ulang lebih rapi, presisi, dan nyaman dibaca saat majlis.
+                    Posisi terakhir membaca naskah kini tersimpan secara otomatis — buka lagi langsung dari tempat terakhir Anda berhenti.
                   </p>
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 shadow-xs">
                 <div className="w-9 h-9 rounded-xl bg-gold-light text-amber-900 flex items-center justify-center shrink-0 mt-0.5">
-                  <Sparkles className="w-4.5 h-4.5 text-gold-accent" />
+                  <Type className="w-4.5 h-4.5 text-gold-accent" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-on-surface">Wirid Kemalaikatan di Menu Doa</h5>
+                  <h5 className="text-sm font-bold text-on-surface">Teks Transliterasi Lebih Tebal</h5>
                   <p className="text-xs text-text-muted mt-1 leading-relaxed">
-                    Panduan kaifiyat dan teks wirid kemalaikatan 7 hari lahir sesuai malaikat penjaga kini dapat diakses dengan mudah di menu Doa.
+                    Teks transliterasi (latin) kini ditampilkan dalam gaya <strong>bold</strong> sehingga lebih mudah dibaca dan dibedakan dari teks Arab.
                   </p>
                 </div>
               </div>
@@ -148,12 +148,13 @@ Barokallohu fiikum! 🙏✨`;
           <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline space-y-2 shadow-xs">
             <h5 className="text-xs font-bold text-on-surface flex items-center gap-1.5">
               <Zap className="w-3.5 h-3.5 text-gold-accent" />
-              <span>Perbaikan Sistem &amp; Peningkatan Kinerja:</span>
+              <span>Perbaikan Sistem &amp; Peningkatan Pengalaman Pengguna:</span>
             </h5>
             <ul className="text-xs text-text-muted space-y-1 pl-4 list-disc">
-              <li>Notifikasi jadwal sholat kini menampilkan <strong className="text-on-surface">nama kota yang bersih</strong> (bukan koordinat GPS mentah).</li>
-              <li>Buka aplikasi lebih cepat tanpa jeda/freeze (<strong className="text-on-surface">splash screen fix</strong>).</li>
-              <li>Pembaruan Google Play lebih lancar &amp; ukuran aplikasi lebih ringan.</li>
+              <li>Pembaruan Google Play lebih lancar &amp; <strong className="text-on-surface">ukuran aplikasi lebih ringan</strong>.</li>
+              <li>Pintasan kembali ke atas naskah tersedia di semua halaman teks.</li>
+              <li>Posisi naskah tetap berada di <strong className="text-on-surface">posisi terakhir dibuka</strong>.</li>
+              <li>Teks transliterasi <strong className="text-on-surface">lebih tebal (bold)</strong> untuk keterbacaan lebih baik.</li>
             </ul>
           </div>
 

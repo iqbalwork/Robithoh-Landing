@@ -11,17 +11,17 @@ export const ReleaseAnnouncementBar: React.FC<ReleaseAnnouncementBarProps> = ({
   onDismiss
 }) => {
   return (
-    <aside aria-label="Pengumuman Rilis v1.2.0" className="relative z-50 bg-gradient-to-r from-merah-950 via-[#40060B] to-merah-950 border-b border-emas-500/30 px-4 py-2.5 text-xs text-slate-200">
+    <aside aria-label="Pengumuman Rilis v1.2.1" className="relative z-50 bg-gradient-to-r from-merah-950 via-[#40060B] to-merah-950 border-b border-emas-500/30 px-4 py-2.5 text-xs text-slate-200">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         
         <div className="flex-1 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-center">
           <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emas-500/20 text-emas-300 font-extrabold text-[10px] tracking-wide uppercase border border-emas-500/40">
             <Sparkles className="w-3 h-3 text-emas-400 animate-pulse" />
-            Pembaruan v1.2.0
+            Pembaruan v1.2.1
           </span>
 
           <span className="text-slate-200 font-medium">
-            Telah Rilis: <strong className="text-white font-semibold">Mode Mushaf Kemenag RI</strong>, <strong className="text-white font-semibold">Halaman Khusus Doa &amp; Live Search</strong>, dan <strong className="text-white font-semibold">Wirid Kemalaikatan</strong>!
+            Telah Rilis: <strong className="text-white font-semibold">Pembaruan Naskah Amaliyah Mursyid Terbaru</strong>, <strong className="text-white font-semibold">Pintasan Kembali ke Atas</strong>, dan <strong className="text-white font-semibold">Optimasi Performa</strong>!
           </span>
 
           <button
