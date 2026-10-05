@@ -30,7 +30,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
               >
                 <span className="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
                 <span className="text-[11px] font-bold uppercase tracking-wider text-secondary">
-                  v1.2.0 • Tersedia di Google Play Store
+                  v2.0.0 • Tersedia di Google Play Store
                 </span>
                 <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-white text-primary font-bold ml-1">
                   Lihat Detail →
@@ -40,7 +40,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDownload, onOpen
               <div className="inline-flex items-center gap-2 bg-gold-light/90 px-3.5 py-1.5 rounded-full shadow-sm border border-gold-accent/30">
                 <span className="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
                 <span className="text-[11px] font-bold uppercase tracking-wider text-secondary">
-                  v1.2.0 • Tersedia di Google Play Store
+                  v2.0.0 • Tersedia di Google Play Store
                 </span>
               </div>
             )}

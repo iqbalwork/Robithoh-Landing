@@ -37,17 +37,17 @@ export const Navbar: React.FC<NavbarProps> = ({
           : 'bg-white/80 backdrop-blur-md border-b border-slate-100 py-3.5'
       }`}
     >
-      {/* Top Announcement Bar for v1.2.0 Release */}
+      {/* Top Announcement Bar for v2.0.0 Release */}
       {showAnnouncement && (
         <div className="mb-2 px-4">
           <div className="max-w-7xl mx-auto py-1 px-3 sm:px-4 rounded-full bg-gold-light/80 border border-gold-accent/30 flex items-center justify-between gap-2 text-xs shadow-sm">
             <div className="flex-1 flex items-center justify-center gap-2 flex-wrap text-center">
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary text-white font-bold text-[10px] uppercase tracking-wider">
                 <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                v1.2.0 Telah Hadir
+                v2.0.0 Telah Hadir
               </span>
               <span className="text-on-surface font-medium text-[11px] sm:text-xs">
-                Mode Mushaf Al-Qur'an Standar Kemenag RI, Doa &amp; Wirid Kemalaikatan kini tersedia di Google Play!
+                Direktori Wakil Talqin Dunia, Menu Maklumat Resmi, dan Volume Adzan Mandiri kini tersedia di Google Play!
               </span>
               {onOpenReleaseModal && (
                 <button
@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 Robithoh
               </span>
               <span className="bg-gold-light text-secondary font-bold text-[11px] px-2 py-0.5 rounded-full border border-gold-accent/30 uppercase tracking-wide">
-                v1.2.0
+                v2.0.0
               </span>
             </div>
           </a>
@@ -111,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-warm hover:bg-slate-100 border border-border-hairline text-on-surface text-xs font-bold transition-all shadow-sm cursor-pointer"
               >
                 <Sparkles className="w-3.5 h-3.5 text-gold-accent" />
-                <span>Rilis v1.2.0</span>
+                <span>Rilis v2.0.0</span>
               </button>
             )}
 
@@ -156,7 +156,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   className="w-full py-2.5 px-3 rounded-xl bg-gold-light/80 border border-gold-accent/30 text-secondary font-bold text-xs flex items-center justify-center gap-2 mb-1"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-gold-accent" />
-                  <span>Pembaruan v1.2.0 • Detail Rilis</span>
+                  <span>Pembaruan v2.0.0 • Detail Rilis</span>
                 </button>
               )}
 

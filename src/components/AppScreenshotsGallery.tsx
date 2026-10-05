@@ -127,8 +127,23 @@ const showcaseScreens: ShowcaseScreen[] = [
     features: [
       'Slider Volume Adzan Mandiri 0%–100%',
       'Mode Senyap Praktis Saat Ibadah',
-      'Informasi Pembaruan v1.2.0',
+      'Informasi Pembaruan v2.0.0',
       'Akses Ulang Panduan Spotlight'
+    ]
+  },
+  {
+    id: 'kalender',
+    badge: 'Layar 08 • Kalender',
+    badgeType: 'emerald',
+    title: 'Kalender Hijriyah & Jadwal',
+    subtitle: 'Penanggalan Islam & Agenda Ibadah',
+    description: 'Kalender Hijriyah terintegrasi dengan penanda amaliyah bulanan, manaqib, dan konversi masehi presisi.',
+    imageSrc: './assets/screenshots/kalender_hijriyah.png',
+    features: [
+      'Sinkronisasi Tanggal Hijriyah & Masehi',
+      'Penanda Jadwal Manaqib & Khotaman',
+      'Pengaturan Koreksi Hari Hijriyah',
+      'Tampilan Bersih & Kontras Tinggi'
     ]
   }
 ];
@@ -172,7 +187,7 @@ export const AppScreenshotsGallery: React.FC = () => {
 
           <div className="flex items-center gap-2 bg-surface-container-high px-4 py-2.5 rounded-xl text-on-surface text-xs font-bold shrink-0 self-start md:self-end">
             <Smartphone className="w-4 h-4 text-primary" />
-            <span>Pratinjau Layar v1.2.0</span>
+            <span>Pratinjau Layar v2.0.0</span>
           </div>
         </div>
 

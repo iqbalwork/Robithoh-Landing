@@ -68,7 +68,7 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
             <div className="flex items-center gap-2 flex-wrap">
               <h3 className="text-xl font-bold text-on-surface tracking-tight">Download Center Robithoh</h3>
               <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">
-                v1.2.0 Pembaruan Baru
+                v2.0.0 Pembaruan Baru
               </span>
             </div>
             <p className="text-xs text-text-muted mt-0.5">
@@ -90,12 +90,12 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
                   Google Play Store
                 </span>
                 <span className="text-[10px] font-bold bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded text-emerald-700">
-                  Versi 1.2.0
+                  Versi 2.0.0
                 </span>
               </div>
 
               <p className="text-xs text-slate-600 leading-relaxed">
-                Aplikasi Robithoh v1.2.0 kini tersedia di Google Play Store dengan fitur Mode Mushaf Standar Kemenag RI, Menu Doa, serta Kitab Manqobah 1–56.
+                Aplikasi Robithoh v2.0.0 resmi rilis di Google Play Store dengan fitur Direktori Wakil Talqin Dunia, Menu Maklumat Resmi, dan Volume Adzan Mandiri.
               </p>
 
               <a
@@ -112,26 +112,26 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
 
               {/* Highlight Box with Clean 1-Line Bullets */}
               <div className="p-3 rounded-xl bg-white border border-slate-200/80 space-y-1.5 text-[11px] text-slate-700">
-                <span className="font-bold text-primary block text-[10px] uppercase tracking-wider mb-1">Highlight v1.2.0:</span>
+                <span className="font-bold text-primary block text-[10px] uppercase tracking-wider mb-1">Highlight v2.0.0:</span>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  <span className="truncate">Mode Mushaf Kemenag RI 604 Halaman</span>
+                  <span className="truncate">Direktori Wakil Talqin Dunia &amp; Majlis Binaan</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  <span className="truncate">Halaman Khusus Doa &amp; Live Search</span>
+                  <span className="truncate">Menu Maklumat Resmi Pangersa Abah</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  <span className="truncate">Wirid Kemalaikatan di Menu Doa</span>
+                  <span className="truncate">Pengaturan Volume Adzan Mandiri</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  <span className="truncate">Kitab Manqobah 1–56 (3 Bahasa)</span>
+                  <span className="truncate">Material Icons Extended &amp; 3.dp Card</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  <span className="truncate">Notifikasi Sholat Nama Kota Bersih</span>
+                  <span className="truncate">Navigasi Cepat &amp; Predictive Back</span>
                 </div>
               </div>
 

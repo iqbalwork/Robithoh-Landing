@@ -109,7 +109,7 @@ export const Footer: React.FC<FooterProps> = () => {
                 <div className="flex items-center gap-2">
                   <span className="font-extrabold text-lg text-on-surface tracking-wider">ROBITHOH</span>
                   <span className="bg-gold-light text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-full border border-gold-accent/30">
-                    v1.2.0
+                    v2.0.0
                   </span>
                 </div>
               </div>

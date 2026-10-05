@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Sparkles, Smartphone, Check, Share2, ExternalLink, FileText, ArrowUp, Zap, BookMarked, Type } from 'lucide-react';
+import { X, Sparkles, Smartphone, Check, Share2, ExternalLink, Globe, ScrollText, Volume2, Palette, Zap } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface ReleaseModalProps {
@@ -23,20 +23,21 @@ export const ReleaseModal: React.FC<ReleaseModalProps> = ({ isOpen, onClose }) =
     });
   };
 
-  const shareText = `📢 UPDATE RESMI: ROBITHOH APP v1.2.1 SUDAH RILIS! 🎉
+  const shareText = `📢 UPDATE MAJOR RESMI: ROBITHOH APP v2.0.0 SUDAH RILIS! 🎉
 
-Alhamdulillah, pembaruan versi 1.2.1 untuk aplikasi amaliyah dan ibadah Robithoh telah hadir di Google Play Store!
+Alhamdulillah, pembaruan Major Versi 2.0.0 (dan update stabil v2.1.1) untuk aplikasi amaliyah dan ibadah Robithoh telah hadir di Google Play Store!
 
-✨ Yang Baru di v1.2.1:
-📖 Pembaruan naskah dzikir, khotaman, dan lainnya sesuai cetakan Amaliyah Mursyid Terbaru.
-⚡ Optimasi performa aplikasi.
-👆 Pintasan kembali ke atas naskah.
+✨ Yang Baru di Major Update v2.0.0:
+🌍 Direktori Wakil Talqin (Waktal) Dunia lengkap dengan pencarian lokasi dan majlis binaan.
+📜 Menu Maklumat & Informasi Resmi Pangersa Abah & Pesantren Sirnarasa.
+🔊 Pengaturan Volume Adzan Mandiri terpisah dari media sistem.
+🎨 Tampilan & Ikon Baru (Material Icons Extended & 3.dp card elevation).
+⚡ Navigasi Cepat & Predictive Back (Navigation 3).
 
-🛠️ Perbaikan Sistem & Peningkatan Pengalaman Pengguna:
-• Perbaikan update Google Play & ukuran aplikasi lebih ringan.
-• Pintasan kembali ke atas naskah.
-• Posisi naskah tetap berada di posisi terakhir dibuka.
-• Teks transliterasi sudah lebih tebal (bold).
+🛠️ Peningkatan & Optimasi Sistem:
+• Performa aplikasi jauh lebih responsif, stabil, dan hemat daya.
+• Perbaikan tata letak kartu dan keterbacaan teks amaliyah.
+• Integrasi pencarian cerdas pada data wakil talqin dan maklumat.
 
 Yuk langsung perbarui aplikasi Robithoh di Google Play Store:
 👉 ${PLAY_STORE_URL}
@@ -68,76 +69,88 @@ Barokallohu fiikum! 🙏✨`;
         <div className="relative z-10 mb-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-soft border border-primary/20 text-xs font-bold text-primary mb-3 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-primary" />
-            <span>Pembaruan Baru Telah Rilis</span>
+            <span>Pembaruan Major Telah Rilis</span>
             <span className="px-2 py-0.2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold">
-              v1.2.1
+              v2.0.0
             </span>
           </div>
 
           <h3 className="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight leading-tight">
-            Robithoh App <span className="text-primary">v1.2.1</span> Sudah Hadir di{' '}
+            Robithoh App <span className="text-primary">v2.0.0</span> Resmi Hadir di{' '}
             <span className="text-gold-accent">Google Play Store</span>! 🎉
           </h3>
           <p className="text-text-muted text-sm mt-1">
-            Alhamdulillah, pembaruan versi 1.2.1 hadir dengan naskah amaliyah yang diperbarui sesuai cetakan Mursyid terbaru dan berbagai peningkatan pengalaman pengguna.
+            Alhamdulillah, rilis Major v2.0.0 membawa fitur Direktori Wakil Talqin Dunia, Maklumat Resmi, pengaturan volume adzan mandiri, serta peningkatan performa modern.
           </p>
         </div>
 
         {/* Features & Changelog Section */}
         <div className="space-y-5 relative z-10">
           
-          {/* New Features Highlights (2x2 Grid) */}
+          {/* New Features Highlights (Grid) */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-gold-accent" />
-              <span>Yang Baru di Versi 1.2.1:</span>
+              <span>Fitur Utama Pembaruan v2.0.0:</span>
             </h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 shadow-xs">
                 <div className="w-9 h-9 rounded-xl bg-red-soft text-primary flex items-center justify-center shrink-0 mt-0.5">
-                  <FileText className="w-4.5 h-4.5" />
+                  <Globe className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-on-surface">Pembaruan Naskah Amaliyah Mursyid</h5>
+                  <h5 className="text-sm font-bold text-on-surface">Direktori Wakil Talqin Dunia</h5>
                   <p className="text-xs text-text-muted mt-1 leading-relaxed">
-                    Naskah dzikir, khotaman, dan lainnya telah diperbarui sesuai cetakan Amaliyah Mursyid terbaru — lebih akurat dan sesuai panduan terkini.
+                    Direktori Wakil Talqin (Waktal) lengkap dengan pencarian lokasi, riwayat khidmat, serta informasi majlis binaan di seluruh dunia.
                   </p>
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 shadow-xs">
                 <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <ArrowUp className="w-4.5 h-4.5" />
+                  <ScrollText className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-on-surface">Pintasan Kembali ke Atas</h5>
+                  <h5 className="text-sm font-bold text-on-surface">Menu Maklumat &amp; Informasi Resmi</h5>
                   <p className="text-xs text-text-muted mt-1 leading-relaxed">
-                    Tombol pintasan baru untuk langsung kembali ke bagian atas naskah dengan satu sentuhan, lebih mudah saat membaca teks panjang.
+                    Pusat maklumat resmi dari Pangersa Abah &amp; Pesantren Sirnarasa yang tersaji secara terstruktur, akurat, dan terverifikasi.
                   </p>
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 shadow-xs">
                 <div className="w-9 h-9 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <BookMarked className="w-4.5 h-4.5" />
+                  <Volume2 className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-on-surface">Posisi Naskah Tersimpan Otomatis</h5>
+                  <h5 className="text-sm font-bold text-on-surface">Volume Adzan Mandiri</h5>
                   <p className="text-xs text-text-muted mt-1 leading-relaxed">
-                    Posisi terakhir membaca naskah kini tersimpan secara otomatis — buka lagi langsung dari tempat terakhir Anda berhenti.
+                    Pengaturan volume adzan mandiri terpisah dari media sistem, memastikan kumandang adzan tetap terdengar optimal sesuai kebutuhan ibadah.
                   </p>
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 shadow-xs">
                 <div className="w-9 h-9 rounded-xl bg-gold-light text-amber-900 flex items-center justify-center shrink-0 mt-0.5">
-                  <Type className="w-4.5 h-4.5 text-gold-accent" />
+                  <Palette className="w-4.5 h-4.5 text-gold-accent" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-on-surface">Teks Transliterasi Lebih Tebal</h5>
+                  <h5 className="text-sm font-bold text-on-surface">Tampilan &amp; Ikon Baru</h5>
                   <p className="text-xs text-text-muted mt-1 leading-relaxed">
-                    Teks transliterasi (latin) kini ditampilkan dalam gaya <strong>bold</strong> sehingga lebih mudah dibaca dan dibedakan dari teks Arab.
+                    Pembaruan visual modern dengan Material Icons Extended serta elevasi kartu halus 3.dp yang lebih nyaman di mata.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline flex items-start gap-3.5 shadow-xs sm:col-span-2">
+                <div className="w-9 h-9 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <Zap className="w-4.5 h-4.5" />
+                </div>
+                <div>
+                  <h5 className="text-sm font-bold text-on-surface">Navigasi Cepat &amp; Predictive Back</h5>
+                  <p className="text-xs text-text-muted mt-1 leading-relaxed">
+                    Didukung arsitektur Navigation 3 untuk transisi antar halaman instan, gestur predictive back yang mulus, dan performa bebas hambatan.
                   </p>
                 </div>
               </div>
@@ -148,13 +161,13 @@ Barokallohu fiikum! 🙏✨`;
           <div className="p-4 rounded-2xl bg-surface-warm border border-border-hairline space-y-2 shadow-xs">
             <h5 className="text-xs font-bold text-on-surface flex items-center gap-1.5">
               <Zap className="w-3.5 h-3.5 text-gold-accent" />
-              <span>Perbaikan Sistem &amp; Peningkatan Pengalaman Pengguna:</span>
+              <span>Peningkatan Sistem &amp; Pengalaman Pengguna:</span>
             </h5>
             <ul className="text-xs text-text-muted space-y-1 pl-4 list-disc">
-              <li>Pembaruan Google Play lebih lancar &amp; <strong className="text-on-surface">ukuran aplikasi lebih ringan</strong>.</li>
-              <li>Pintasan kembali ke atas naskah tersedia di semua halaman teks.</li>
-              <li>Posisi naskah tetap berada di <strong className="text-on-surface">posisi terakhir dibuka</strong>.</li>
-              <li>Teks transliterasi <strong className="text-on-surface">lebih tebal (bold)</strong> untuk keterbacaan lebih baik.</li>
+              <li>Pembaruan basis kode Kotlin Multiplatform &amp; Jetpack Compose terbaru.</li>
+              <li>Performa rendering naskah amaliyah dan jadwal sholat lebih cepat dan hemat daya.</li>
+              <li>Optimalisasi ukuran aplikasi dan stabilitas notifikasi pengingat waktu sholat.</li>
+              <li>Integrasi antarmuka bersih sesuai standar desain Robithoh Design System (RDS).</li>
             </ul>
           </div>
 

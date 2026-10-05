@@ -14,7 +14,7 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-surface text-on-surface font-sans selection:bg-primary selection:text-white">
-      {/* Navigation Bar with v1.2.0 Announcement */}
+      {/* Navigation Bar with v2.0.0 Announcement */}
       <Navbar
         onOpenDownload={() => setIsDownloadOpen(true)}
         onOpenReleaseModal={() => setIsReleaseModalOpen(true)}
