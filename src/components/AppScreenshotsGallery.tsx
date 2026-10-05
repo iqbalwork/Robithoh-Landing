@@ -90,7 +90,7 @@ const showcaseScreens: ShowcaseScreen[] = [
     id: 'dzikir',
     badge: 'Layar 05 • Dzikir',
     badgeType: 'primary',
-    title: 'Dzikir Harian TQN Suryalaya',
+    title: 'Dzikir Harian TQN',
     subtitle: 'Amaliyah Dzikir & Khotaman',
     description: 'Panduan bacaan tasbih, lafadz tahlil, shalawat bani hasyim, dan urutan khotaman lengkap dengan transliterasi serta terjemah.',
     imageSrc: './assets/screenshots/dzikir_harian.png',
@@ -129,21 +129,6 @@ const showcaseScreens: ShowcaseScreen[] = [
       'Mode Senyap Praktis Saat Ibadah',
       'Informasi Pembaruan v2.0.0',
       'Akses Ulang Panduan Spotlight'
-    ]
-  },
-  {
-    id: 'kalender',
-    badge: 'Layar 08 • Kalender',
-    badgeType: 'emerald',
-    title: 'Kalender Hijriyah & Jadwal',
-    subtitle: 'Penanggalan Islam & Agenda Ibadah',
-    description: 'Kalender Hijriyah terintegrasi dengan penanda amaliyah bulanan, manaqib, dan konversi masehi presisi.',
-    imageSrc: './assets/screenshots/kalender_hijriyah.png',
-    features: [
-      'Sinkronisasi Tanggal Hijriyah & Masehi',
-      'Penanda Jadwal Manaqib & Khotaman',
-      'Pengaturan Koreksi Hari Hijriyah',
-      'Tampilan Bersih & Kontras Tinggi'
     ]
   }
 ];
