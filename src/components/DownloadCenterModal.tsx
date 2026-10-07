@@ -145,33 +145,31 @@ export const DownloadCenterModal: React.FC<DownloadCenterModalProps> = ({ isOpen
               </div>
             </div>
 
-            {/* iOS App Store Option */}
+            {/* iOS App Store / Web App Option */}
             <div className="space-y-2">
               <span className="text-xs font-bold text-text-muted block uppercase tracking-wider">
-                Platform Lainnya
+                Pengguna Apple (iOS / Safari)
               </span>
 
               <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('Versi iOS sedang dalam tahap finalisasi dan akan segera hadir (Coming Soon) di Apple App Store!');
-                }}
-                className="p-3 rounded-xl bg-surface-warm hover:bg-slate-100 border border-border-hairline flex items-center justify-between text-xs transition-colors group cursor-pointer"
+                href="https://robithoh-app.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                className="p-3.5 rounded-xl bg-surface-warm hover:bg-slate-100 border border-border-hairline flex items-center justify-between text-xs transition-colors group cursor-pointer shadow-xs"
               >
                 <div className="flex items-center gap-2.5">
                   <Smartphone className="w-4 h-4 text-primary" />
                   <div>
                     <div className="flex items-center gap-1.5">
-                      <p className="font-bold text-on-surface">Apple App Store (iOS)</p>
-                      <span className="px-1.5 py-0.2 rounded bg-gold-light text-amber-900 text-[9px] font-bold border border-gold-accent/30">
-                        Coming Soon
+                      <p className="font-bold text-on-surface">Web App untuk iOS (Safari)</p>
+                      <span className="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[9px] font-bold border border-emerald-300">
+                        Akses Sekarang
                       </span>
                     </div>
-                    <p className="text-[10px] text-text-muted">Tahap Pengembangan</p>
+                    <p className="text-[10px] text-text-muted mt-0.5">Buka robithoh-app.vercel.app di iPhone / iPad tanpa instalasi</p>
                   </div>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 text-text-muted group-hover:text-on-surface" />
+                <ExternalLink className="w-4 h-4 text-text-muted group-hover:text-primary transition-colors" />
               </a>
             </div>
 
